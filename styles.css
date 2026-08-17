@@ -92,12 +92,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button & Hover Card Micro-Interactions */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(0);
+  transition: transform 0.15s ease-out, box-shadow 0.35s ease, border-color 0.2s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* 3D Button Press Feedback */
+button,
+a[href^="tel:"] {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+button:hover,
+a[href^="tel:"]:hover {
+  transform: translateY(-2px);
+}
+
+button:active,
+a[href^="tel:"]:active {
+  transform: translateY(0) scale(0.97);
 }
 
 /* Sticky Mobile Action Bar */
@@ -108,20 +127,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Scroll Reveal Animations */
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: perspective(1200px) translateY(30px) rotateX(6deg);
+  transform-origin: center bottom;
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scroll-reveal.revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: perspective(1200px) translateY(0) rotateX(0deg);
 }
 
 /* Staggered children animation */
 .scroll-reveal.revealed .reveal-child {
   opacity: 0;
-  transform: translateY(20px);
-  animation: revealChild 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: perspective(800px) translateY(20px) rotateX(12deg) scale(0.96);
+  transform-origin: center bottom;
+  animation: revealChild 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .scroll-reveal.revealed .reveal-child:nth-child(1) { animation-delay: 0.05s; }
@@ -158,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes revealChild {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: perspective(800px) translateY(0) rotateX(0deg) scale(1);
   }
 }
 
@@ -173,6 +194,17 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: none;
     animation: none;
+  }
+  .card-hover,
+  .card-hover:hover,
+  button,
+  button:hover,
+  button:active,
+  a[href^="tel:"],
+  a[href^="tel:"]:hover,
+  a[href^="tel:"]:active {
+    transform: none;
+    transition: none;
   }
 }
 

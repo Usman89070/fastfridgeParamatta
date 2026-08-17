@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
+  initTiltCards();
   initScrollProgress();
   initHeader();
   initModals();
@@ -16,6 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveTicker();
   initLucideIcons();
 });
+
+// 3D Cursor-Tracked Card Tilt (skipped on touch devices & reduced-motion)
+function initTiltCards() {
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!canHover || reduceMotion) return;
+
+  const MAX_TILT = 7; // degrees
+  const FAST_TRANSITION = 'transform 0.15s ease-out, box-shadow 0.35s ease, border-color 0.2s ease';
+  const SETTLE_TRANSITION = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.2s ease';
+
+  document.querySelectorAll('.card-hover').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = FAST_TRANSITION;
+    });
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty('--tilt-x', `${(-py * MAX_TILT * 2).toFixed(2)}deg`);
+      card.style.setProperty('--tilt-y', `${(px * MAX_TILT * 2).toFixed(2)}deg`);
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = SETTLE_TRANSITION;
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+    });
+  });
+}
 
 // Initialize Lucide SVG Icons safely
 function initLucideIcons() {
