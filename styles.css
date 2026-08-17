@@ -134,8 +134,26 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-reveal.revealed .reveal-child:nth-child(8) { animation-delay: 0.4s; }
 .scroll-reveal.revealed .reveal-child:nth-child(9) { animation-delay: 0.45s; }
 .scroll-reveal.revealed .reveal-child:nth-child(10) { animation-delay: 0.5s; }
-.scroll-reveal.revealed .reveal-child:nth-child(11) { animation-delay: 0.55s; }
-.scroll-reveal.revealed .reveal-child:nth-child(12) { animation-delay: 0.6s; }
+.scroll-reveal.revealed .reveal-child:nth-child(11) { animation-delay: 0.52s; }
+.scroll-reveal.revealed .reveal-child:nth-child(12) { animation-delay: 0.54s; }
+.scroll-reveal.revealed .reveal-child:nth-child(13) { animation-delay: 0.56s; }
+.scroll-reveal.revealed .reveal-child:nth-child(14) { animation-delay: 0.58s; }
+.scroll-reveal.revealed .reveal-child:nth-child(15) { animation-delay: 0.6s; }
+.scroll-reveal.revealed .reveal-child:nth-child(16) { animation-delay: 0.62s; }
+.scroll-reveal.revealed .reveal-child:nth-child(17) { animation-delay: 0.64s; }
+.scroll-reveal.revealed .reveal-child:nth-child(18) { animation-delay: 0.66s; }
+.scroll-reveal.revealed .reveal-child:nth-child(19) { animation-delay: 0.68s; }
+.scroll-reveal.revealed .reveal-child:nth-child(20) { animation-delay: 0.7s; }
+.scroll-reveal.revealed .reveal-child:nth-child(21) { animation-delay: 0.72s; }
+.scroll-reveal.revealed .reveal-child:nth-child(22) { animation-delay: 0.74s; }
+.scroll-reveal.revealed .reveal-child:nth-child(23) { animation-delay: 0.76s; }
+.scroll-reveal.revealed .reveal-child:nth-child(24) { animation-delay: 0.78s; }
+.scroll-reveal.revealed .reveal-child:nth-child(25) { animation-delay: 0.8s; }
+.scroll-reveal.revealed .reveal-child:nth-child(26) { animation-delay: 0.82s; }
+.scroll-reveal.revealed .reveal-child:nth-child(27) { animation-delay: 0.84s; }
+.scroll-reveal.revealed .reveal-child:nth-child(28) { animation-delay: 0.86s; }
+.scroll-reveal.revealed .reveal-child:nth-child(29) { animation-delay: 0.88s; }
+.scroll-reveal.revealed .reveal-child:nth-child(30) { animation-delay: 0.9s; }
 
 @keyframes revealChild {
   to {
