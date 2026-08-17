@@ -92,14 +92,14 @@
   <!-- Top Emergency Status & Ticker Bar -->
   <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-        <span class="font-bold text-emerald-400">Live Status:</span>
-        <span class="text-slate-200">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
       </div>
-      <div class="flex items-center gap-3 text-slate-300 overflow-hidden">
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
         <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
-        <span id="live-ticker-text" class="truncate font-medium text-slate-200">
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
           ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
         </span>
       </div>
@@ -111,12 +111,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
+      <a href="#" class="flex items-center gap-3 group shrink-0">
         <div class="relative overflow-hidden rounded-lg">
-          <img src="images/fridge_repair_logo.jpg" onerror="this.src='fridge_repair_logo_1786618018339.jpg';" alt="Fridge Repair Parramatta Logo" class="w-11 h-11 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+          <img src="images/fridge_repair_logo.jpg" onerror="this.onerror=null; this.src='fridge_repair_logo_1786618018339.jpg';" alt="Fridge Repair Parramatta Logo" class="w-11 h-11 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
         </div>
         <div>
-          <span class="text-lg sm:text-xl font-extrabold tracking-tight text-white block leading-tight">
+          <span class="text-lg sm:text-xl xl:text-lg 2xl:text-xl font-extrabold tracking-tight text-white block leading-tight whitespace-nowrap">
             Fridge Repair <span class="text-sky-400">Parramatta</span>
           </span>
           <span class="text-[11px] text-slate-400 font-medium">Licensed Refrigeration Mechanics • Lic #R38910</span>
@@ -124,8 +124,8 @@
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
-        <a href="#why-us" class="hover:text-sky-400 transition-colors">Why Choose Us</a>
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-xs 2xl:text-sm font-semibold text-slate-300 whitespace-nowrap">
+        <a href="#why-us" class="hover:text-sky-400 transition-colors">Why Us</a>
         <a href="#services" class="hover:text-sky-400 transition-colors">Services</a>
         <a href="#common-faults" class="hover:text-sky-400 transition-colors">Fault Finder</a>
         <a href="#repair-vs-replace" class="hover:text-sky-400 transition-colors">Repair vs Replace</a>
@@ -135,25 +135,25 @@
       </nav>
 
       <!-- Header Action Buttons -->
-      <div class="hidden sm:flex items-center gap-3">
-        <a href="tel:1300240680" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all">
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="tel:1300240680" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
           <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
           <span>1300 240 680</span>
         </a>
-        <button class="open-booking-modal px-4 py-2 rounded-lg text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md">
+        <button class="open-booking-modal px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
           Book Online 24/7
         </button>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+      <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
 
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
       <a href="#why-us" class="block text-slate-300 hover:text-sky-400 py-1">Why Choose Us</a>
       <a href="#services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
       <a href="#common-faults" class="block text-slate-300 hover:text-sky-400 py-1">Fault Finder</a>
@@ -581,7 +581,7 @@
 
         <div class="lg:col-span-5 space-y-4">
           <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-            <img src="images/service_van_parramatta.jpg" onerror="this.src='service_van_parramatta_1786611841930.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop';}" alt="Fridge Repair Parramatta Service Van" class="w-full h-[340px] object-cover">
+            <img src="images/service_van_parramatta.jpg" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop';}; this.src='service_van_parramatta_1786611841930.jpg';" alt="Fridge Repair Parramatta Service Van" class="w-full h-[340px] object-cover">
           </div>
           <div class="p-6 rounded-xl bg-slate-800 border border-slate-700 space-y-3 text-xs text-slate-300">
             <h4 class="text-sm font-bold text-white flex items-center gap-2">
@@ -721,7 +721,7 @@
           </ul>
         </div>
         <div class="lg:col-span-5">
-          <img src="images/commercial_coolroom_repair.jpg" onerror="this.src='commercial_coolroom_repair_1786611822533.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200&auto=format&fit=crop';}" alt="Coolroom Technician Repairing Control Unit" class="rounded-xl border border-slate-200 w-full h-[260px] object-cover">
+          <img src="images/commercial_coolroom_repair.jpg" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200&auto=format&fit=crop';}; this.src='commercial_coolroom_repair_1786611822533.jpg';" alt="Coolroom Technician Repairing Control Unit" class="rounded-xl border border-slate-200 w-full h-[260px] object-cover">
         </div>
       </div>
 
