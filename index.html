@@ -111,7 +111,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center group shrink-0">
+      <a href="index.html" class="flex items-center group shrink-0">
         <div class="relative overflow-hidden rounded-lg">
           <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
         </div>
@@ -155,6 +155,8 @@
       <a href="#brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
       <a href="#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
       <a href="#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about.html" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="contact.html" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
       <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
         <a href="tel:1300240680" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
           📞 Call now
@@ -167,8 +169,24 @@
   </header>
 
   <!-- 1. HERO SECTION (Dark Trades Navy Section) -->
-  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
+
+    <!-- Hero Background Image (full-bleed, responsive, with dark overlay for text contrast) -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="image/hero-fridge-repair-tech.webp"
+        onerror="this.onerror=null; this.src='images/hero_refrigeration_tech.jpg';"
+        alt="Licensed technician repairing a residential fridge in Parramatta"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      >
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/60 lg:to-slate-900/40"></div>
+      <div class="absolute inset-0 bg-slate-900/35"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-10 items-center">
         
         <!-- Hero Text Content (Left Column) -->
@@ -1802,6 +1820,10 @@
             <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
             <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
           </div>
+          <div class="flex gap-4 pt-1">
+            <a href="about.html" class="hover:text-sky-400">About Us</a>
+            <a href="contact.html" class="hover:text-sky-400">Contact</a>
+          </div>
         </div>
 
         <div class="reveal-child space-y-3">
@@ -1844,9 +1866,9 @@
         <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
           <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
           <div class="flex gap-3">
-            <a href="#" class="hover:text-sky-400">Privacy Policy</a>
+            <a href="privacy-policy.html" class="hover:text-sky-400">Privacy Policy</a>
             <span>|</span>
-            <a href="#" class="hover:text-sky-400">Terms of Service</a>
+            <a href="terms-of-service.html" class="hover:text-sky-400">Terms of Service</a>
           </div>
         </div>
       </div>
