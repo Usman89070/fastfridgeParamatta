@@ -29,11 +29,18 @@ html {
   background-color: #ffffff;
   color: var(--color-text-dark);
   -webkit-font-smoothing: antialiased;
-  font-size: 17px;
 }
 
 body {
   overflow-x: hidden;
+}
+
+/* Content text set to 18px site-wide, independent of heading sizes.
+   Scoped to actual body copy (paragraphs, list items, table cells, FAQ
+   answers) and excluded from the header/nav/sticky mobile bar so their
+   carefully-tuned widths aren't affected. */
+body :is(p, li, td, .faq-answer):not(header *, .sticky-mobile-bar *) {
+  font-size: 18px;
 }
 
 /* Custom Scrollbar */
