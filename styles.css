@@ -29,6 +29,7 @@ html {
   background-color: #ffffff;
   color: var(--color-text-dark);
   -webkit-font-smoothing: antialiased;
+  font-size: 17px;
 }
 
 body {
