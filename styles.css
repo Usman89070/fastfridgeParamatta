@@ -25,6 +25,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Clears the sticky header (~90px tall) plus breathing room so jumping to
+     any #section (nav links, footer links, "Read Article", etc.) doesn't
+     land with the heading hidden underneath the header. */
+  scroll-padding-top: 110px;
   font-family: var(--font-body);
   background-color: #ffffff;
   color: var(--color-text-dark);
