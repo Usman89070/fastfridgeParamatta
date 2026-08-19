@@ -69,6 +69,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
+/* Headings keep their existing font-size but get a roomier line-height so
+   multi-line titles (hero H1, blog post H1s, H2 section headings) don't
+   read as touching lines. Tailwind's text-3xl/4xl/5xl utilities bundle a
+   tight ~1.1-1.2 ratio into the class itself, so this needs the same
+   specificity-boosting :is()/:not() pattern as the body-copy rule above
+   to win over that class without !important. */
+body :is(h1, h2, h3, h4, h5, h6):not(header *, .sticky-mobile-bar *) {
+  line-height: 1.3;
+}
+
 /* Custom Scroll Progress Bar */
 #scroll-progress {
   position: fixed;
