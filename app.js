@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTiltCards();
   initScrollProgress();
   initHeader();
+  initAgencyDropdown();
+  initActiveNavLinks();
   initModals();
   initBookingWizard();
   initHeroContactForm();
@@ -17,6 +19,62 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveTicker();
   initLucideIcons();
 });
+
+// "Agency" Header Dropdown (About / Blog / Reviews / Contact)
+function initAgencyDropdown() {
+  const btn = document.getElementById('agency-dropdown-btn');
+  const panel = document.getElementById('agency-dropdown-panel');
+  if (!btn || !panel) return;
+
+  const chevron = btn.querySelector('[data-lucide="chevron-down"]');
+
+  const closeDropdown = () => {
+    panel.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    if (chevron) chevron.classList.remove('rotate-180');
+  };
+  const openDropdown = () => {
+    panel.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    if (chevron) chevron.classList.add('rotate-180');
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (panel.classList.contains('hidden')) {
+      openDropdown();
+    } else {
+      closeDropdown();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!panel.contains(e.target) && !btn.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDropdown();
+  });
+}
+
+// Highlight the current page's link inside the Agency dropdown (and mobile menu equivalent)
+function initActiveNavLinks() {
+  const current = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isBlogPost = current.startsWith('blog-');
+
+  document.querySelectorAll('a.agency-link').forEach(link => {
+    const hrefFile = link.getAttribute('href').split('#')[0].toLowerCase();
+    const isMatch = hrefFile === current || (hrefFile === 'blog.html' && isBlogPost);
+    if (isMatch) {
+      link.classList.remove('text-slate-300');
+      link.classList.add('text-sky-400', 'font-semibold');
+      const trigger = document.getElementById('agency-dropdown-btn');
+      if (trigger) trigger.classList.add('text-sky-400');
+    }
+  });
+}
 
 // 3D Cursor-Tracked Card Tilt (skipped on touch devices & reduced-motion)
 function initTiltCards() {
@@ -86,6 +144,14 @@ function initHeader() {
   if (mobileBtn && mobileMenu) {
     mobileBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close the panel once a link inside it is actually used, instead of
+    // leaving it open over the destination section/page after navigating.
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
   }
 }
