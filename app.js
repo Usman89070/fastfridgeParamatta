@@ -145,6 +145,14 @@ function initHeader() {
     mobileBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    // Close the panel once a link inside it is actually used, instead of
+    // leaving it open over the destination section/page after navigating.
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   }
 }
 

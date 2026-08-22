@@ -18,6 +18,11 @@ $ogType = $ogType ?? 'website';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- SEO META -->
   <title><?= e($pageTitle) ?></title>
   <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
@@ -54,7 +59,7 @@ $ogType = $ogType ?? 'website';
   </script>
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=3">

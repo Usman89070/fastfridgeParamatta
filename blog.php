@@ -39,7 +39,7 @@ require __DIR__ . '/includes/site-header.php';
             <a href="blog-<?= e($post['slug']) ?>.html" class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 card-hover flex flex-col justify-between space-y-4">
               <div class="space-y-3">
                 <?php if (!empty($post['featured_image'])): ?>
-                  <img src="<?= e($post['featured_image']) ?>" alt="" class="w-full h-32 object-cover rounded-lg">
+                  <img src="<?= e($post['featured_image']) ?>" alt="" class="w-full h-32 object-cover rounded-lg" loading="lazy" decoding="async">
                 <?php else: ?>
                   <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
                     <i data-lucide="file-text" class="w-5 h-5"></i>

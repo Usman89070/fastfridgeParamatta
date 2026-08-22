@@ -84,6 +84,6 @@
   </footer>
 
   <!-- Application Logic -->
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
