@@ -100,17 +100,6 @@ require __DIR__ . '/includes/site-header.php';
               View All Articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
-
-          <div class="p-6 rounded-2xl bg-slate-900 text-white space-y-3">
-            <h2 class="text-base font-bold">Need a Fridge Repair?</h2>
-            <p class="text-slate-300 text-sm">Same-day service across Parramatta and Western Sydney, with a free quote first.</p>
-            <a href="tel:1300240680" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all">
-              <i data-lucide="phone-call" class="w-4 h-4"></i> Call now
-            </a>
-            <a href="contact.html#contact-form" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all">
-              <i data-lucide="calendar" class="w-4 h-4"></i> Book Online 24/7
-            </a>
-          </div>
         </aside>
 
       </div>
