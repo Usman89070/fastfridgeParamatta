@@ -31,9 +31,9 @@ if (!$post) {
     exit;
 }
 
-// "You might also like" - up to 2 other published posts.
+// Recent Articles sidebar - other published posts, most recent first.
 $stmt = get_db()->prepare(
-    "SELECT slug, title FROM blog_posts WHERE status = 'published' AND id != ? ORDER BY published_at DESC LIMIT 2"
+    "SELECT slug, title, excerpt, published_at FROM blog_posts WHERE status = 'published' AND id != ? ORDER BY published_at DESC LIMIT 5"
 );
 $stmt->execute([$post['id']]);
 $otherPosts = $stmt->fetchAll();
@@ -48,12 +48,12 @@ require __DIR__ . '/includes/site-header.php';
 
   <!-- PAGE BANNER -->
   <section class="bg-slate-900 text-white py-14 border-b border-slate-800">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
       <p class="text-xs font-semibold text-slate-400">
         <a href="index.html" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span>
         <a href="blog.html" class="hover:text-sky-400">Blog</a> <span class="mx-1">/</span> <?= e($post['title']) ?>
       </p>
-      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight"><?= e($post['title']) ?></h1>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight max-w-3xl"><?= e($post['title']) ?></h1>
       <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
         <span>Fridge Repair Parramatta</span>
         <span>·</span>
@@ -64,14 +64,55 @@ require __DIR__ . '/includes/site-header.php';
     </div>
   </section>
 
-  <!-- ARTICLE CONTENT -->
+  <!-- ARTICLE CONTENT + SIDEBAR -->
   <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <?php if (!empty($post['featured_image'])): ?>
-        <img src="<?= e($post['featured_image']) ?>" alt="<?= e($post['title']) ?>" class="w-full h-auto rounded-2xl border border-slate-200 shadow-md mb-10">
-      <?php endif; ?>
-      <div class="post-content text-slate-700">
-        <?= $post['content'] ?>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+
+        <div class="lg:col-span-8 max-w-3xl">
+          <?php if (!empty($post['featured_image'])): ?>
+            <img src="<?= e($post['featured_image']) ?>" alt="<?= e($post['title']) ?>" class="w-full h-auto rounded-2xl border border-slate-200 shadow-md mb-10">
+          <?php endif; ?>
+          <div class="post-content text-slate-700">
+            <?= $post['content'] ?>
+          </div>
+        </div>
+
+        <aside class="lg:col-span-4 space-y-6">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 lg:sticky lg:top-24">
+            <h2 class="text-lg font-bold text-slate-900 mb-5">Recent Articles</h2>
+            <?php if (empty($otherPosts)): ?>
+              <p class="text-sm text-slate-500">More articles coming soon.</p>
+            <?php else: ?>
+              <div class="space-y-5 divide-y divide-slate-200">
+                <?php foreach ($otherPosts as $i => $other): ?>
+                  <a href="blog-<?= e($other['slug']) ?>.html" class="group block <?= $i > 0 ? 'pt-5' : '' ?>">
+                    <div class="text-xs text-slate-500 mb-1.5"><?= e(date('j F Y', strtotime($other['published_at'] ?? 'now'))) ?></div>
+                    <h3 class="font-bold text-slate-900 text-sm leading-snug group-hover:text-sky-700 transition-colors"><?= e($other['title']) ?></h3>
+                    <?php if (!empty($other['excerpt'])): ?>
+                      <p class="text-xs text-slate-500 mt-1.5 leading-relaxed"><?= e($other['excerpt']) ?></p>
+                    <?php endif; ?>
+                  </a>
+                <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
+            <a href="blog.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800 mt-6">
+              View All Articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900 text-white space-y-3">
+            <h2 class="text-base font-bold">Need a Fridge Repair?</h2>
+            <p class="text-slate-300 text-sm">Same-day service across Parramatta and Western Sydney, with a free quote first.</p>
+            <a href="tel:1300240680" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all">
+              <i data-lucide="phone-call" class="w-4 h-4"></i> Call now
+            </a>
+            <a href="contact.html#contact-form" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book Online 24/7
+            </a>
+          </div>
+        </aside>
+
       </div>
     </div>
   </section>
@@ -91,13 +132,6 @@ require __DIR__ . '/includes/site-header.php';
           <span>Book Online 24/7</span>
         </a>
       </div>
-      <?php if (!empty($otherPosts)): ?>
-        <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-center items-center gap-x-6 gap-y-2 text-sm">
-          <?php foreach ($otherPosts as $other): ?>
-            <a href="blog-<?= e($other['slug']) ?>.html" class="text-slate-400 hover:text-sky-400"><?= e($other['title']) ?></a>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
       <a href="blog.html" class="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-sky-400 pt-2">
         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all articles
       </a>
