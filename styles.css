@@ -240,3 +240,70 @@ a[href^="tel:"]:active {
     display: none !important;
   }
 }
+
+/* Blog Post Content (admin-authored, plain HTML - no per-element utility
+   classes required). Mirrors the spacing/typography already used by the
+   hand-built static blog posts so admin-created posts look identical. */
+.post-content > * + * {
+  margin-top: 2rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+}
+
+.post-content h2 + p,
+.post-content h3 + p {
+  margin-top: 0.75rem;
+}
+
+.post-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+}
+
+.post-content ul {
+  list-style-type: disc;
+}
+
+.post-content ol {
+  list-style-type: decimal;
+}
+
+.post-content li + li {
+  margin-top: 0.5rem;
+}
+
+.post-content a {
+  color: var(--color-trade-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  color: var(--color-trade-blue-hover);
+  text-decoration: underline;
+}
+
+.post-content .callout {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+}
+
+.post-content .callout > * + * {
+  margin-top: 0.5rem;
+}
+
+.post-content .callout h3 {
+  font-size: 1.125rem;
+}

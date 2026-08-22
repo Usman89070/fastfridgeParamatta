@@ -12,6 +12,25 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^fridge-repair-parramatta/?$ index.html [L,QSA]
 
+# 2b. Blog admin panel - transparently serve the dynamic blog pages under
+# their existing static-looking URLs, so every internal link, external
+# link and search-engine listing built around the old static filenames
+# keeps working with zero changes anywhere else on the site.
+RewriteRule ^blog\.html$ blog.php [L,QSA]
+RewriteRule ^blog-([a-z0-9-]+)\.html$ blog-post.php?slug=$1 [L,QSA]
+
+# 2c. Block direct web access to backend-only folders and files. These are
+# only ever loaded via PHP `require`, never requested directly by a browser.
+RewriteRule ^admin/includes/ - [F,L]
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^database/ - [F,L]
+<FilesMatch "\.(sql|sqlite)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^config\.php$">
+  Require all denied
+</FilesMatch>
+
 # Set Default Index Document
 DirectoryIndex index.html
 
