@@ -1,6 +1,7 @@
 /* Fridge Repair Parramatta - Interactive Application Logic */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initInitialHashScrollFix();
   initScrollReveal();
   initTiltCards();
   initScrollProgress();
@@ -19,6 +20,57 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveTicker();
   initLucideIcons();
 });
+
+// Fix janky/broken scroll-to-#section on the very first page load. The
+// browser performs its native jump-to-fragment before layout has actually
+// settled (fonts/images still loading, scroll-reveal not yet initialised),
+// and the site's global `scroll-behavior: smooth` then animates that
+// premature jump over a long, visibly broken distance as the target's real
+// position keeps shifting under it - looking like the destination section
+// "hasn't loaded" until a second click (which only has a short, already-
+// mostly-correct distance left to travel) fixes it up. Once everything has
+// actually finished loading, snap straight to the correct final position
+// instead of trusting wherever that early native jump left off.
+function initInitialHashScrollFix() {
+  const hash = window.__initialHash;
+  if (!hash) return;
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      // Revealing a section (adding .revealed) still plays its 0.7s
+      // tilt-to-flat CSS transition even when the class is added instantly -
+      // the transition fires off the computed-style change, not off how the
+      // class got there. Left alone, that transition keeps animating the
+      // target's transform for hundreds of ms after we've already scrolled,
+      // dragging the target's real position out from under a scroll that was
+      // computed before the animation started. Force the target (and any
+      // scroll-reveal ancestor) straight to its final, settled state with no
+      // transition, so the position we scroll to is already the real one.
+      let el = target;
+      while (el && el !== document.body) {
+        if (el.classList && el.classList.contains('scroll-reveal') && !el.classList.contains('revealed')) {
+          const previousTransition = el.style.transition;
+          el.style.transition = 'none';
+          el.classList.add('revealed');
+          el.offsetHeight; // force a synchronous reflow so the transition-less state applies immediately
+          el.style.transition = previousTransition;
+        }
+        el = el.parentElement;
+      }
+
+      const html = document.documentElement;
+      const previousBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start' });
+      history.replaceState(null, '', location.pathname + location.search + hash);
+      requestAnimationFrame(() => {
+        html.style.scrollBehavior = previousBehavior;
+      });
+    });
+  });
+}
 
 // "Agency" Header Dropdown (About / Blog / Reviews / Contact)
 function initAgencyDropdown() {
