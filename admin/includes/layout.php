@@ -33,7 +33,7 @@ function render_admin_header(string $title, string $active = ''): void {
       </div>
       <nav class="flex items-center gap-4 text-sm font-semibold">
         <a href="index.php" class="<?= $active === 'dashboard' ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400' ?> transition-colors">Posts</a>
-        <a href="../blog.html" target="_blank" rel="noopener" class="text-slate-300 hover:text-sky-400 transition-colors">View Site</a>
+        <a href="../blog" target="_blank" rel="noopener" class="text-slate-300 hover:text-sky-400 transition-colors">View Site</a>
         <a href="change-password.php" class="<?= $active === 'password' ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400' ?> transition-colors">Change Password</a>
         <span class="hidden sm:inline text-slate-500">|</span>
         <span class="hidden sm:inline text-slate-400 font-normal"><?= e(current_admin_username() ?? '') ?></span>

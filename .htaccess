@@ -12,12 +12,24 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^fridge-repair-parramatta/?$ index.html [L,QSA]
 
-# 2b. Blog admin panel - transparently serve the dynamic blog pages under
-# their existing static-looking URLs, so every internal link, external
-# link and search-engine listing built around the old static filenames
-# keeps working with zero changes anywhere else on the site.
-RewriteRule ^blog\.html$ blog.php [L,QSA]
-RewriteRule ^blog-([a-z0-9-]+)\.html$ blog-post.php?slug=$1 [L,QSA]
+# 2a. Clean URLs, step 1: redirect any old .html link to its extension-free
+# version (301, so old bookmarks/search results/external links still land
+# on the right page and pass their SEO value through), so the address bar
+# always shows the clean URL rather than just quietly serving both forms.
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^blog\.html$ /blog [R=301,L]
+RewriteRule ^blog-([a-z0-9-]+)\.html$ /blog-$1 [R=301,L]
+RewriteRule ^(about|contact|privacy-policy|terms-of-service)\.html$ /$1 [R=301,L]
+
+# 2b. Clean URLs, step 2: serve the real page behind each extension-free
+# path. Blog URLs always resolve to the dynamic PHP pages (even though the
+# original static blog-*.html files are still sitting on disk, superseded
+# by the database-backed admin panel).
+RewriteRule ^blog/?$ blog.php [L,QSA]
+RewriteRule ^blog-([a-z0-9-]+)/?$ blog-post.php?slug=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(about|contact|privacy-policy|terms-of-service)/?$ $1.html [L,QSA]
 
 # 2c. Block direct web access to backend-only folders and files. These are
 # only ever loaded via PHP `require`, never requested directly by a browser.

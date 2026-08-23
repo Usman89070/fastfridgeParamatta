@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <p class="text-center text-slate-500 text-xs mt-5">
-      <a href="../index.html" class="hover:text-sky-400">&larr; Back to the main site</a>
+      <a href="../" class="hover:text-sky-400">&larr; Back to the main site</a>
     </p>
   </div>
 

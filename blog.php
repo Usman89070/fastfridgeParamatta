@@ -9,7 +9,7 @@ $posts = get_db()->query(
 
 $pageTitle = 'Blog | Fridge Repair Parramatta';
 $metaDescription = 'Fridge repair advice, maintenance tips and honest repair-vs-replace guidance from licensed refrigeration mechanics servicing Parramatta and Western Sydney.';
-$canonicalUrl = 'https://fridgerepairparramatta.com.au/blog/';
+$canonicalUrl = 'https://fridgerepairparramatta.com.au/blog';
 $ogType = 'website';
 
 require __DIR__ . '/includes/site-header.php';
@@ -19,7 +19,7 @@ require __DIR__ . '/includes/site-header.php';
   <section class="bg-slate-900 text-white py-14 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
       <p class="text-xs font-semibold text-slate-400">
-        <a href="index.html" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span> Blog
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span> Blog
       </p>
       <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Fridge Repair Blog</h1>
       <p class="text-slate-300 text-base sm:text-lg max-w-2xl">
@@ -36,7 +36,7 @@ require __DIR__ . '/includes/site-header.php';
       <?php else: ?>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <?php foreach ($posts as $post): ?>
-            <a href="blog-<?= e($post['slug']) ?>.html" class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 card-hover flex flex-col justify-between space-y-4">
+            <a href="blog-<?= e($post['slug']) ?>" class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 card-hover flex flex-col justify-between space-y-4">
               <div class="space-y-3">
                 <?php if (!empty($post['featured_image'])): ?>
                   <img src="<?= e($post['featured_image']) ?>" alt="" class="w-full h-32 object-cover rounded-lg" loading="lazy" decoding="async">

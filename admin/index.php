@@ -39,7 +39,7 @@ render_flash_messages();
             <tr>
               <td class="px-5 py-3.5">
                 <div class="font-semibold text-slate-900"><?= e($post['title']) ?></div>
-                <div class="text-xs text-slate-400">/blog-<?= e($post['slug']) ?>.html</div>
+                <div class="text-xs text-slate-400">/blog-<?= e($post['slug']) ?></div>
               </td>
               <td class="px-5 py-3.5">
                 <span class="<?= $post['status'] === 'published' ? 'admin-badge-published' : 'admin-badge-draft' ?>">

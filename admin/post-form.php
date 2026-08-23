@@ -55,7 +55,7 @@ render_flash_messages();
   <div>
     <label class="admin-label" for="slug">URL Slug</label>
     <input class="admin-input" type="text" id="slug" name="slug" value="<?= e($post['slug']) ?>" placeholder="auto-generated from title if left blank">
-    <p class="admin-hint">The post will be published at <code>/blog-<span id="slug-preview"><?= e($post['slug'] ?: 'your-slug') ?></span>.html</code>. Only lowercase letters, numbers and dashes.</p>
+    <p class="admin-hint">The post will be published at <code>/blog-<span id="slug-preview"><?= e($post['slug'] ?: 'your-slug') ?></span></code>. Only lowercase letters, numbers and dashes.</p>
   </div>
 
   <div class="grid sm:grid-cols-2 gap-6">

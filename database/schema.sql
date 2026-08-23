@@ -60,7 +60,7 @@ INSERT INTO blog_posts (slug, title, meta_description, excerpt, content, read_ti
 
 <div class="callout">
 <h3>When to Call a Technician</h3>
-<p>If your fridge is warm but the light still works, don''t keep opening the door to check - that only lets more warm air in. A quick call gets you a proper diagnosis before you spend money guessing at parts. See our full <a href="index.html#common-faults">fault finder</a> for more symptoms, or book a technician directly below.</p>
+<p>If your fridge is warm but the light still works, don''t keep opening the door to check - that only lets more warm air in. A quick call gets you a proper diagnosis before you spend money guessing at parts. See our full <a href="/#common-faults">fault finder</a> for more symptoms, or book a technician directly below.</p>
 </div>', 6, 'published', '2026-08-10'),
   ('repair-or-replace-guide', 'Repair or Replace? A Practical Guide for Sydney Homeowners', 'Not sure whether to repair your fridge or buy a new one? Here''s the rule of thumb we actually use, with real examples for common Parramatta situations.', 'The rule of thumb we actually use when deciding whether a fridge is worth fixing, with real cost examples.', '<p>This is the question we get asked more than almost any other: "is it even worth fixing?" It''s a fair question - nobody wants to spend $300 on a repair only to have the fridge fail again in six months. There''s no single answer that fits every fridge, but there is a rule of thumb that gets it right most of the time.</p>
 
@@ -85,7 +85,7 @@ INSERT INTO blog_posts (slug, title, meta_description, excerpt, content, read_ti
 
 <div class="callout">
 <h3>Try Our Interactive Calculator</h3>
-<p>Enter your fridge''s age, original price and estimated repair cost into our <a href="index.html#repair-vs-replace">repair vs replace value checker</a> for an instant recommendation, or book a technician for a proper diagnosis and we''ll give you a straight answer either way.</p>
+<p>Enter your fridge''s age, original price and estimated repair cost into our <a href="/#repair-vs-replace">repair vs replace value checker</a> for an instant recommendation, or book a technician for a proper diagnosis and we''ll give you a straight answer either way.</p>
 </div>', 5, 'published', '2026-08-12'),
   ('summer-fridge-maintenance-tips', '5 Ways to Keep Your Fridge Running Through a Parramatta Summer', 'Western Sydney summers are hard on fridges and freezers. Five practical maintenance habits that meaningfully cut your risk of a breakdown when it''s 40°C outside.', 'Simple habits that meaningfully cut your risk of a breakdown when it''s 40°C outside in Western Sydney.', '<p>When the mercury pushes past 40°C in Western Sydney - routinely several degrees hotter than the coastal suburbs - fridges and freezers work overtime just to hold a safe temperature. A big share of the breakdowns we attend across Parramatta cluster in the January and February heatwaves. The good news is that most of the units that fail were already running compromised for months beforehand. Here''s what actually helps.</p>
 
@@ -106,6 +106,6 @@ INSERT INTO blog_posts (slug, title, meta_description, excerpt, content, read_ti
 
 <div class="callout">
 <h3>Running a Commercial Kitchen or Coolroom?</h3>
-<p>The same principles apply at commercial scale, with more at stake. If you run multiple units, a scheduled maintenance arrangement is dramatically cheaper than an emergency breakdown mid-service on a Saturday night. See our <a href="index.html#services">commercial refrigeration services</a> for details.</p>
+<p>The same principles apply at commercial scale, with more at stake. If you run multiple units, a scheduled maintenance arrangement is dramatically cheaper than an emergency breakdown mid-service on a Saturday night. See our <a href="/#services">commercial refrigeration services</a> for details.</p>
 </div>', 4, 'published', '2026-08-14');
 

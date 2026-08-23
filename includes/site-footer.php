@@ -3,7 +3,7 @@
     <a href="tel:1300240680" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>📞 Call Now</span>
     </a>
-    <a href="contact.html#contact-form" class="flex-1 py-3 rounded-xl bg-sky-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>📅 Book Online</span>
     </a>
   </div>
@@ -27,26 +27,26 @@
             <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
           </div>
           <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
-            <a href="about.html" class="hover:text-sky-400 transition-colors">About Us</a>
-            <a href="blog.html" class="hover:text-sky-400 transition-colors">Blog</a>
-            <a href="contact.html" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
           </div>
         </div>
 
         <div class="reveal-child space-y-3">
           <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
           <ul class="space-y-2">
-            <li><a href="index.html#services" class="hover:text-sky-400">Residential Fridge Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Freezer Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Coolroom Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Ice Machine Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Display Fridge Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Salad Bar Fridge Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Emergency Fridge Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
-            <li><a href="index.html#services" class="hover:text-sky-400">Fridge Maintenance</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Salad Bar Fridge Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Emergency Fridge Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="/#services" class="hover:text-sky-400">Fridge Maintenance</a></li>
           </ul>
         </div>
 
@@ -73,9 +73,9 @@
         <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
           <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
           <div class="flex gap-3">
-            <a href="privacy-policy.html" class="hover:text-sky-400">Privacy Policy</a>
+            <a href="privacy-policy" class="hover:text-sky-400">Privacy Policy</a>
             <span>|</span>
-            <a href="terms-of-service.html" class="hover:text-sky-400">Terms of Service</a>
+            <a href="terms-of-service" class="hover:text-sky-400">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -91,7 +91,7 @@ $ogType = $ogType ?? 'website';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center group shrink-0">
+      <a href="/" class="flex items-center group shrink-0">
         <div class="relative overflow-hidden rounded-lg">
           <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
         </div>
@@ -99,16 +99,16 @@ $ogType = $ogType ?? 'website';
 
       <!-- Desktop Nav Links -->
       <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
-        <a href="index.html#why-us" class="hover:text-sky-400 transition-colors">Why Us</a>
-        <a href="index.html#services" class="hover:text-sky-400 transition-colors">Services</a>
-        <a href="index.html#common-faults" class="hover:text-sky-400 transition-colors">Fault Finder</a>
-        <a href="index.html#repair-vs-replace" class="hover:text-sky-400 transition-colors">Repair vs Replace</a>
-        <a href="index.html#brands" class="hover:text-sky-400 transition-colors">Brands</a>
-        <a href="index.html#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
-        <a href="index.html#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
-        <a href="about.html" class="hover:text-sky-400 transition-colors">About</a>
-        <a href="blog.html" class="text-sky-400 transition-colors">Blog</a>
-        <a href="contact.html" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="/#why-us" class="hover:text-sky-400 transition-colors">Why Us</a>
+        <a href="/#services" class="hover:text-sky-400 transition-colors">Services</a>
+        <a href="/#common-faults" class="hover:text-sky-400 transition-colors">Fault Finder</a>
+        <a href="/#repair-vs-replace" class="hover:text-sky-400 transition-colors">Repair vs Replace</a>
+        <a href="/#brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
       </nav>
 
       <!-- Header Action Buttons -->
@@ -117,7 +117,7 @@ $ogType = $ogType ?? 'website';
           <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
           <span>Call now</span>
         </a>
-        <a href="contact.html#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
           Book Online 24/7
         </a>
       </div>
@@ -131,21 +131,21 @@ $ogType = $ogType ?? 'website';
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
-      <a href="index.html#why-us" class="block text-slate-300 hover:text-sky-400 py-1">Why Choose Us</a>
-      <a href="index.html#services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
-      <a href="index.html#common-faults" class="block text-slate-300 hover:text-sky-400 py-1">Fault Finder</a>
-      <a href="index.html#repair-vs-replace" class="block text-slate-300 hover:text-sky-400 py-1">Repair vs Replace</a>
-      <a href="index.html#brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
-      <a href="index.html#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
-      <a href="index.html#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
-      <a href="about.html" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
-      <a href="blog.html" class="block text-sky-400 py-1">Blog</a>
-      <a href="contact.html" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="/#why-us" class="block text-slate-300 hover:text-sky-400 py-1">Why Choose Us</a>
+      <a href="/#services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
+      <a href="/#common-faults" class="block text-slate-300 hover:text-sky-400 py-1">Fault Finder</a>
+      <a href="/#repair-vs-replace" class="block text-slate-300 hover:text-sky-400 py-1">Repair vs Replace</a>
+      <a href="/#brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
       <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
         <a href="tel:1300240680" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
           📞 Call now
         </a>
-        <a href="contact.html#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-600">
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-600">
           Book Online 24/7
         </a>
       </div>
