@@ -73,11 +73,6 @@
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
           <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
-          <div class="flex gap-3">
-            <a href="privacy-policy" class="hover:text-sky-400">Privacy Policy</a>
-            <span>|</span>
-            <a href="terms-of-service" class="hover:text-sky-400">Terms of Service</a>
-          </div>
         </div>
       </div>
 
