@@ -1,7 +1,7 @@
   <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
-    <a href="tel:1300240680" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
-      <span>📞 Call Now</span>
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
     </a>
     <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>📅 Book Online</span>

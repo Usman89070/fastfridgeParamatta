@@ -127,9 +127,9 @@ $ogType = $ogType ?? 'website';
 
       <!-- Header Action Buttons -->
       <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
-        <a href="tel:1300240680" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
-          <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
-          <span>Call now</span>
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
         </a>
         <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
           Book Online 24/7
@@ -156,8 +156,8 @@ $ogType = $ogType ?? 'website';
       <a href="blog" class="block text-sky-400 py-1">Blog</a>
       <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
       <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
-        <a href="tel:1300240680" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
-          📞 Call now
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
         </a>
         <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-600">
           Book Online 24/7

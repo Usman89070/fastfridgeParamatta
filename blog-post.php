@@ -112,9 +112,9 @@ require __DIR__ . '/includes/site-header.php';
       <h2 class="text-2xl sm:text-3xl font-extrabold">Need a Hand With This?</h2>
       <p class="text-slate-300">Same-day service across Parramatta and Western Sydney, with a free quote before any work starts.</p>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="tel:1300240680" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
-          <i data-lucide="phone-call" class="w-5 h-5"></i>
-          <span>Call now</span>
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>Email Us</span>
         </a>
         <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
           <i data-lucide="calendar" class="w-5 h-5"></i>
