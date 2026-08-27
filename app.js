@@ -630,7 +630,12 @@ function initHeroContactForm() {
 // Scroll Reveal Animations
 function initScrollReveal() {
   const sections = document.querySelectorAll('body > section, body > footer');
-  if (!sections.length) return;
+  // Blocks that need to animate on their own scroll trigger, independent of
+  // the section they sit inside (e.g. two sibling blocks that should each
+  // fade in separately rather than both appearing the moment their shared
+  // parent section comes into view).
+  const soloBlocks = document.querySelectorAll('.scroll-reveal-solo');
+  if (!sections.length && !soloBlocks.length) return;
 
   // Add scroll-reveal class to all sections
   sections.forEach((section, index) => {
@@ -640,6 +645,7 @@ function initScrollReveal() {
       section.classList.add('revealed');
     }
   });
+  soloBlocks.forEach(block => block.classList.add('scroll-reveal'));
 
   // Use IntersectionObserver for performant scroll detection
   const observerOptions = {
@@ -663,4 +669,5 @@ function initScrollReveal() {
       observer.observe(section);
     }
   });
+  soloBlocks.forEach(block => observer.observe(block));
 }
