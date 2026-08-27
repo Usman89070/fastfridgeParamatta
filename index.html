@@ -308,17 +308,17 @@
               
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
-                <input type="text" id="hero_name" required placeholder="e.g. Aisha Khan" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                <input type="text" id="hero_name" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
               </div>
 
               <div class="grid grid-cols-2 gap-3">
                 <div>
                   <label class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
-                  <input type="tel" id="hero_phone" required placeholder="0400 000 000" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                  <input type="tel" id="hero_phone" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
                 </div>
                 <div>
                   <label class="block font-semibold text-slate-700 mb-1">Parramatta Suburb *</label>
-                  <input type="text" id="hero_suburb" required placeholder="e.g. Westmead, 2150" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                  <input type="text" id="hero_suburb" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
                 </div>
               </div>
 
@@ -330,12 +330,14 @@
                   <option value="Walk-in Coolroom">Coolroom / Cold Room Repair</option>
                   <option value="Freezer Repair">Freezer Repair (Upright / Chest)</option>
                   <option value="Regas & Leak Repair">Refrigerant Leak & Regas</option>
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div>
                 <label class="block font-semibold text-slate-700 mb-1">Issue / Symptom Description</label>
-                <input type="text" id="hero_symptom" placeholder="e.g. Warm fridge, light on, water leaking..." class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                <input type="text" id="hero_symptom" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
               </div>
 
               <!-- Submit Button -->
@@ -476,7 +478,7 @@
   <section id="why-us" class="py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
+      <div class="grid lg:grid-cols-12 gap-8">
         <div class="lg:col-span-7 space-y-5">
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Parramatta Chooses Us for Fridge Repair</h2>
           <p class="text-slate-700 text-base leading-relaxed">
@@ -490,7 +492,9 @@
           </p>
         </div>
         <div class="lg:col-span-5">
-          <img src="image/whyChooseUs.jpeg" alt="Why Parramatta Chooses Us for Fridge Repair" class="rounded-xl border border-slate-200 shadow-md w-full h-[320px] object-cover" loading="lazy" decoding="async">
+          <div class="h-full min-h-[220px] rounded-xl border border-slate-200 shadow-md bg-white overflow-hidden flex items-center justify-center">
+            <img src="image/whyChooseUs.jpeg" alt="Why Parramatta Chooses Us for Fridge Repair" class="w-full h-full object-contain" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
 
@@ -671,7 +675,7 @@
           </button>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="grid lg:grid-cols-12 gap-8">
           <div class="lg:col-span-7 space-y-5 text-sm text-slate-700">
             <p>
               When your home fridge stops cooling properly, starts leaking, becomes noisy or struggles to hold the right temperature, you need a repair service that is fast, practical and easy to deal with. Our residential fridge repair service in Parramatta is designed to get household refrigerators and freezers working properly again with as little disruption as possible.
@@ -687,7 +691,9 @@
             </p>
           </div>
           <div class="lg:col-span-5">
-            <img src="image/resdential-frp.jpeg" alt="Residential Fridge Repair in Parramatta" class="rounded-xl border border-slate-200 shadow-md w-full h-[320px] object-cover" loading="lazy" decoding="async">
+            <div class="h-full min-h-[220px] rounded-xl border border-slate-200 shadow-md bg-white overflow-hidden flex items-center justify-center">
+              <img src="image/resdential-frp.jpeg" alt="Residential Fridge Repair in Parramatta" class="w-full h-full object-contain" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
       </div>
@@ -709,7 +715,7 @@
           </button>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="grid lg:grid-cols-12 gap-8">
           <div class="lg:col-span-7 space-y-5 text-sm text-slate-700">
             <p>
               For restaurants, cafés, bakeries, shops and other food businesses, a refrigeration breakdown can quickly lead to spoiled stock, service disruption and food-safety concerns. Our commercial fridge repair service in Parramatta is focused on getting your equipment back to a safe operating temperature as quickly as possible.
@@ -749,7 +755,9 @@
             </p>
           </div>
           <div class="lg:col-span-5">
-            <img src="image/commeriacl-frp.jpeg" alt="Commercial Fridge Repair in Parramatta" class="rounded-xl border border-slate-200 shadow-md w-full h-[320px] object-cover" loading="lazy" decoding="async">
+            <div class="h-full min-h-[220px] rounded-xl border border-slate-200 shadow-md bg-white overflow-hidden flex items-center justify-center">
+              <img src="image/commeriacl-frp.jpeg" alt="Commercial Fridge Repair in Parramatta" class="w-full h-full object-contain" loading="lazy" decoding="async">
+            </div>
           </div>
         </div>
       </div>
@@ -2052,7 +2060,7 @@
           <div class="space-y-3 text-xs">
             <div>
               <label class="block font-medium text-slate-700 mb-1">Fridge Brand / Make</label>
-              <input type="text" id="booking_brand" placeholder="e.g. Samsung, LG, Westinghouse, Skope..." class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+              <input type="text" id="booking_brand" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
             </div>
             <div>
               <label class="block font-medium text-slate-700 mb-1">Main Symptom</label>
@@ -2115,21 +2123,21 @@
             <div class="grid sm:grid-cols-2 gap-3">
               <div>
                 <label class="block font-medium text-slate-700 mb-1">Full Name *</label>
-                <input type="text" id="book_name" required placeholder="Aisha Khan" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+                <input type="text" id="book_name" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
               <div>
                 <label class="block font-medium text-slate-700 mb-1">Phone Number *</label>
-                <input type="tel" id="book_phone" required placeholder="0400 000 000" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+                <input type="tel" id="book_phone" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
             </div>
             <div class="grid sm:grid-cols-2 gap-3">
               <div>
                 <label class="block font-medium text-slate-700 mb-1">Parramatta Suburb *</label>
-                <input type="text" id="book_suburb" required placeholder="e.g. Westmead, Harris Park" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+                <input type="text" id="book_suburb" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
               <div>
                 <label class="block font-medium text-slate-700 mb-1">Email Address</label>
-                <input type="email" id="book_email" placeholder="name@example.com.au" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+                <input type="email" id="book_email" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
             </div>
           </div>
@@ -2206,7 +2214,7 @@
 
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Suburb Location</label>
-          <input type="text" required placeholder="e.g. Parramatta 2150, Westmead" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+          <input type="text" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
         </div>
 
         <button type="submit" class="w-full py-3 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
