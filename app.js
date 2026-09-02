@@ -352,17 +352,45 @@ function initBookingWizard() {
     const name = document.getElementById('book_name')?.value || 'Valued Customer';
     const phone = document.getElementById('book_phone')?.value || '';
     const suburb = document.getElementById('book_suburb')?.value || 'Parramatta';
-    const refNum = 'FRP-' + Math.floor(100000 + Math.random() * 900000);
 
-    const refElem = document.getElementById('booking-ref-number');
-    const nameElem = document.getElementById('booking-customer-name');
-    const suburbElem = document.getElementById('booking-customer-suburb');
+    const serviceRadio = wizardForm.querySelector('input[name="booking_service"]:checked');
+    const serviceLabel = serviceRadio?.closest('label')?.querySelector('strong')?.textContent || serviceRadio?.value || '';
+    const symptomSelect = document.getElementById('booking_symptom_select');
+    const symptomLabel = symptomSelect && symptomSelect.selectedIndex >= 0
+      ? symptomSelect.options[symptomSelect.selectedIndex].text
+      : '';
+    const timeSlotSelect = document.getElementById('book_time_slot');
+    const timeSlotLabel = timeSlotSelect && timeSlotSelect.selectedIndex >= 0
+      ? timeSlotSelect.options[timeSlotSelect.selectedIndex].text
+      : '';
 
-    if (refElem) refElem.innerText = refNum;
-    if (nameElem) nameElem.innerText = name;
-    if (suburbElem) suburbElem.innerText = suburb;
+    submitInquiry(wizardForm, {
+      form_type: 'booking',
+      website: wizardForm.querySelector('input[name="website"]')?.value || '',
+      name,
+      phone,
+      email: document.getElementById('book_email')?.value || '',
+      suburb,
+      service: serviceLabel,
+      brand: document.getElementById('booking_brand')?.value || '',
+      date: document.getElementById('book_date')?.value || '',
+      time_slot: timeSlotLabel,
+      message: symptomLabel,
+    }, {
+      onSuccess: () => {
+        const refNum = 'FRP-' + Math.floor(100000 + Math.random() * 900000);
+        const refElem = document.getElementById('booking-ref-number');
+        const nameElem = document.getElementById('booking-customer-name');
+        const suburbElem = document.getElementById('booking-customer-suburb');
 
-    updateSteps(5);
+        if (refElem) refElem.innerText = refNum;
+        if (nameElem) nameElem.innerText = name;
+        if (suburbElem) suburbElem.innerText = suburb;
+
+        updateSteps(5);
+      },
+      onError: (message) => showInquiryError(wizardForm, message),
+    });
   });
 
   const resetBtn = document.getElementById('reset-booking-btn');
@@ -615,6 +643,56 @@ function initLiveTicker() {
 }
 
 // Hero Contact Form Handler
+// Posts a contact/booking form to send-inquiry.php so the business gets an
+// email straight away, with no mail app required on either end. Shared by
+// the hero contact form and the booking wizard's final step.
+function submitInquiry(form, fields, { onSuccess, onError } = {}) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : null;
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending&hellip;';
+  }
+
+  const body = new URLSearchParams(fields);
+  // Honeypot field, if present, rides along automatically as part of the
+  // form's own fields object when callers include it.
+
+  fetch('send-inquiry.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString(),
+  })
+    .then(res => res.json().catch(() => ({ success: false, message: 'Unexpected response from the server.' })))
+    .then(data => {
+      if (data.success) {
+        if (onSuccess) onSuccess();
+      } else {
+        if (onError) onError(data.message || 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      if (onError) onError('Could not reach the server. Please check your connection and try again, or email us directly at info@fridgerepairparramatta.com.au.');
+    })
+    .finally(() => {
+      if (submitBtn && originalBtnHtml !== null) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    });
+}
+
+function showInquiryError(form, message) {
+  let errorBox = form.querySelector('.inquiry-error-message');
+  if (!errorBox) {
+    errorBox = document.createElement('p');
+    errorBox.className = 'inquiry-error-message text-xs text-red-700 font-semibold bg-red-50 border border-red-200 rounded-lg px-3 py-2';
+    form.appendChild(errorBox);
+  }
+  errorBox.textContent = message;
+  errorBox.classList.remove('hidden');
+}
+
 function initHeroContactForm() {
   const heroForm = document.getElementById('hero-contact-form');
   const successBox = document.getElementById('hero-form-success');
@@ -622,8 +700,27 @@ function initHeroContactForm() {
 
   heroForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    heroForm.classList.add('hidden');
-    if (successBox) successBox.classList.remove('hidden');
+
+    const serviceSelect = document.getElementById('hero_service');
+    const serviceLabel = serviceSelect && serviceSelect.selectedIndex >= 0
+      ? serviceSelect.options[serviceSelect.selectedIndex].text
+      : '';
+
+    submitInquiry(heroForm, {
+      form_type: 'contact',
+      website: document.querySelector('#hero-contact-form input[name="website"]')?.value || '',
+      name: document.getElementById('hero_name')?.value || '',
+      phone: document.getElementById('hero_phone')?.value || '',
+      suburb: document.getElementById('hero_suburb')?.value || '',
+      service: serviceLabel,
+      message: document.getElementById('hero_symptom')?.value || '',
+    }, {
+      onSuccess: () => {
+        heroForm.classList.add('hidden');
+        if (successBox) successBox.classList.remove('hidden');
+      },
+      onError: (message) => showInquiryError(heroForm, message),
+    });
   });
 }
 
