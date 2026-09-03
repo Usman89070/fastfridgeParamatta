@@ -107,7 +107,7 @@ $ogType = $ogType ?? 'website';
       <!-- Brand Logo -->
       <a href="/" class="flex items-center group shrink-0">
         <div class="relative overflow-hidden rounded-lg">
-          <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
         </div>
       </a>
 
@@ -131,13 +131,13 @@ $ogType = $ogType ?? 'website';
           <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
           <span>Email Us</span>
         </a>
-        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
           Book Online 24/7
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
 
@@ -159,9 +159,11 @@ $ogType = $ogType ?? 'website';
         <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
           ✉️ Email Us
         </a>
-        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-600">
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
           Book Online 24/7
         </a>
       </div>
     </div>
   </header>
+
+  <main>

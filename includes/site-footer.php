@@ -1,9 +1,11 @@
+  </main>
+
   <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
-    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>✉️ Email Us</span>
     </a>
-    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>📅 Book Online</span>
     </a>
   </div>
@@ -16,7 +18,7 @@
 
         <div class="reveal-child space-y-4">
           <div class="flex items-center gap-3">
-            <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
             <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
           </div>
           <p class="text-slate-400 leading-relaxed">
@@ -67,7 +69,7 @@
 
       </div>
 
-      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500">
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
         <p class="text-center md:text-left">
           Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
         </p>

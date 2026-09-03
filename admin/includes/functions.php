@@ -8,6 +8,22 @@ function e(?string $value): string {
     return htmlspecialchars($value ?? '', ENT_QUOTES, 'UTF-8');
 }
 
+/**
+ * Reads an uploaded image's real pixel dimensions so callers can emit
+ * width/height attributes (prevents layout shift while it loads). Takes a
+ * site-relative path (as stored in blog_posts.featured_image); returns
+ * ' width="123" height="456"' ready to drop straight into an <img> tag, or
+ * an empty string if the file can't be read.
+ */
+function image_dimensions_attr(string $siteRelativePath): string {
+    $path = __DIR__ . '/../../' . ltrim($siteRelativePath, '/');
+    $size = @getimagesize($path);
+    if ($size === false) {
+        return '';
+    }
+    return ' width="' . (int) $size[0] . '" height="' . (int) $size[1] . '"';
+}
+
 function slugify(string $text): string {
     $text = mb_strtolower(trim($text), 'UTF-8');
     // Transliterate common accented characters (é, ü, etc.) to plain ASCII.

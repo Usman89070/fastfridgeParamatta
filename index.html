@@ -133,7 +133,7 @@
       <!-- Brand Logo -->
       <a href="/" class="flex items-center group shrink-0">
         <div class="relative overflow-hidden rounded-lg">
-          <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
         </div>
       </a>
 
@@ -157,13 +157,13 @@
           <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
           <span>Email Us</span>
         </a>
-        <button class="open-booking-modal px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-600 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+        <button class="open-booking-modal px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
           Book Online 24/7
         </button>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
 
@@ -185,12 +185,14 @@
         <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
           ✉️ Email Us
         </a>
-        <button class="open-booking-modal w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-600">
+        <button class="open-booking-modal w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
           Book Online 24/7
         </button>
       </div>
     </div>
   </header>
+
+  <main>
 
   <!-- 1. HERO SECTION (Dark Trades Navy Section) -->
   <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
@@ -199,6 +201,8 @@
     <div class="absolute inset-0 z-0">
       <img
         src="image/hero-fridge-repair-tech.webp"
+        width="1536"
+        height="1024"
         onerror="this.onerror=null; this.src='images/hero_refrigeration_tech.jpg';"
         alt="Licensed technician repairing a residential fridge in Parramatta"
         class="w-full h-full object-cover object-center"
@@ -255,11 +259,11 @@
 
           <!-- Direct Hero Actions -->
           <div class="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
-            <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all">
+            <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all">
               <i data-lucide="mail" class="w-5 h-5"></i>
               <span>Email Us</span>
             </a>
-            <button class="open-booking-modal flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all">
+            <button class="open-booking-modal flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">
               <i data-lucide="calendar" class="w-5 h-5"></i>
               <span>Book Online 24/7</span>
             </button>
@@ -299,7 +303,7 @@
                 </span>
                 <span class="text-slate-500 font-medium">Free Upfront Quote</span>
               </div>
-              <h3 class="text-xl font-extrabold text-slate-900 pt-1">Book Repair / Request Quote</h3>
+              <h2 class="text-xl font-extrabold text-slate-900 pt-1">Book Repair / Request Quote</h2>
               <p class="text-xs text-slate-600">Enter your details for an immediate callback from a Parramatta technician.</p>
             </div>
 
@@ -308,23 +312,23 @@
               <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                <label for="hero_name" class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
                 <input type="text" id="hero_name" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
               </div>
 
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
+                  <label for="hero_phone" class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
                   <input type="tel" id="hero_phone" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
                 </div>
                 <div>
-                  <label class="block font-semibold text-slate-700 mb-1">Parramatta Suburb *</label>
+                  <label for="hero_suburb" class="block font-semibold text-slate-700 mb-1">Parramatta Suburb *</label>
                   <input type="text" id="hero_suburb" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
                 </div>
               </div>
 
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Service Required</label>
+                <label for="hero_service" class="block font-semibold text-slate-700 mb-1">Service Required</label>
                 <select id="hero_service" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
                   <option value="Residential Fridge">Residential Fridge Repair</option>
                   <option value="Commercial Refrigeration">Commercial Fridge / Cafe / Restaurant</option>
@@ -337,12 +341,12 @@
               </div>
 
               <div>
-                <label class="block font-semibold text-slate-700 mb-1">Issue / Symptom Description</label>
+                <label for="hero_symptom" class="block font-semibold text-slate-700 mb-1">Issue / Symptom Description</label>
                 <input type="text" id="hero_symptom" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
               </div>
 
               <!-- Submit Button -->
-              <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-sky-600 hover:bg-sky-500 shadow-md transition-all flex items-center justify-center gap-2">
+              <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all flex items-center justify-center gap-2">
                 <i data-lucide="send" class="w-4 h-4"></i>
                 <span>Submit For Fast Technician Callback</span>
               </button>
@@ -493,7 +497,7 @@
           </p>
         </div>
         <div class="lg:col-span-5">
-          <img src="image/whyChooseUs.jpeg" alt="Why Parramatta Chooses Us for Fridge Repair" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
+          <img src="image/whyChooseUs.jpeg" width="800" height="800" alt="Why Parramatta Chooses Us for Fridge Repair" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -628,13 +632,13 @@
 
         <div class="lg:col-span-5 space-y-4">
           <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-            <img src="images/service_van_parramatta.jpg" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop';}; this.src='service_van_parramatta_1786611841930.jpg';" alt="Fridge Repair Parramatta Service Van" class="w-full h-[340px] object-cover" loading="lazy" decoding="async">
+            <img src="images/service_van_parramatta.jpg" width="1200" height="800" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop';}; this.src='service_van_parramatta_1786611841930.jpg';" alt="Fridge Repair Parramatta Service Van" class="w-full h-[340px] object-cover" loading="lazy" decoding="async">
           </div>
           <div class="p-6 rounded-xl bg-slate-800 border border-slate-700 space-y-3 text-xs text-slate-300">
-            <h4 class="text-sm font-bold text-white flex items-center gap-2">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
               <i data-lucide="navigation" class="w-4 h-4 text-sky-400"></i>
               Fastest Dispatch Corridors
-            </h4>
+            </h3>
             <ul class="space-y-2">
               <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Parramatta CBD, Parramatta Square & Church St Eat Street</li>
               <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Westmead Health Precinct & Medical Hubs</li>
@@ -661,7 +665,7 @@
       <div class="scroll-reveal-solo p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-6">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-lg bg-sky-600 text-white flex items-center justify-center shrink-0 shadow-md">
+            <div class="w-12 h-12 rounded-lg bg-sky-700 text-white flex items-center justify-center shrink-0 shadow-md">
               <i data-lucide="home" class="w-6 h-6"></i>
             </div>
             <div>
@@ -669,7 +673,7 @@
               <p class="text-slate-600 text-sm">Home fridge repairs, domestic freezer repairs and household refrigerator servicing done properly.</p>
             </div>
           </div>
-          <button class="open-booking-modal px-5 py-2.5 rounded-lg text-sm font-bold bg-sky-600 text-white hover:bg-sky-500 shadow-md" data-service="residential">
+          <button class="open-booking-modal px-5 py-2.5 rounded-lg text-sm font-bold bg-sky-700 text-white hover:bg-sky-500 shadow-md" data-service="residential">
             Book Home Repair
           </button>
         </div>
@@ -690,7 +694,7 @@
             </p>
           </div>
           <div class="lg:col-span-5">
-            <img src="image/resdential-frp.jpeg" alt="Residential Fridge Repair in Parramatta" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
+            <img src="image/resdential-frp.jpeg" width="900" height="635" alt="Residential Fridge Repair in Parramatta" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -752,7 +756,7 @@
             </p>
           </div>
           <div class="lg:col-span-5">
-            <img src="image/commeriacl-frp.jpeg" alt="Commercial Fridge Repair in Parramatta" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
+            <img src="image/commeriacl-frp.jpeg" width="800" height="800" alt="Commercial Fridge Repair in Parramatta" class="w-full h-auto rounded-xl border border-slate-200 shadow-md" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -778,7 +782,7 @@
           </ul>
         </div>
         <div class="lg:col-span-5">
-          <img src="images/commercial_coolroom_repair.jpg" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200&auto=format&fit=crop';}; this.src='commercial_coolroom_repair_1786611822533.jpg';" alt="Coolroom Technician Repairing Control Unit" class="rounded-xl border border-slate-200 w-full h-[260px] object-cover" loading="lazy" decoding="async">
+          <img src="images/commercial_coolroom_repair.jpg" width="1200" height="800" onerror="this.onerror=function(){this.onerror=null; this.src='https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?q=80&w=1200&auto=format&fit=crop';}; this.src='commercial_coolroom_repair_1786611822533.jpg';" alt="Coolroom Technician Repairing Control Unit" class="rounded-xl border border-slate-200 w-full h-[260px] object-cover" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -1149,7 +1153,7 @@
           </div>
 
           <div class="pt-2">
-            <button class="open-booking-modal px-8 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all" data-service="emergency">
+            <button class="open-booking-modal px-8 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all" data-service="emergency">
               Book Emergency Repair Online
             </button>
           </div>
@@ -1168,7 +1172,7 @@
             <div class="flex justify-between text-slate-300"><span>Avg Response Time:</span><span class="text-sky-400 font-bold">~45 Minutes</span></div>
             <div class="flex justify-between text-slate-300"><span>After-Hours Surcharge:</span><span class="text-white font-bold">Zero Hidden Fees</span></div>
           </div>
-          <a href="mailto:info@fridgerepairparramatta.com.au" class="block w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-500 shadow-md">
+          <a href="mailto:info@fridgerepairparramatta.com.au" class="block w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-700 text-white hover:bg-emerald-500 shadow-md">
             Email Duty Technician Now
           </a>
         </div>
@@ -1309,37 +1313,37 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">1</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">1</span>
           <h3 class="text-lg font-bold text-slate-900">Book Online 24/7</h3>
           <p class="text-xs text-slate-600 leading-relaxed">Reach us 24/7 through the online booking form. Tell us the symptom and the make if you know it.</p>
         </div>
 
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">2</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">2</span>
           <h3 class="text-lg font-bold text-slate-900">Free Upfront Quote</h3>
           <p class="text-xs text-slate-600 leading-relaxed">We give you an upfront, no-obligation quote, so you know the cost before any work begins.</p>
         </div>
 
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">3</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">3</span>
           <h3 class="text-lg font-bold text-slate-900">Same-Day Visit</h3>
           <p class="text-xs text-slate-600 leading-relaxed">Wherever a slot allows, a technician attends the same day, van stocked with common spare parts.</p>
         </div>
 
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">4</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">4</span>
           <h3 class="text-lg font-bold text-slate-900">Systematic Diagnosis</h3>
           <p class="text-xs text-slate-600 leading-relaxed">A systematic diagnosis pinpoints the real fault, no guessing, no shotgunning parts at the problem.</p>
         </div>
 
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">5</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">5</span>
           <h3 class="text-lg font-bold text-slate-900">On-Site Repair</h3>
           <p class="text-xs text-slate-600 leading-relaxed">Most repairs are completed on the spot. If a special-order part is required, we tell you the timeline honestly.</p>
         </div>
 
         <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <span class="w-8 h-8 rounded-full bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center">6</span>
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">6</span>
           <h3 class="text-lg font-bold text-slate-900">Warranty & Prevention</h3>
           <p class="text-xs text-slate-600 leading-relaxed">Every repair is backed by our 1-year workmanship warranty, plus practical prevention tips to keep it running through summer.</p>
         </div>
@@ -1413,19 +1417,19 @@
         </h3>
         <form id="rr-calculator-form" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Fridge Age (Years)</label>
+            <label for="rr_age" class="block text-xs font-semibold text-slate-700 mb-1">Fridge Age (Years)</label>
             <input type="number" id="rr_age" value="5" min="1" max="25" class="w-full px-3.5 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Original Price ($ AUD)</label>
+            <label for="rr_orig_price" class="block text-xs font-semibold text-slate-700 mb-1">Original Price ($ AUD)</label>
             <input type="number" id="rr_orig_price" value="1400" step="100" class="w-full px-3.5 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Estimated Repair ($ AUD)</label>
+            <label for="rr_est_repair" class="block text-xs font-semibold text-slate-700 mb-1">Estimated Repair ($ AUD)</label>
             <input type="number" id="rr_est_repair" value="280" step="50" class="w-full px-3.5 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Fridge Category</label>
+            <label for="rr_type" class="block text-xs font-semibold text-slate-700 mb-1">Fridge Category</label>
             <select id="rr_type" class="w-full px-3.5 py-2 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               <option value="standard">Standard Domestic</option>
               <option value="premium">Premium French Door / Built-in</option>
@@ -1433,7 +1437,7 @@
             </select>
           </div>
           <div class="sm:col-span-2 lg:col-span-4">
-            <button type="submit" class="px-6 py-2.5 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
+            <button type="submit" class="px-6 py-2.5 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
               Calculate Recommendation
             </button>
           </div>
@@ -1855,11 +1859,11 @@
       </div>
 
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
           <i data-lucide="mail" class="w-5 h-5"></i>
           <span>Email Us</span>
         </a>
-        <button class="open-booking-modal w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+        <button class="open-booking-modal w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
           <i data-lucide="calendar" class="w-5 h-5"></i>
           <span>Book Online 24/7</span>
         </button>
@@ -1884,12 +1888,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
-    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>✉️ Email Us</span>
     </a>
-    <button class="open-booking-modal flex-1 py-3 rounded-xl bg-sky-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+    <button class="open-booking-modal flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
       <span>📅 Book Online</span>
     </button>
   </div>
@@ -1902,7 +1908,7 @@
         
         <div class="reveal-child space-y-4">
           <div class="flex items-center gap-3">
-            <img src="image/FFp-logo.webp" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
             <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
           </div>
           <p class="text-slate-400 leading-relaxed">
@@ -1953,7 +1959,7 @@
 
       </div>
 
-      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500">
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
         <p class="text-center md:text-left">
           Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
         </p>
@@ -1978,7 +1984,7 @@
           </h3>
           <p class="text-xs text-slate-400">Fast Response · Same-Day Slots · Free Upfront Quote</p>
         </div>
-        <button class="close-booking-modal p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+        <button class="close-booking-modal p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-label="Close booking form">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
@@ -1986,7 +1992,7 @@
       <!-- Wizard Progress Indicators -->
       <div class="bg-slate-100 border-b border-slate-200 px-6 py-3 flex items-center justify-between text-xs">
         <div class="flex items-center gap-2">
-          <span class="wizard-step-indicator w-6 h-6 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center">1</span>
+          <span class="wizard-step-indicator w-6 h-6 rounded-full bg-sky-700 text-white font-bold flex items-center justify-center">1</span>
           <span class="text-slate-800 font-semibold">Service</span>
         </div>
         <div class="h-0.5 flex-1 mx-2 bg-slate-300"></div>
@@ -2044,7 +2050,7 @@
             </label>
           </div>
           <div class="flex justify-end pt-4">
-            <button type="button" id="next-step-1" class="px-6 py-2.5 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500">
+            <button type="button" id="next-step-1" class="px-6 py-2.5 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500">
               Next Step &rarr;
             </button>
           </div>
@@ -2055,11 +2061,11 @@
           <h4 class="text-sm font-bold text-slate-900">Step 2: Brand & Primary Symptom</h4>
           <div class="space-y-3 text-xs">
             <div>
-              <label class="block font-medium text-slate-700 mb-1">Fridge Brand / Make</label>
+              <label for="booking_brand" class="block font-medium text-slate-700 mb-1">Fridge Brand / Make</label>
               <input type="text" id="booking_brand" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
             </div>
             <div>
-              <label class="block font-medium text-slate-700 mb-1">Main Symptom</label>
+              <label for="booking_symptom_select" class="block font-medium text-slate-700 mb-1">Main Symptom</label>
               <select id="booking_symptom_select" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
                 <option value="Fridge not cooling but light on">Fridge not cooling but the light is on</option>
                 <option value="Fridge not cooling but freezer works">Fridge not cooling but freezer works</option>
@@ -2078,7 +2084,7 @@
             <button type="button" id="prev-step-2" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 text-xs font-semibold">
               &larr; Back
             </button>
-            <button type="button" id="next-step-2" class="px-6 py-2.5 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500">
+            <button type="button" id="next-step-2" class="px-6 py-2.5 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500">
               Next Step &rarr;
             </button>
           </div>
@@ -2089,11 +2095,11 @@
           <h4 class="text-sm font-bold text-slate-900">Step 3: Preferred Date & Time Window</h4>
           <div class="grid sm:grid-cols-2 gap-4 text-xs">
             <div>
-              <label class="block font-medium text-slate-700 mb-1">Preferred Date</label>
+              <label for="book_date" class="block font-medium text-slate-700 mb-1">Preferred Date</label>
               <input type="date" id="book_date" value="2026-03-15" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
             </div>
             <div>
-              <label class="block font-medium text-slate-700 mb-1">Time Window</label>
+              <label for="book_time_slot" class="block font-medium text-slate-700 mb-1">Time Window</label>
               <select id="book_time_slot" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
                 <option>Same-Day Emergency (Under 2 Hours)</option>
                 <option>Morning (8am - 12pm)</option>
@@ -2106,7 +2112,7 @@
             <button type="button" id="prev-step-3" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 text-xs font-semibold">
               &larr; Back
             </button>
-            <button type="button" id="next-step-3" class="px-6 py-2.5 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500">
+            <button type="button" id="next-step-3" class="px-6 py-2.5 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500">
               Next Step &rarr;
             </button>
           </div>
@@ -2118,21 +2124,21 @@
           <div class="space-y-3 text-xs">
             <div class="grid sm:grid-cols-2 gap-3">
               <div>
-                <label class="block font-medium text-slate-700 mb-1">Full Name *</label>
+                <label for="book_name" class="block font-medium text-slate-700 mb-1">Full Name *</label>
                 <input type="text" id="book_name" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
               <div>
-                <label class="block font-medium text-slate-700 mb-1">Phone Number *</label>
+                <label for="book_phone" class="block font-medium text-slate-700 mb-1">Phone Number *</label>
                 <input type="tel" id="book_phone" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
             </div>
             <div class="grid sm:grid-cols-2 gap-3">
               <div>
-                <label class="block font-medium text-slate-700 mb-1">Parramatta Suburb *</label>
+                <label for="book_suburb" class="block font-medium text-slate-700 mb-1">Parramatta Suburb *</label>
                 <input type="text" id="book_suburb" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
               <div>
-                <label class="block font-medium text-slate-700 mb-1">Email Address</label>
+                <label for="book_email" class="block font-medium text-slate-700 mb-1">Email Address</label>
                 <input type="email" id="book_email" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
               </div>
             </div>
@@ -2147,7 +2153,7 @@
             <button type="button" id="prev-step-4" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 text-xs font-semibold">
               &larr; Back
             </button>
-            <button type="submit" class="px-8 py-3 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
+            <button type="submit" class="px-8 py-3 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
               Confirm & Book Technician
             </button>
           </div>
@@ -2191,14 +2197,14 @@
           </h3>
           <p class="text-xs text-slate-400">Transparent upfront pricing with zero call-out surprises.</p>
         </div>
-        <button class="close-quote-modal p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+        <button class="close-quote-modal p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-label="Close quote calculator">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
       <form id="quick-quote-form" class="p-6 space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Service Type</label>
+          <label for="quote_service_type" class="block text-xs font-semibold text-slate-700 mb-1">Service Type</label>
           <select id="quote_service_type" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
             <option value="residential">Residential Fridge Repair</option>
             <option value="commercial">Commercial Fridge Repair</option>
@@ -2209,11 +2215,11 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Suburb Location</label>
-          <input type="text" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
+          <label for="quote_suburb" class="block text-xs font-semibold text-slate-700 mb-1">Suburb Location</label>
+          <input type="text" id="quote_suburb" required class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm">
         </div>
 
-        <button type="submit" class="w-full py-3 rounded-lg bg-sky-600 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
+        <button type="submit" class="w-full py-3 rounded-lg bg-sky-700 text-white font-bold text-sm hover:bg-sky-500 shadow-md">
           Generate Instant Estimate
         </button>
 

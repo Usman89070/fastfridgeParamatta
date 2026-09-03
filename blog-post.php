@@ -23,7 +23,7 @@ if (!$post) {
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
           <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Article Not Found</h1>
           <p class="text-slate-600">This article may have been moved or unpublished.</p>
-          <a href="blog" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all">Back to the Blog</a>
+          <a href="blog" class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">Back to the Blog</a>
         </div>
       </section>
     <?php
@@ -71,7 +71,7 @@ require __DIR__ . '/includes/site-header.php';
 
         <div class="lg:col-span-8 max-w-3xl">
           <?php if (!empty($post['featured_image'])): ?>
-            <img src="<?= e($post['featured_image']) ?>" alt="<?= e($post['title']) ?>" class="w-full h-auto rounded-2xl border border-slate-200 shadow-md mb-10">
+            <img src="<?= e($post['featured_image']) ?>"<?= image_dimensions_attr($post['featured_image']) ?> alt="<?= e($post['title']) ?>" class="w-full h-auto rounded-2xl border border-slate-200 shadow-md mb-10">
           <?php endif; ?>
           <div class="post-content text-slate-700">
             <?= $post['content'] ?>
@@ -112,11 +112,11 @@ require __DIR__ . '/includes/site-header.php';
       <h2 class="text-2xl sm:text-3xl font-extrabold">Need a Hand With This?</h2>
       <p class="text-slate-300">Same-day service across Parramatta and Western Sydney, with a free quote before any work starts.</p>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
           <i data-lucide="mail" class="w-5 h-5"></i>
           <span>Email Us</span>
         </a>
-        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-600 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
           <i data-lucide="calendar" class="w-5 h-5"></i>
           <span>Book Online 24/7</span>
         </a>
