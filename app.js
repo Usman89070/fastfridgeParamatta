@@ -1,10 +1,13 @@
 /* Fridge Repair Parramatta - Interactive Application Logic */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initInitialHashScrollFix();
   initScrollReveal();
   initTiltCards();
   initScrollProgress();
   initHeader();
+  initAgencyDropdown();
+  initActiveNavLinks();
   initModals();
   initBookingWizard();
   initHeroContactForm();
@@ -17,6 +20,113 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveTicker();
   initLucideIcons();
 });
+
+// Fix janky/broken scroll-to-#section on the very first page load. The
+// browser performs its native jump-to-fragment before layout has actually
+// settled (fonts/images still loading, scroll-reveal not yet initialised),
+// and the site's global `scroll-behavior: smooth` then animates that
+// premature jump over a long, visibly broken distance as the target's real
+// position keeps shifting under it - looking like the destination section
+// "hasn't loaded" until a second click (which only has a short, already-
+// mostly-correct distance left to travel) fixes it up. Once everything has
+// actually finished loading, snap straight to the correct final position
+// instead of trusting wherever that early native jump left off.
+function initInitialHashScrollFix() {
+  const hash = window.__initialHash;
+  if (!hash) return;
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      // Revealing a section (adding .revealed) still plays its 0.7s
+      // tilt-to-flat CSS transition even when the class is added instantly -
+      // the transition fires off the computed-style change, not off how the
+      // class got there. Left alone, that transition keeps animating the
+      // target's transform for hundreds of ms after we've already scrolled,
+      // dragging the target's real position out from under a scroll that was
+      // computed before the animation started. Force the target (and any
+      // scroll-reveal ancestor) straight to its final, settled state with no
+      // transition, so the position we scroll to is already the real one.
+      let el = target;
+      while (el && el !== document.body) {
+        if (el.classList && el.classList.contains('scroll-reveal') && !el.classList.contains('revealed')) {
+          const previousTransition = el.style.transition;
+          el.style.transition = 'none';
+          el.classList.add('revealed');
+          el.offsetHeight; // force a synchronous reflow so the transition-less state applies immediately
+          el.style.transition = previousTransition;
+        }
+        el = el.parentElement;
+      }
+
+      const html = document.documentElement;
+      const previousBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start' });
+      history.replaceState(null, '', location.pathname + location.search + hash);
+      requestAnimationFrame(() => {
+        html.style.scrollBehavior = previousBehavior;
+      });
+    });
+  });
+}
+
+// "Agency" Header Dropdown (About / Blog / Reviews / Contact)
+function initAgencyDropdown() {
+  const btn = document.getElementById('agency-dropdown-btn');
+  const panel = document.getElementById('agency-dropdown-panel');
+  if (!btn || !panel) return;
+
+  const chevron = btn.querySelector('[data-lucide="chevron-down"]');
+
+  const closeDropdown = () => {
+    panel.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    if (chevron) chevron.classList.remove('rotate-180');
+  };
+  const openDropdown = () => {
+    panel.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    if (chevron) chevron.classList.add('rotate-180');
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (panel.classList.contains('hidden')) {
+      openDropdown();
+    } else {
+      closeDropdown();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!panel.contains(e.target) && !btn.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDropdown();
+  });
+}
+
+// Highlight the current page's link inside the Agency dropdown (and mobile menu equivalent)
+function initActiveNavLinks() {
+  const current = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isBlogPost = current.startsWith('blog-');
+
+  document.querySelectorAll('a.agency-link').forEach(link => {
+    const hrefFile = link.getAttribute('href').split('#')[0].toLowerCase();
+    const isMatch = hrefFile === current || (hrefFile === 'blog.html' && isBlogPost);
+    if (isMatch) {
+      link.classList.remove('text-slate-300');
+      link.classList.add('text-sky-400', 'font-semibold');
+      const trigger = document.getElementById('agency-dropdown-btn');
+      if (trigger) trigger.classList.add('text-sky-400');
+    }
+  });
+}
 
 // 3D Cursor-Tracked Card Tilt (skipped on touch devices & reduced-motion)
 function initTiltCards() {
@@ -86,6 +196,14 @@ function initHeader() {
   if (mobileBtn && mobileMenu) {
     mobileBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close the panel once a link inside it is actually used, instead of
+    // leaving it open over the destination section/page after navigating.
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
   }
 }
@@ -234,17 +352,45 @@ function initBookingWizard() {
     const name = document.getElementById('book_name')?.value || 'Valued Customer';
     const phone = document.getElementById('book_phone')?.value || '';
     const suburb = document.getElementById('book_suburb')?.value || 'Parramatta';
-    const refNum = 'FRP-' + Math.floor(100000 + Math.random() * 900000);
 
-    const refElem = document.getElementById('booking-ref-number');
-    const nameElem = document.getElementById('booking-customer-name');
-    const suburbElem = document.getElementById('booking-customer-suburb');
+    const serviceRadio = wizardForm.querySelector('input[name="booking_service"]:checked');
+    const serviceLabel = serviceRadio?.closest('label')?.querySelector('strong')?.textContent || serviceRadio?.value || '';
+    const symptomSelect = document.getElementById('booking_symptom_select');
+    const symptomLabel = symptomSelect && symptomSelect.selectedIndex >= 0
+      ? symptomSelect.options[symptomSelect.selectedIndex].text
+      : '';
+    const timeSlotSelect = document.getElementById('book_time_slot');
+    const timeSlotLabel = timeSlotSelect && timeSlotSelect.selectedIndex >= 0
+      ? timeSlotSelect.options[timeSlotSelect.selectedIndex].text
+      : '';
 
-    if (refElem) refElem.innerText = refNum;
-    if (nameElem) nameElem.innerText = name;
-    if (suburbElem) suburbElem.innerText = suburb;
+    submitInquiry(wizardForm, {
+      form_type: 'booking',
+      website: wizardForm.querySelector('input[name="website"]')?.value || '',
+      name,
+      phone,
+      email: document.getElementById('book_email')?.value || '',
+      suburb,
+      service: serviceLabel,
+      brand: document.getElementById('booking_brand')?.value || '',
+      date: document.getElementById('book_date')?.value || '',
+      time_slot: timeSlotLabel,
+      message: symptomLabel,
+    }, {
+      onSuccess: () => {
+        const refNum = 'FRP-' + Math.floor(100000 + Math.random() * 900000);
+        const refElem = document.getElementById('booking-ref-number');
+        const nameElem = document.getElementById('booking-customer-name');
+        const suburbElem = document.getElementById('booking-customer-suburb');
 
-    updateSteps(5);
+        if (refElem) refElem.innerText = refNum;
+        if (nameElem) nameElem.innerText = name;
+        if (suburbElem) suburbElem.innerText = suburb;
+
+        updateSteps(5);
+      },
+      onError: (message) => showInquiryError(wizardForm, message),
+    });
   });
 
   const resetBtn = document.getElementById('reset-booking-btn');
@@ -497,6 +643,56 @@ function initLiveTicker() {
 }
 
 // Hero Contact Form Handler
+// Posts a contact/booking form to send-inquiry.php so the business gets an
+// email straight away, with no mail app required on either end. Shared by
+// the hero contact form and the booking wizard's final step.
+function submitInquiry(form, fields, { onSuccess, onError } = {}) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : null;
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending&hellip;';
+  }
+
+  const body = new URLSearchParams(fields);
+  // Honeypot field, if present, rides along automatically as part of the
+  // form's own fields object when callers include it.
+
+  fetch('send-inquiry.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString(),
+  })
+    .then(res => res.json().catch(() => ({ success: false, message: 'Unexpected response from the server.' })))
+    .then(data => {
+      if (data.success) {
+        if (onSuccess) onSuccess();
+      } else {
+        if (onError) onError(data.message || 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      if (onError) onError('Could not reach the server. Please check your connection and try again, or email us directly at info@fridgerepairparramatta.com.au.');
+    })
+    .finally(() => {
+      if (submitBtn && originalBtnHtml !== null) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    });
+}
+
+function showInquiryError(form, message) {
+  let errorBox = form.querySelector('.inquiry-error-message');
+  if (!errorBox) {
+    errorBox = document.createElement('p');
+    errorBox.className = 'inquiry-error-message text-xs text-red-700 font-semibold bg-red-50 border border-red-200 rounded-lg px-3 py-2';
+    form.appendChild(errorBox);
+  }
+  errorBox.textContent = message;
+  errorBox.classList.remove('hidden');
+}
+
 function initHeroContactForm() {
   const heroForm = document.getElementById('hero-contact-form');
   const successBox = document.getElementById('hero-form-success');
@@ -504,15 +700,39 @@ function initHeroContactForm() {
 
   heroForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    heroForm.classList.add('hidden');
-    if (successBox) successBox.classList.remove('hidden');
+
+    const serviceSelect = document.getElementById('hero_service');
+    const serviceLabel = serviceSelect && serviceSelect.selectedIndex >= 0
+      ? serviceSelect.options[serviceSelect.selectedIndex].text
+      : '';
+
+    submitInquiry(heroForm, {
+      form_type: 'contact',
+      website: document.querySelector('#hero-contact-form input[name="website"]')?.value || '',
+      name: document.getElementById('hero_name')?.value || '',
+      phone: document.getElementById('hero_phone')?.value || '',
+      suburb: document.getElementById('hero_suburb')?.value || '',
+      service: serviceLabel,
+      message: document.getElementById('hero_symptom')?.value || '',
+    }, {
+      onSuccess: () => {
+        heroForm.classList.add('hidden');
+        if (successBox) successBox.classList.remove('hidden');
+      },
+      onError: (message) => showInquiryError(heroForm, message),
+    });
   });
 }
 
 // Scroll Reveal Animations
 function initScrollReveal() {
   const sections = document.querySelectorAll('body > section, body > footer');
-  if (!sections.length) return;
+  // Blocks that need to animate on their own scroll trigger, independent of
+  // the section they sit inside (e.g. two sibling blocks that should each
+  // fade in separately rather than both appearing the moment their shared
+  // parent section comes into view).
+  const soloBlocks = document.querySelectorAll('.scroll-reveal-solo');
+  if (!sections.length && !soloBlocks.length) return;
 
   // Add scroll-reveal class to all sections
   sections.forEach((section, index) => {
@@ -522,6 +742,7 @@ function initScrollReveal() {
       section.classList.add('revealed');
     }
   });
+  soloBlocks.forEach(block => block.classList.add('scroll-reveal'));
 
   // Use IntersectionObserver for performant scroll detection
   const observerOptions = {
@@ -545,4 +766,5 @@ function initScrollReveal() {
       observer.observe(section);
     }
   });
+  soloBlocks.forEach(block => observer.observe(block));
 }
