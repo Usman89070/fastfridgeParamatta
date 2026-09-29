@@ -47,7 +47,7 @@
             <li><a href="/#services" class="hover:text-sky-400">Ice Machine Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Display Fridge Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Salad Bar Fridge Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Emergency Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Fridge Maintenance</a></li>
           </ul>
@@ -82,6 +82,6 @@
   </footer>
 
   <!-- Application Logic -->
-  <script src="app.js?v=9"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initBookingWizard();
   initHeroContactForm();
+  initEmergencyForm();
   initQuoteCalculator();
   initRepairReplaceCalculator();
   initSymptomAnalyzer();
@@ -724,9 +725,50 @@ function initHeroContactForm() {
   });
 }
 
+// Emergency page's "Request an Emergency Callback" form.
+function initEmergencyForm() {
+  const emergencyForm = document.getElementById('emergency-contact-form');
+  const successBox = document.getElementById('emergency-form-success');
+  if (!emergencyForm) return;
+
+  emergencyForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const faultSelect = document.getElementById('emg_fault_type');
+    const faultLabel = faultSelect && faultSelect.selectedIndex >= 0
+      ? faultSelect.options[faultSelect.selectedIndex].text
+      : '';
+    const urgencySelect = document.getElementById('emg_urgency');
+    const urgencyLabel = urgencySelect && urgencySelect.selectedIndex >= 0
+      ? urgencySelect.options[urgencySelect.selectedIndex].text
+      : '';
+
+    submitInquiry(emergencyForm, {
+      form_type: 'emergency',
+      website: emergencyForm.querySelector('input[name="website"]')?.value || '',
+      name: document.getElementById('emg_name')?.value || '',
+      phone: document.getElementById('emg_phone')?.value || '',
+      suburb: document.getElementById('emg_suburb')?.value || '',
+      fault_type: faultLabel,
+      urgency: urgencyLabel,
+      message: document.getElementById('emg_details')?.value || '',
+    }, {
+      onSuccess: () => {
+        emergencyForm.classList.add('hidden');
+        if (successBox) successBox.classList.remove('hidden');
+      },
+      onError: (message) => showInquiryError(emergencyForm, message),
+    });
+  });
+}
+
 // Scroll Reveal Animations
 function initScrollReveal() {
-  const sections = document.querySelectorAll('body > section, body > footer');
+  // Sections live directly under <body> on pages without a <main> wrapper,
+  // and under <main> on pages that have one (added later for the
+  // accessibility landmark) - match both so reveal animation keeps working
+  // everywhere.
+  const sections = document.querySelectorAll('body > section, main > section, body > footer');
   // Blocks that need to animate on their own scroll trigger, independent of
   // the section they sit inside (e.g. two sibling blocks that should each
   // fade in separately rather than both appearing the moment their shared

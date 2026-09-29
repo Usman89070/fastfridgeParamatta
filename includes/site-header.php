@@ -123,6 +123,7 @@ $ogType = $ogType ?? 'website';
         <a href="about" class="hover:text-sky-400 transition-colors">About</a>
         <a href="blog" class="text-sky-400 transition-colors">Blog</a>
         <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
       </nav>
 
       <!-- Header Action Buttons -->
@@ -155,6 +156,7 @@ $ogType = $ogType ?? 'website';
       <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
       <a href="blog" class="block text-sky-400 py-1">Blog</a>
       <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
       <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
         <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
           ✉️ Email Us

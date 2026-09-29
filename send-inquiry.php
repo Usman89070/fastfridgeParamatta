@@ -61,6 +61,8 @@ $service  = clean_line('service');
 $brand    = clean_line('brand');
 $date     = clean_line('date');
 $timeSlot = clean_line('time_slot');
+$faultType = clean_line('fault_type', 80);
+$urgency   = clean_line('urgency', 80);
 $message  = clean_multiline('message');
 
 if ($name === '' || $phone === '') {
@@ -76,10 +78,24 @@ if ($email !== '') {
 }
 
 $isBooking = $formType === 'booking';
-$subject = ($isBooking ? 'New Booking Request' : 'New Website Enquiry') . ' - ' . $name . ($suburb !== '' ? ' (' . $suburb . ')' : '');
+$isEmergency = $formType === 'emergency';
+if ($isEmergency) {
+    $subjectLabel = 'EMERGENCY Call-Out Request';
+} elseif ($isBooking) {
+    $subjectLabel = 'New Booking Request';
+} else {
+    $subjectLabel = 'New Website Enquiry';
+}
+$subject = ($isEmergency ? '🚨 ' : '') . $subjectLabel . ' - ' . $name . ($suburb !== '' ? ' (' . $suburb . ')' : '');
 
 $lines = [];
-$lines[] = ($isBooking ? 'New online booking request' : 'New enquiry') . ' from fridgerepairparramatta.com.au';
+if ($isEmergency) {
+    $lines[] = 'EMERGENCY call-out request from fridgerepairparramatta.com.au/emergency-fridge-repair';
+} elseif ($isBooking) {
+    $lines[] = 'New online booking request from fridgerepairparramatta.com.au';
+} else {
+    $lines[] = 'New enquiry from fridgerepairparramatta.com.au';
+}
 $lines[] = str_repeat('-', 48);
 $lines[] = 'Name: ' . $name;
 $lines[] = 'Phone: ' . $phone;
@@ -88,6 +104,12 @@ if ($validEmail !== null) {
 }
 if ($suburb !== '') {
     $lines[] = 'Suburb: ' . $suburb;
+}
+if ($urgency !== '') {
+    $lines[] = 'Urgency: ' . $urgency;
+}
+if ($faultType !== '') {
+    $lines[] = 'What\'s broken: ' . $faultType;
 }
 if ($service !== '') {
     $lines[] = 'Service: ' . $service;
@@ -119,7 +141,12 @@ if ($validEmail !== null) {
 }
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 
-$sent = @mail(RECIPIENT, $subject, $body, implode("\r\n", $headers));
+// mail() sends the Subject header raw; a non-ASCII emoji in it needs
+// RFC 2047 MIME encoding or it can arrive mangled (or get the header
+// dropped) in some mail clients.
+$encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n");
+
+$sent = @mail(RECIPIENT, $encodedSubject, $body, implode("\r\n", $headers));
 
 if (!$sent) {
     respond(false, 'Sorry, something went wrong sending your details. Please email us directly at info@fridgerepairparramatta.com.au.');
