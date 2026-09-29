@@ -33,6 +33,7 @@
             <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
             <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
             <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
           </div>
         </div>
 
@@ -48,6 +49,7 @@
             <li><a href="/#services" class="hover:text-sky-400">Display Fridge Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Salad Bar Fridge Repair</a></li>
             <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
             <li><a href="/#services" class="hover:text-sky-400">Fridge Maintenance</a></li>
           </ul>
