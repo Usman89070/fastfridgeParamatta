@@ -40,18 +40,19 @@
         <div class="reveal-child space-y-3">
           <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
           <ul class="space-y-2">
-            <li><a href="/#services" class="hover:text-sky-400">Residential Fridge Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Freezer Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Coolroom Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Ice Machine Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Display Fridge Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Salad Bar Fridge Repair</a></li>
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="services#regas-service" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
             <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
             <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
-            <li><a href="/#services" class="hover:text-sky-400">Fridge Maintenance</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
           </ul>
         </div>
 
