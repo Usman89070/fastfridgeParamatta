@@ -31,7 +31,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(about|contact|emergency-fridge-repair|fridge-repair-cost|services)/?$ $1.html [L,QSA]
 
-# 2c. Block direct web access to backend-only folders and files. These are
+# 2c. sitemap.xml is generated on the fly by sitemap.php (scans the site for
+# pages and queries published blog posts), so new pages/posts show up
+# automatically. This rule always wins over any physical sitemap.xml file.
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# 2d. Block direct web access to backend-only folders and files. These are
 # only ever loaded via PHP `require`, never requested directly by a browser.
 RewriteRule ^admin/includes/ - [F,L]
 RewriteRule ^includes/ - [F,L]
