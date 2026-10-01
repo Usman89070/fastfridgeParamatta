@@ -59,6 +59,7 @@
         <div class="reveal-child space-y-3">
           <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
           <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
             Samsung · LG · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
           </p>
         </div>

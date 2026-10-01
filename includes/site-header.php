@@ -114,7 +114,7 @@ $ogType = $ogType ?? 'website';
       <!-- Desktop Nav Links -->
       <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
         <a href="services" class="hover:text-sky-400 transition-colors">Services</a>
-        <a href="/#brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
         <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
         <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
         <a href="about" class="hover:text-sky-400 transition-colors">About</a>
@@ -145,7 +145,7 @@ $ogType = $ogType ?? 'website';
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
       <a href="services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
-      <a href="/#brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
       <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
       <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
       <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>

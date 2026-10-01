@@ -27,6 +27,7 @@ $pageSettings = [
     'emergency-fridge-repair'  => ['priority' => '0.9', 'changefreq' => 'weekly'],
     'fridge-repair-cost'       => ['priority' => '0.9', 'changefreq' => 'monthly'],
     'services'                 => ['priority' => '0.9', 'changefreq' => 'monthly'],
+    'brands'                   => ['priority' => '0.9', 'changefreq' => 'monthly'],
 ];
 $defaultPriority = '0.6';
 $defaultChangefreq = 'monthly';
