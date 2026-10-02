@@ -43,13 +43,14 @@ try {
     $defaultPriority = '0.6';
     $defaultChangefreq = 'monthly';
 
-    // Homepage (and its legacy /fridge-repair-parramatta/ slug alias), pinned
-    // first with top priority. lastmod comes from index.html's own mtime.
+    // Homepage, pinned first with top priority. lastmod comes from index.html's
+    // own mtime. The legacy /fridge-repair-parramatta/ slug still resolves (for
+    // old bookmarks/backlinks) but canonicalizes to this URL, so it's not
+    // listed here separately - a sitemap should only list canonical URLs.
     $indexPath = __DIR__ . '/index.html';
     $homeMtime = file_exists($indexPath) ? filemtime($indexPath) : false;
     $homeLastmod = date('Y-m-d', $homeMtime !== false ? $homeMtime : time());
     $urls[] = ['loc' => BASE_URL . '/', 'lastmod' => $homeLastmod, 'changefreq' => 'daily', 'priority' => '1.0'];
-    $urls[] = ['loc' => BASE_URL . '/fridge-repair-parramatta/', 'lastmod' => $homeLastmod, 'changefreq' => 'daily', 'priority' => '1.0'];
 
     // Every other top-level static page: scan the directory instead of hand-
     // listing files, so a new page (any new *.html dropped in the site root)

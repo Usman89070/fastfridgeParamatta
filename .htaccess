@@ -7,6 +7,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# 1a. Force the non-www host (every canonical tag, og:url and sitemap.php URL
+# uses the non-www form, so www must redirect here rather than serve a
+# duplicate copy of the site).
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
 # 2. URL Rewriting for URL Slug: /fridge-repair-parramatta/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
