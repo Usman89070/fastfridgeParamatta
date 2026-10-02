@@ -1,0 +1,4 @@
+# Real database credentials - never commit these. Copy
+# admin/includes/config.example.php to admin/includes/config.php and fill
+# in your real Hostinger MySQL credentials after creating the database.
+admin/includes/config.php
