@@ -168,3 +168,112 @@ function clean_dom_node(DOMNode $node, array $allowedTags, array $allowedAttrsBy
         clean_dom_node($child, $allowedTags, $allowedAttrsByTag);
     }
 }
+
+/**
+ * Builds the JSON-LD @graph for a published blog post: an Article block
+ * always, plus a FAQPage block if the content has an FAQ section.
+ *
+ * A post is treated as having an FAQ section when its content contains an
+ * <h2> whose text mentions "frequently asked questions" or "faqs" - every
+ * <h3> after that point is read as a question, paired with the text of the
+ * next element (normally a <p>) as its answer. This needs no new database
+ * field: writing the FAQ section with an <h2> heading and one <h3> per
+ * question, exactly as the post-content hint already describes, is enough
+ * for it to pick the Q&As up automatically, for this post and any future
+ * one written the same way.
+ *
+ * @param array<string,mixed> $post Row from blog_posts (slug, title,
+ *   meta_description, excerpt, content, published_at, updated_at).
+ * @return array<int,array<string,mixed>> Graph nodes ready to merge into an
+ *   @graph array (empty only if $post['content'] is unparseable, which
+ *   sanitize_post_content() already prevents for anything actually saved).
+ */
+function build_blog_post_schema(array $post): array {
+    $canonicalUrl = 'https://fridgerepairparramatta.com.au/blog-' . $post['slug'];
+    $businessId = ['@id' => 'https://fridgerepairparramatta.com.au/#business'];
+
+    $graph = [
+        [
+            '@type' => 'Article',
+            '@id' => $canonicalUrl . '#article',
+            'headline' => $post['title'],
+            'description' => $post['meta_description'] !== '' ? $post['meta_description'] : $post['excerpt'],
+            'datePublished' => $post['published_at'] ?? $post['created_at'] ?? null,
+            'dateModified' => $post['updated_at'] ?? $post['published_at'] ?? null,
+            'author' => $businessId,
+            'publisher' => $businessId,
+            'mainEntityOfPage' => $canonicalUrl,
+        ],
+    ];
+
+    $faq = extract_faq_schema((string) $post['content']);
+    if (!empty($faq)) {
+        $graph[] = [
+            '@type' => 'FAQPage',
+            'mainEntity' => $faq,
+        ];
+    }
+
+    return $graph;
+}
+
+/**
+ * Parses sanitized post-content HTML for an FAQ section (see
+ * build_blog_post_schema() above) and returns Question/Answer nodes for
+ * FAQPage schema. Returns [] if no FAQ heading is found.
+ */
+function extract_faq_schema(string $html): array {
+    if (trim($html) === '') {
+        return [];
+    }
+
+    $wrapped = '<?xml encoding="utf-8"?><div id="__root__">' . $html . '</div>';
+    $doc = new DOMDocument();
+    $prevErrors = libxml_use_internal_errors(true);
+    $doc->loadHTML($wrapped, LIBXML_NOERROR | LIBXML_NOWARNING);
+    libxml_clear_errors();
+    libxml_use_internal_errors($prevErrors);
+
+    $root = $doc->getElementById('__root__');
+    if (!$root) {
+        return [];
+    }
+
+    $faqs = [];
+    $inFaqSection = false;
+    $pendingQuestion = null;
+
+    foreach (iterator_to_array($root->childNodes) as $node) {
+        if ($node->nodeType !== XML_ELEMENT_NODE) {
+            continue;
+        }
+        $tag = strtolower($node->tagName);
+        $text = trim($node->textContent);
+
+        if ($tag === 'h2') {
+            $inFaqSection = (bool) preg_match('/frequently asked questions|faqs?\b/i', $text);
+            $pendingQuestion = null;
+            continue;
+        }
+
+        if (!$inFaqSection || $text === '') {
+            continue;
+        }
+
+        if ($tag === 'h3' || $tag === 'h4') {
+            $pendingQuestion = $text;
+            continue;
+        }
+
+        if ($pendingQuestion !== null) {
+            $faqs[] = [
+                '@type' => 'Question',
+                'name' => $pendingQuestion,
+                'acceptedAnswer' => ['@type' => 'Answer', 'text' => $text],
+            ];
+            $pendingQuestion = null;
+        }
+    }
+
+    return $faqs;
+}

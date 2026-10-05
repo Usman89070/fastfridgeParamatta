@@ -9,9 +9,11 @@
  *   $metaDescription    string  meta description / og:description
  *   $canonicalUrl       string  full canonical URL
  *   $ogType             string  'website' or 'article' (optional, defaults to 'website')
+ *   $schemaGraph        array   JSON-LD @graph nodes to emit (optional)
  */
 
 $ogType = $ogType ?? 'website';
+$schemaGraph = $schemaGraph ?? [];
 ?><!DOCTYPE html>
 <html lang="en-AU" class="scroll-smooth">
 <head>
@@ -77,6 +79,13 @@ $ogType = $ogType ?? 'website';
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css?v=3">
+
+  <?php if (!empty($schemaGraph)): ?>
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  <?= json_encode(['@context' => 'https://schema.org', '@graph' => $schemaGraph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
+  </script>
+  <?php endif; ?>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
 

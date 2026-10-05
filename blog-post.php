@@ -42,6 +42,7 @@ $pageTitle = $post['title'] . ' | Fridge Repair Parramatta';
 $metaDescription = $post['meta_description'] !== '' ? $post['meta_description'] : $post['excerpt'];
 $canonicalUrl = 'https://fridgerepairparramatta.com.au/blog-' . $post['slug'];
 $ogType = 'article';
+$schemaGraph = build_blog_post_schema($post);
 
 require __DIR__ . '/includes/site-header.php';
 ?>
