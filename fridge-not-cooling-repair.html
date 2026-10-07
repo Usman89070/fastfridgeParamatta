@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title>Fridge Not Cooling Repair Parramatta – Same-Day Fix</title>
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta name="description" content="Fridge not cooling in Parramatta? Licensed technicians find the fault fast: condenser, evaporator, fan, thermostat or gas. Upfront quote, same-day help.">
+  <link rel="canonical" href="https://fridgerepairparramatta.com.au/fridge-not-cooling-repair">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Fridge Not Cooling Repair Parramatta – Same-Day Fix">
+  <meta property="og:description" content="Fridge not cooling in Parramatta? Licensed technicians find the fault fast: condenser, evaporator, fan, thermostat or gas. Upfront quote, same-day help.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fridgerepairparramatta.com.au/fridge-not-cooling-repair">
+  <meta property="og:image" content="https://fridgerepairparramatta.com.au/image/fridge-not-cooling-repair-parramatta.webp">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            trade: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              900: '#0f172a',
+              950: '#0b1120',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://fridgerepairparramatta.com.au/fridge-not-cooling-repair#webpage",
+        "name": "Fridge Not Cooling Repair Parramatta: Find the Fault, Fix It Fast",
+        "about": {"@id": "https://fridgerepairparramatta.com.au/#business"}
+      },
+      {
+        "@type": "Service",
+        "name": "Fridge Not Cooling Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/fridge-not-cooling-repair"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fridgerepairparramatta.com.au/"},
+          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://fridgerepairparramatta.com.au/services"},
+          {"@type": "ListItem", "position": 3, "name": "Fridge Not Cooling Repair", "item": "https://fridgerepairparramatta.com.au/fridge-not-cooling-repair"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is my fridge not cooling but the freezer works?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most often it's a failed evaporator fan, a blocked air vent, or a defrost fault that's iced up the evaporator. These are common and usually repairable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my fridge running but not cooling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common causes include a dirty condenser, a failed condenser fan, low refrigerant, a faulty thermostat, or a defrost problem. A technician can test each."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does fridge not cooling repair cost in Parramatta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The price depends on the fault and the parts. We charge a diagnostic fee and give you an upfront quote before any repair."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer fridge condenser repair in Parramatta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We clean condenser coils, replace condenser fans, repair airflow problems and diagnose refrigerant circuit faults."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a fridge evaporator do, and can you fix it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The evaporator absorbs heat inside the fridge. Faults usually come from fans, defrost parts or ice build-up, and we repair all of these. Coil leaks need an assessment on a case-by-case basis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you repair my fridge on the same day?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Often, yes. Same-day appointments are available in many cases. Email or book early and we'll confirm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I turn the fridge off if it's not cooling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you smell burning or hear loud sparking, switch it off at the wall. Otherwise, leave it plugged in and keep the doors closed until the technician arrives, unless we advise otherwise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my fridge worth repairing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If it's under about 8 years old and the repair costs less than half a new fridge, usually yes. We'll give you honest advice either way."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I clean the condenser coils myself?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if the coils are accessible. Switch off the power, use a brush and vacuum, and avoid water. If you're unsure, we can do it for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a fridge not cooling repair take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most repairs take one to two hours on site. If a part has to be ordered, we'll let you know the timeframe."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <a href="services" class="text-sky-400 hover:text-sky-300 transition-colors">Services</a>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-sky-400 py-1">Services</a>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- 1. HERO -->
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+      <img src="image/fridge-not-cooling-repair-parramatta.webp" width="1536" height="1024" onerror="this.onerror=null; this.src='image/hero-fridge-repair-tech.webp';" alt="Technician diagnosing a fridge not cooling in Parramatta" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/60 lg:to-slate-900/40"></div>
+      <div class="absolute inset-0 bg-slate-900/35"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+
+      <p class="text-xs font-semibold text-slate-400">
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span>
+        <a href="services" class="hover:text-sky-400">Services</a> <span class="mx-1">/</span> Fridge Not Cooling Repair
+      </p>
+
+      <div class="max-w-3xl space-y-6">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold">
+          <i data-lucide="thermometer-snowflake" class="w-4 h-4"></i> Licensed Refrigeration Mechanics &bull; Same-Day Where Available
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Fridge Not Cooling Repair Parramatta: Find the Fault, Fix It Fast
+        </h1>
+
+        <p class="text-slate-200 text-lg leading-relaxed">
+          A fridge that isn't cold is one of the most stressful appliance problems. Milk turns, meat spoils and the weekly shop is at risk. The good news is that most cooling faults have a clear cause, and many can be fixed in a single visit.
+        </p>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Our fridge not cooling repair in Parramatta service sends a licensed technician to your home to find the real cause, whether it's a failed fan, a blocked evaporator, a dirty or faulty condenser, a bad thermostat, a defrost fault or a compressor problem. You get a clear explanation and an upfront price before any repair begins.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-200 pt-1">
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Same-day appointments where available</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Upfront quote before we start</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Licensed technicians, common parts on board</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> All major brands & fridge types</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1-year warranty on parts & labour</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
+          <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            <span>Email Us</span>
+          </a>
+          <a href="contact#contact-form" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            <span>Book a Repair</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. IS YOUR FRIDGE REALLY NOT COOLING? -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="search" class="w-4 h-4"></i> Quick Check
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Is Your Fridge Really Not Cooling?</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Before you book, check these signs. Any of them points to a cooling fault:</p>
+      </div>
+
+      <ul class="grid sm:grid-cols-2 gap-3 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> The fridge compartment is warm, but the freezer is still frozen</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Both the fridge and freezer are warm</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> The inside temperature is above 5&deg;C</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> The compressor runs constantly but doesn't cool</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> The fridge is silent and doesn't run at all</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Food spoils faster than normal</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Ice has built up at the back of the freezer</li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> The back or sides of the fridge feel unusually hot</li>
+      </ul>
+
+      <p class="text-slate-700 text-sm leading-relaxed">
+        Use a fridge thermometer. Safe temperatures are 3&ndash;4&deg;C in the fridge and &minus;18&deg;C in the freezer. If your fridge stays above 5&deg;C, don't wait: bacteria grow quickly above that.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 3. COMMON CAUSES TABLE -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="list" class="w-4 h-4"></i> Common Causes
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Common Causes of a Fridge Not Cooling</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Most breakdowns come from a handful of components. Here's what we check first:</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr>
+              <th class="p-4">Symptom</th>
+              <th class="p-4">Likely cause</th>
+              <th class="p-4">Typical repair</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Fridge warm, freezer cold</td>
+              <td class="p-4">Evaporator fan failure, blocked air vent, defrost fault</td>
+              <td class="p-4">Fan motor or defrost part replacement</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Fridge and freezer both warm, compressor running</td>
+              <td class="p-4">Dirty or faulty condenser, condenser fan failure, low refrigerant</td>
+              <td class="p-4">Condenser clean or repair, fan replacement</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Fridge and freezer both warm, compressor silent</td>
+              <td class="p-4">Start relay, overload, control board or compressor fault</td>
+              <td class="p-4">Relay or board replacement, compressor repair</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Cold at first, then warms up</td>
+              <td class="p-4">Ice-blocked evaporator, defrost heater or timer fault</td>
+              <td class="p-4">Defrost system repair</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Runs non-stop, barely cold</td>
+              <td class="p-4">Dirty condenser, worn seal, low gas</td>
+              <td class="p-4">Clean condenser, replace seal, find leak</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Inconsistent temperatures</td>
+              <td class="p-4">Faulty thermostat or temperature sensor</td>
+              <td class="p-4">Sensor or thermostat replacement</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Warm with a clicking sound</td>
+              <td class="p-4">Failed start relay or overload protector</td>
+              <td class="p-4">Relay replacement</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Nothing works at all</td>
+              <td class="p-4">Power supply, control board or fuse</td>
+              <td class="p-4">Power and electrical diagnosis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. CONDENSER REPAIR -->
+  <section id="condenser" class="py-16 sm:py-20 bg-white border-b border-slate-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 max-w-4xl">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Condenser Repair in Parramatta</h2>
+      <p class="text-slate-700 text-base leading-relaxed">
+        The condenser is the part that releases heat from your fridge. It sits at the back or underneath the fridge, with a fan to push air across it. When it can't get rid of heat, the whole system struggles and the fridge stops cooling properly.
+      </p>
+      <p class="text-slate-700 text-base leading-relaxed">Our fridge condenser repair in Parramatta covers:</p>
+      <ul class="space-y-2 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Condenser coil cleaning:</strong> dust, fluff and pet hair insulate the coils and trap heat.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Condenser fan motor replacement:</strong> a dead fan means no airflow across the coils.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Blocked or restricted airflow:</strong> a fridge crammed into a tight cavity can overheat.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Leaking coils or pipework:</strong> refrigerant leaks need to be found, repaired and the system regassed by an ARC-licensed technician.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Compressor stress caused by overheating:</strong> we check the compressor for damage before it fails.</span></li>
+      </ul>
+
+      <h3 class="text-lg font-bold text-slate-900 pt-2">Signs You Need Fridge Condenser Repair</h3>
+      <ul class="space-y-1.5 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> The back or base of the fridge is very hot</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> The compressor runs for hours without switching off</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> The fridge is noisy, with a buzzing or whirring fan</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> Power bills are climbing</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> The fridge struggles in hot weather</li>
+      </ul>
+
+      <p class="text-slate-700 text-sm leading-relaxed">
+        If you want to try basic maintenance first, our guide to <a href="blog-summer-fridge-maintenance-tips" class="text-sky-700 font-bold hover:underline">cleaning fridge condenser coils</a> on the Summer Fridge Maintenance page explains how. If cleaning doesn't help, a technician can test the fan and refrigerant circuit.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 5. EVAPORATOR REPAIR -->
+  <section id="evaporator" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 max-w-4xl">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Evaporator Repair in Parramatta</h2>
+      <p class="text-slate-700 text-base leading-relaxed">
+        The evaporator is the cold coil inside your freezer compartment. A fan pulls warm air across it, and it absorbs the heat. In a frost-free fridge-freezer, the freezer's evaporator fan also blows cold air into the fridge. When it fails, the fridge warms up while the freezer may still look fine.
+      </p>
+      <p class="text-slate-700 text-base leading-relaxed">Our fridge evaporator repair in Parramatta service includes:</p>
+      <ul class="space-y-2 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Evaporator fan motor replacement:</strong> one of the most common reasons a fridge stops cooling.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Defrost heater, timer and sensor repairs:</strong> if they fail, frost builds up on the coil and blocks airflow.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Evaporator coil icing:</strong> we find why the ice formed, rather than just melting it.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Drain and air duct clearing:</strong> blocked drains can freeze and block airflow.</span></li>
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span><strong>Evaporator coil leaks:</strong> diagnosed and quoted honestly, as some leaks may not be worth repairing on older fridges.</span></li>
+      </ul>
+
+      <h3 class="text-lg font-bold text-slate-900 pt-2">Signs You Need Fridge Evaporator Repair</h3>
+      <ul class="space-y-1.5 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> The freezer is cold, but the fridge is warm</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> A thick layer of frost or ice on the freezer's back wall</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> A loud buzzing, rattling or clicking from inside the freezer</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> Water pooling at the bottom of the fridge</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> Cooling that comes and goes</li>
+      </ul>
+
+      <p class="text-slate-700 text-sm leading-relaxed">
+        Ice on the evaporator is a symptom, not the cause. Defrosting it only gives temporary relief, so the underlying defrost fault still needs repairing or the problem will return.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 6. OTHER FAULTS -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="wrench" class="w-4 h-4"></i> Other Faults We Repair
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Other Fridge Not Cooling Faults We Repair</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">Thermostat and Temperature Sensor Faults</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A faulty thermostat or sensor tells the fridge it's cold when it isn't, so the compressor switches off too soon. These are inexpensive parts and usually quick to replace.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">Compressor and Start Relay Problems</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A clicking sound, a hot compressor or no cooling at all can point to the start relay or overload protector. Replacing them is often straightforward. A failed compressor is more serious, and we'll tell you honestly whether repair makes sense for the age of your fridge.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">Refrigerant Leaks and Regassing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">If the system is low on refrigerant, the fridge runs but doesn't cool. Simply topping up isn't a lasting fix. We locate and repair the leak first, using ARC-licensed technicians, then regas the system.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <h3 class="text-lg font-bold text-slate-900">Control Board Faults</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Modern fridges rely on electronic control boards. A faulty board can stop the compressor, the fans or the defrost cycle. We test the board before replacing it, so you don't pay for parts you don't need.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2 md:col-span-2">
+          <h3 class="text-lg font-bold text-slate-900">Door Seals and Airflow Problems</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Worn door gaskets let warm air in, and overloaded shelves block vents. A fridge that's mostly fine mechanically can still struggle to cool because of these.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. WHAT TO CHECK BEFORE YOU CALL -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="clipboard-check" class="w-4 h-4"></i> Before You Call
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">What To Check Before You Call</h2>
+        <p class="text-slate-700 text-base leading-relaxed">These quick checks may solve the problem, or at least help us diagnose faster:</p>
+      </div>
+
+      <ol class="grid sm:grid-cols-2 gap-4 text-slate-700 text-sm list-none">
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">1</span> Is it plugged in, and is the power point working? Test it with another appliance.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">2</span> Has the breaker tripped? Reset it once only.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">3</span> Check the temperature setting. Someone may have changed it.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">4</span> Clear the vents. Don't block the air vents in the fridge and freezer.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">5</span> Check the door seal. Close the door on a sheet of paper. If it slides out, the seal needs attention.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">6</span> Look at the back of the fridge. If it's covered in dust, a clean might help.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">7</span> Check for ventilation. Leave a gap around the sides, top and back.</li>
+        <li class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">8</span> Keep the doors shut. This protects your food while you wait.</li>
+      </ol>
+
+      <p class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm leading-relaxed">
+        If the problem continues, please don't dismantle the fridge. Electrical faults can be dangerous, and refrigerant work legally needs an ARC-licensed technician.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 8. HOW LONG CAN FOOD STAY SAFE -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 max-w-4xl">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How Long Can Food Stay Safe?</h2>
+      <p class="text-slate-700 text-base leading-relaxed">
+        As a general guide, a closed fridge keeps food cold for about four hours without cooling. After that, food kept above 5&deg;C may not be safe. Move meat, dairy and leftovers to an esky with ice if your fridge will be down longer. Frozen food stays frozen for much longer if the freezer door stays closed. When in doubt, throw it out. See the <a href="https://www.foodauthority.nsw.gov.au" title="NSW Food Authority" class="text-sky-700 font-bold hover:underline">NSW Food Authority</a> for official advice.
+      </p>
+    </div>
+  </section>
+
+  <!-- 9. HOW OUR SERVICE WORKS -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider justify-center">
+          <i data-lucide="list-checks" class="w-4 h-4"></i> How It Works
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How Our Fridge Not Cooling Repair Parramatta Service Works</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">1</span>
+          <h3 class="text-base font-bold text-slate-900">Email or book online</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Tell us the brand, model and what's happening.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">2</span>
+          <h3 class="text-base font-bold text-slate-900">Fast booking</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Same-day appointments across Parramatta where available.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">3</span>
+          <h3 class="text-base font-bold text-slate-900">Diagnosis</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">We test the fans, condenser, evaporator, thermostat, defrost system and refrigerant circuit to find the real cause.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">4</span>
+          <h3 class="text-base font-bold text-slate-900">Plain-English explanation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">We show you what's wrong.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">5</span>
+          <h3 class="text-base font-bold text-slate-900">Upfront quote</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">You approve the price before work starts.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">6</span>
+          <h3 class="text-base font-bold text-slate-900">Repair</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Most jobs are done on the spot using parts from the van.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">7</span>
+          <h3 class="text-base font-bold text-slate-900">Test</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">We check the fridge is cooling before we leave.</p>
+        </div>
+      </div>
+
+      <p class="text-slate-700 text-sm text-center max-w-2xl mx-auto">If a part needs to be ordered, we'll tell you how long it will take and how to look after your food in the meantime.</p>
+
+    </div>
+  </section>
+
+  <!-- 10. REPAIR OR REPLACE -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 max-w-4xl">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Is It Worth Repairing a Fridge That Isn't Cooling?</h2>
+      <p class="text-slate-700 text-base leading-relaxed">Often, yes. Fans, thermostats, sensors and relays are inexpensive compared with a new fridge. As a general rule:</p>
+      <ul class="space-y-2 text-slate-700 text-sm">
+        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> Repair if your fridge is under about 8 years old and the repair costs less than half the price of a comparable new one.</li>
+        <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> Think carefully if the fridge is over 10 years old and needs a major repair, like a compressor or sealed system work.</li>
+        <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-red-500 shrink-0 mt-0.5"></i> Replace if it's very old, rusty, or has failed repeatedly.</li>
+      </ul>
+      <p class="text-slate-700 text-base leading-relaxed">
+        Our technicians will give you honest advice, even if that means saying your fridge isn't worth fixing. For more help, read our guide, <a href="blog-repair-or-replace-guide" class="text-sky-700 font-bold hover:underline">Repair or Replace Your Fridge?</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 11. BRANDS -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 max-w-4xl">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Types and Brands We Repair</h2>
+      <p class="text-slate-700 text-base leading-relaxed">
+        We repair top-mount, bottom-mount, side-by-side, French door, bar and built-in fridges, as well as fridge-freezer combos. Our technicians work on Samsung, LG, Fisher &amp; Paykel, Westinghouse, Electrolux, Bosch, Haier, Hisense, Miele, Beko, Panasonic, Mitsubishi and more. Don't see your brand? <a href="contact#contact-form" class="text-sky-700 font-bold hover:underline">Give us a call.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 12. AREAS WE SERVE -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 max-w-4xl">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Not Cooling Repair Parramatta: Areas We Serve</h2>
+      <p class="text-slate-700 text-base leading-relaxed">
+        We provide fridge not cooling repair across Parramatta and surrounding areas, including Westmead, Harris Park, North Parramatta, Granville, Merrylands, Wentworthville, Northmead, Rosehill, Camellia, Auburn, Silverwater, Toongabbie, Pendle Hill, Constitution Hill, Baulkham Hills, Carlingford, Epping, Ermington, Rydalmere and Homebush.
+      </p>
+      <p class="text-slate-600 text-sm">Not sure whether we cover your suburb? <a href="contact#contact-form" class="text-sky-700 font-bold hover:underline">Email us and we'll confirm.</a></p>
+    </div>
+  </section>
+
+  <!-- 13. WHY CHOOSE US -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="shield-check" class="w-4 h-4"></i> Why Choose Us
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Choose Us for Urgent Cooling Repairs</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Local Parramatta technicians</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Quick attendance, no long travel times.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Cooling specialists</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We handle fridge condenser and evaporator repairs, plus sealed systems.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Licensed</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">ARC refrigerant handling licence [confirm number] and fully insured.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Honest advice</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Repair or replace, we tell you straight.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Upfront pricing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">No surprises.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+          <h3 class="text-base font-bold text-slate-900">1-year warranty</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">On parts and labour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. FAQs -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="space-y-3 max-w-2xl">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-4 h-4"></i> Clear Answers
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-3 max-w-4xl">
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Why is my fridge not cooling but the freezer works?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Most often it's a failed evaporator fan, a blocked air vent, or a defrost fault that's iced up the evaporator. These are common and usually repairable.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Why is my fridge running but not cooling?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Common causes include a dirty condenser, a failed condenser fan, low refrigerant, a faulty thermostat, or a defrost problem. A technician can test each.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>How much does fridge not cooling repair cost in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            The price depends on the fault and the parts. We charge a diagnostic fee and give you an upfront quote before any repair.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you offer fridge condenser repair in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We clean condenser coils, replace condenser fans, repair airflow problems and diagnose refrigerant circuit faults.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>What does a fridge evaporator do, and can you fix it?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            The evaporator absorbs heat inside the fridge. Faults usually come from fans, defrost parts or ice build-up, and we repair all of these. Coil leaks need an assessment on a case-by-case basis.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Can you repair my fridge on the same day?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Often, yes. Same-day appointments are available in many cases. Email or book early and we'll confirm.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Should I turn the fridge off if it's not cooling?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            If you smell burning or hear loud sparking, switch it off at the wall. Otherwise, leave it plugged in and keep the doors closed until the technician arrives, unless we advise otherwise.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Is my fridge worth repairing?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            If it's under about 8 years old and the repair costs less than half a new fridge, usually yes. We'll give you honest advice either way.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Can I clean the condenser coils myself?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes, if the coils are accessible. Switch off the power, use a brush and vacuum, and avoid water. If you're unsure, we can do it for you.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>How long does a fridge not cooling repair take?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Most repairs take one to two hours on site. If a part has to be ordered, we'll let you know the timeframe.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. FINAL CTA -->
+  <section class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+
+      <div class="space-y-3">
+        <span class="px-3.5 py-1.5 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold uppercase tracking-wider">
+          Don't Lose Another Shelf of Food
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white">Book Your Fridge Not Cooling Repair in Parramatta Today</h2>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          For fast, reliable fridge not cooling repair in Parramatta, email our local team now or book online.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Book Online 24/7</span>
+        </a>
+      </div>
+
+      <p class="text-slate-400 text-xs pt-2">Servicing Parramatta and Western Sydney. All major brands repaired.</p>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
+    </a>
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>📅 Book Online</span>
+    </a>
+  </div>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="services#regas-service" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            Samsung &middot; LG &middot; Westinghouse &middot; Fisher & Paykel &middot; Electrolux &middot; Bosch &middot; Hisense &middot; Haier &middot; Whirlpool &middot; Smeg &middot; Miele &middot; Kelvinator &middot; Liebherr &middot; Bromic &middot; Skope &middot; Hoshizaki &middot; Williams &middot; Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta &middot; North Parramatta &middot; Harris Park &middot; Westmead &middot; Rosehill &middot; Granville &middot; Merrylands &middot; Wentworthville &middot; Northmead &middot; Oatlands &middot; Rydalmere &middot; Dundas &middot; Telopea &middot; Carlingford &middot; Toongabbie &middot; Winston Hills &middot; Baulkham Hills &middot; Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>&copy; 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=10"></script>
+</body>
+</html>
