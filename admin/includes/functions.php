@@ -214,7 +214,119 @@ function build_blog_post_schema(array $post): array {
         ];
     }
 
+    $howTo = extract_howto_schema((string) $post['content']);
+    if (!empty($howTo)) {
+        $graph[] = $howTo;
+    }
+
     return $graph;
+}
+
+/**
+ * Parses sanitized post-content HTML for a step-by-step section and
+ * returns a HowTo node, or [] if none is found.
+ *
+ * A post is treated as having a HowTo section when its content contains an
+ * <h3> (or <h4>) whose text matches "step by step" - the next <ol> after
+ * that heading becomes the HowTo's steps, one HowToStep per <li>. The
+ * HowTo's name is taken from the nearest preceding <h2>. If a "what you'll
+ * need" / "materials" / "tools" / "supplies" heading appears earlier in the
+ * same <h2> section with a <ul> under it, each <li> becomes a HowToTool.
+ * As with extract_faq_schema(), this needs no new database field - writing
+ * the post with that heading structure is enough.
+ */
+function extract_howto_schema(string $html): array {
+    if (trim($html) === '') {
+        return [];
+    }
+
+    $wrapped = '<?xml encoding="utf-8"?><div id="__root__">' . $html . '</div>';
+    $doc = new DOMDocument();
+    $prevErrors = libxml_use_internal_errors(true);
+    $doc->loadHTML($wrapped, LIBXML_NOERROR | LIBXML_NOWARNING);
+    libxml_clear_errors();
+    libxml_use_internal_errors($prevErrors);
+
+    $root = $doc->getElementById('__root__');
+    if (!$root) {
+        return [];
+    }
+
+    $currentH2 = null;
+    $pendingTools = [];
+    // What the most recent h3/h4 heading means for the next list we see:
+    // 'tools' -> the next <ul> is the tool/materials list, 'steps' -> the
+    // next <ol> is the step list, null -> the next list means nothing here
+    // (e.g. a plain bullet list elsewhere in the same H2 section, which
+    // must NOT be swept up as "tools").
+    $nextListIsFor = null;
+
+    foreach (iterator_to_array($root->childNodes) as $node) {
+        if ($node->nodeType !== XML_ELEMENT_NODE) {
+            continue;
+        }
+        $tag = strtolower($node->tagName);
+        $text = trim($node->textContent);
+
+        if ($tag === 'h2') {
+            $currentH2 = $text;
+            $pendingTools = [];
+            $nextListIsFor = null;
+            continue;
+        }
+
+        if ($tag === 'h3' || $tag === 'h4') {
+            if (preg_match('/step[\s-]*by[\s-]*step/i', $text)) {
+                $nextListIsFor = 'steps';
+            } elseif (preg_match('/what you.?ll need|materials needed|^tools$|^supplies$/i', $text)) {
+                $nextListIsFor = 'tools';
+            } else {
+                $nextListIsFor = null;
+            }
+            continue;
+        }
+
+        if ($tag === 'ul' && $nextListIsFor === 'tools') {
+            foreach ($node->childNodes as $li) {
+                if ($li->nodeType === XML_ELEMENT_NODE && strtolower($li->tagName) === 'li') {
+                    $toolText = trim($li->textContent);
+                    if ($toolText !== '') {
+                        $pendingTools[] = ['@type' => 'HowToTool', 'name' => $toolText];
+                    }
+                }
+            }
+            $nextListIsFor = null;
+            continue;
+        }
+
+        if ($tag === 'ol' && $nextListIsFor === 'steps') {
+            $steps = [];
+            $position = 1;
+            foreach ($node->childNodes as $li) {
+                if ($li->nodeType === XML_ELEMENT_NODE && strtolower($li->tagName) === 'li') {
+                    $stepText = trim($li->textContent);
+                    if ($stepText !== '') {
+                        $steps[] = ['@type' => 'HowToStep', 'position' => $position, 'text' => $stepText];
+                        $position++;
+                    }
+                }
+            }
+            if (!empty($steps)) {
+                $howTo = [
+                    '@type' => 'HowTo',
+                    'name' => $currentH2 ?? 'How To Guide',
+                    'step' => $steps,
+                ];
+                if (!empty($pendingTools)) {
+                    $howTo['tool'] = $pendingTools;
+                }
+                return $howTo;
+            }
+            $nextListIsFor = null;
+        }
+    }
+
+    return [];
 }
 
 /**
