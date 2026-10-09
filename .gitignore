@@ -2,3 +2,8 @@
 # admin/includes/config.example.php to admin/includes/config.php and fill
 # in your real Hostinger MySQL credentials after creating the database.
 admin/includes/config.php
+
+# Tailwind build tooling - only tailwind.config.js/input.css/package*.json
+# need to be in git; the installed packages don't. Run
+# `cd .buildtools && npm install` once to regenerate this.
+.buildtools/node_modules
