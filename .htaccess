@@ -7,10 +7,52 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# 1a. Force the non-www host (every canonical tag, og:url and sitemap.php URL
+# uses the non-www form, so www must redirect here rather than serve a
+# duplicate copy of the site).
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
 # 2. URL Rewriting for URL Slug: /fridge-repair-parramatta/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^fridge-repair-parramatta/?$ index.html [L,QSA]
+
+# 2a. Clean URLs, step 1: redirect any old .html link to its extension-free
+# version (301, so old bookmarks/search results/external links still land
+# on the right page and pass their SEO value through), so the address bar
+# always shows the clean URL rather than just quietly serving both forms.
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^blog\.html$ /blog [R=301,L]
+RewriteRule ^blog-([a-z0-9-]+)\.html$ /blog-$1 [R=301,L]
+RewriteRule ^(about|contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair)\.html$ /$1 [R=301,L]
+
+# 2b. Clean URLs, step 2: serve the real page behind each extension-free
+# path. Blog URLs always resolve to the dynamic PHP pages (even though the
+# original static blog-*.html files are still sitting on disk, superseded
+# by the database-backed admin panel).
+RewriteRule ^blog/?$ blog.php [L,QSA]
+RewriteRule ^blog-([a-z0-9-]+)/?$ blog-post.php?slug=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(about|contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair)/?$ $1.html [L,QSA]
+
+# 2c. sitemap.xml is generated on the fly by sitemap.php (scans the site for
+# pages and queries published blog posts), so new pages/posts show up
+# automatically. This rule always wins over any physical sitemap.xml file.
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# 2d. Block direct web access to backend-only folders and files. These are
+# only ever loaded via PHP `require`, never requested directly by a browser.
+RewriteRule ^admin/includes/ - [F,L]
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^database/ - [F,L]
+<FilesMatch "\.(sql|sqlite)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^config\.php$">
+  Require all denied
+</FilesMatch>
 
 # Set Default Index Document
 DirectoryIndex index.html

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title>Fridge Brands We Repair Parramatta | All Makes & Models</title>
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta name="description" content="Fridge brands we repair in Parramatta: Samsung, LG, Fisher & Paykel plus Teco, TCL, Vintec, Kogan, GE, Simpson & Siemens. Genuine parts, 1-yr warranty.">
+  <link rel="canonical" href="https://fridgerepairparramatta.com.au/brands">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Fridge Brands We Repair Parramatta | All Makes & Models">
+  <meta property="og:description" content="Fridge brands we repair in Parramatta: Samsung, LG, Fisher & Paykel plus Teco, TCL, Vintec, Kogan, GE, Simpson & Siemens. Genuine parts, 1-yr warranty.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fridgerepairparramatta.com.au/brands">
+  <meta property="og:image" content="https://fridgerepairparramatta.com.au/image/fridge-brands-we-repair-parramatta.webp">
+
+  <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
+  <link rel="stylesheet" href="tailwind-built.css?v=1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <!-- CollectionPage.mainEntity ItemList of the 10 dedicated brand pages (Samsung,
+       LG, etc.) is intentionally omitted: none of those pages are live yet. Add
+       it once they go live, matching the real hrefs already used in Section 3's
+       HTML comments. The 7 Service blocks below are for the brands THIS page
+       itself covers in full (anchored sections), so they're accurate now. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://fridgerepairparramatta.com.au/brands#webpage",
+        "name": "Fridge Brands We Repair in Parramatta",
+        "about": {"@id": "https://fridgerepairparramatta.com.au/#business"}
+      },
+      {
+        "@type": "Service",
+        "name": "Teco Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "Teco"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#teco"
+      },
+      {
+        "@type": "Service",
+        "name": "TCL Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "TCL"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#tcl"
+      },
+      {
+        "@type": "Service",
+        "name": "Vintec Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "Vintec"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#vintec"
+      },
+      {
+        "@type": "Service",
+        "name": "Kogan Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "Kogan"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#kogan"
+      },
+      {
+        "@type": "Service",
+        "name": "GE Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "GE"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#ge"
+      },
+      {
+        "@type": "Service",
+        "name": "Simpson Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "Simpson"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#simpson"
+      },
+      {
+        "@type": "Service",
+        "name": "Siemens Fridge Repair Parramatta",
+        "serviceType": "Fridge repair",
+        "brand": {"@type": "Brand", "name": "Siemens"},
+        "provider": {"@id": "https://fridgerepairparramatta.com.au/#business"},
+        "areaServed": {"@type": "City", "name": "Parramatta"},
+        "url": "https://fridgerepairparramatta.com.au/brands#siemens"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fridgerepairparramatta.com.au/"},
+          {"@type": "ListItem", "position": 2, "name": "Brands", "item": "https://fridgerepairparramatta.com.au/brands"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you repair all fridge brands in Parramatta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We repair almost every domestic and commercial fridge brand in Parramatta, from Samsung, LG and Fisher & Paykel to Teco, TCL, Vintec, Kogan, GE, Simpson and Siemens. If you're unsure about yours, send us the brand and model number."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you do Teco fridge repairs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We repair Teco top-mount fridges, bar fridges and freezers across Parramatta. Common Teco faults are thermostats, start relays and door seals, and we'll tell you honestly whether the repair is worth it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you repair a TCL fridge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our TCL fridge repairs cover frost-free, French-door and side-by-side models, including sensor, fan, defrost and control board faults. If your TCL is still under warranty, contact TCL first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair Vintec wine fridges?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, out-of-warranty Vintec wine fridges, including single and multi-zone cabinets. For in-warranty repairs, book with Vintec directly on 1800 666 778."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are Kogan fridges worth repairing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Often, yes, especially for common faults like relays, thermostats and fans. Because some Kogan parts are harder to source, we confirm part availability before quoting so you don't pay for a repair we can't finish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you get parts for GE fridges?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually, yes, though some GE parts are imported and can take longer. We confirm availability and timing before you commit to the repair."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it worth fixing an old Simpson fridge?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Often, yes. Simpson shares many parts with Westinghouse and Electrolux, so parts are easy to get and common repairs like thermostats, fans and defrost parts are affordable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair integrated Siemens fridges?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We repair freestanding and integrated Siemens fridges, working carefully inside the cabinetry. In-warranty Siemens repairs should go through Siemens' own service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will using an independent repairer void my warranty?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If your fridge is still under manufacturer warranty, use the manufacturer's service to keep that cover. For out-of-warranty fridges, our repairs come with our own 1-year parts and labour warranty."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use genuine parts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We use genuine parts wherever they're available. For brands with limited supply we may suggest quality-matched compatible parts, and we always tell you which you're getting."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <a href="services" class="hover:text-sky-400 transition-colors">Services</a>
+        <a href="brands" class="text-sky-400 hover:text-sky-300 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
+      <a href="brands" class="block text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- 1. HERO / INTRO -->
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+      <img src="image/fridge-brands-we-repair-parramatta.webp" width="1536" height="1024" onerror="this.onerror=null; this.src='image/hero-fridge-repair-tech.webp';" alt="Technician checking a fridge model plate before a repair in Parramatta" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/60 lg:to-slate-900/40"></div>
+      <div class="absolute inset-0 bg-slate-900/35"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+
+      <p class="text-xs font-semibold text-slate-400">
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span> Brands
+      </p>
+
+      <div class="max-w-3xl space-y-6">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold">
+          <i data-lucide="badge-check" class="w-4 h-4"></i> Independent Multi-Brand Refrigeration Mechanics &bull; Lic #R38910
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Fridge Brands We Repair in Parramatta
+        </h1>
+
+        <p class="text-slate-200 text-lg leading-relaxed">
+          From Samsung and LG to Teco, Kogan and Vintec: one local technician for every make and model.
+        </p>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Looking for the fridge brands we repair in Parramatta? The short answer is almost all of them. We're independent refrigeration mechanics, not tied to any manufacturer, so we provide fridge repairs in Parramatta for premium, mainstream and budget brands alike, including the less common makes many repairers turn away. We carry the parts that fail most often and source genuine or quality-matched parts for everything else.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-200 pt-1">
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Fridge Repair, All Brands, Parramatta</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Genuine & Quality-Matched Parts</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1-Year Parts & Labour Warranty</span>
+          <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Same-Day Service Where Available</span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
+          <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            <span>Email Us Your Brand</span>
+          </a>
+          <a href="contact#contact-form" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            <span>Book a Repair: Tell Us Your Brand</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. QUICK ANSWER -->
+  <section class="py-10 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 border-l-4 border-l-sky-500 shadow-sm max-w-4xl">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3">Which Fridge Brands Do We Repair in Parramatta?</h2>
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+          We repair all major fridge and freezer brands in Parramatta, including Samsung, LG, Fisher &amp; Paykel, Westinghouse, Electrolux, Hisense, Haier, Mitsubishi, Bosch and Panasonic, plus Teco, TCL, Vintec, Kogan, GE, Simpson and Siemens. We also service commercial brands such as Skope, Williams and Bromic. Out-of-warranty repairs come with a 1-year parts and labour warranty.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. POPULAR BRANDS GRID -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="star" class="w-4 h-4"></i> Most Repaired Brands
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Popular Fridge Brands We Repair</h2>
+        <p class="text-slate-700 text-base leading-relaxed">
+          All brands fridge repairs, with dedicated guides for the brands we see most in Parramatta homes.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Samsung</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Inverter compressors, ice makers, error codes 22E / 33E</p>
+          <!-- TODO: link to /brands/samsung-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">LG</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Linear compressors, ER FF / ER RF codes, ice makers</p>
+          <!-- TODO: link to /brands/lg-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Fisher & Paykel</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">ActiveSmart, integrated models, door alarms</p>
+          <!-- TODO: link to /brands/fisher-paykel-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Westinghouse</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Top and bottom mounts, fans, defrost systems</p>
+          <!-- TODO: link to /brands/westinghouse-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Electrolux</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">French-door and frost-free models</p>
+          <!-- TODO: link to /brands/electrolux-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Hisense</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Control boards, side-by-side models</p>
+          <!-- TODO: link to /brands/hisense-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Haier</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Quad-door and frost-free models</p>
+          <!-- TODO: link to /brands/haier-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Mitsubishi Electric</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Multi-drawer fridges, sensors and fans</p>
+          <!-- TODO: link to /brands/mitsubishi-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Bosch</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Integrated and freestanding NoFrost</p>
+          <!-- TODO: link to /brands/bosch-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+        <div class="reveal-child p-5 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <h3 class="text-base font-bold text-slate-900">Panasonic</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">Inverter compressors, prime freezers</p>
+          <!-- TODO: link to /brands/panasonic-fridge-repair once that page is live -->
+          <p class="text-xs text-slate-500 font-semibold">Page coming soon</p>
+        </div>
+
+      </div>
+
+      <p class="text-slate-700 text-sm text-center">
+        Also repaired: Kelvinator &middot; Whirlpool &middot; Smeg &middot; Liebherr &middot; Sub-Zero &middot; Miele &middot; Beko &middot; CHiQ &middot; ASKO &middot; Sharp &middot; Omega &middot; Husky &middot; Euromaid &middot; Toshiba.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- 4. TECO, TCL, VINTEC, KOGAN, GE, SIMPSON & SIEMENS -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="award" class="w-4 h-4"></i> Brands Others Turn Away
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Teco, TCL, Vintec, Kogan, GE, Simpson & Siemens Fridge Repairs</h2>
+        <p class="text-slate-700 text-base leading-relaxed">
+          Many repairers only want the big names. We repair these brands every month across Parramatta, and below is what we typically find with each.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+
+        <div id="teco" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">Teco Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            TECO is a Taiwanese brand sold in Australia mainly as good-value top-mount fridges, bar fridges, upright freezers and chest freezers. You'll find plenty of them in Parramatta apartments, granny flats and garages, often as a second fridge.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Our Teco fridge repairs focus on making sure the repair is worth it: these are affordable fridges, so we diagnose first and give you an honest repair-or-replace recommendation before any work starts.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Thermostat failure: fridge too warm or freezing food</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Start relay or capacitor faults: clicking, compressor won't start</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Worn door seals causing condensation and frost</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Ice build-up in manual-defrost freezers and bar fridges</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Still under warranty? Contact TECO Australia first. Out of warranty, we can usually fix it the same day.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a Teco Repair</a>
+        </div>
+
+        <div id="tcl" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">TCL Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            TCL has grown quickly in Australia, from frost-free top and bottom mounts to French-door and side-by-side fridges with inverter compressors and electronic controls. Many TCL fridges in Parramatta are only a few years old.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            TCL fridge repairs usually involve the electronics or airflow rather than the compressor. We read the fault symptoms, test the sensors and fans, and replace only what has actually failed.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Temperature sensor or control board errors</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Evaporator fan faults: fridge warm, freezer cold</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Defrost faults causing an iced-up back wall</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Door alignment and seal problems on multi-door models</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">A newer TCL may still be under manufacturer warranty. Check that first, as warranty repairs must go through TCL's service network.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a TCL Repair</a>
+        </div>
+
+        <div id="vintec" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <img src="image/vintec-fridge-repair-parramatta.webp" width="1200" height="675" onerror="this.onerror=null; this.src='image/hero-fridge-repair-tech.webp';" alt="Vintec wine fridge repair in Parramatta" class="w-full h-48 sm:h-64 object-cover rounded-xl" loading="lazy" decoding="async">
+          <h3 class="text-2xl font-extrabold text-slate-900">Vintec Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Vintec is a specialist wine-cabinet brand (part of the Electrolux group), with single-zone, dual-zone and multi-zone wine fridges designed to hold a stable temperature and humidity. A small drift can affect a valuable collection, so Vintec problems deserve a technician who understands wine storage, not just fridges.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Our Vintec fridge repairs and wine fridge repairs cover compressor-based cabinets: zone temperature drift, fans, controllers, door seals and condensation issues. We check both zones and the cabinet's ventilation, which is often the hidden cause in built-in installations.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> One zone warmer than its setting, or zones drifting</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Fan or controller faults, a blank or flashing display</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Excess condensation or low humidity</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Door seal and hinge wear on glass doors</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Under warranty, book through Vintec's own service (1800 666 778). Out of warranty, we can help, and we'll confirm parts availability before quoting.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a Vintec Repair</a>
+        </div>
+
+        <div id="kogan" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">Kogan Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Kogan sells its own-label fridges, freezers and bar fridges online. They're made by contract manufacturers, so the parts inside are often standard components, but brand-specific parts can be harder to find than for mainstream brands.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            For Kogan fridge repairs we diagnose the fault, then source genuine or quality-matched compatible parts. If a part simply isn't available, we'll tell you upfront so you don't pay for a repair that can't be finished.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Not cooling: relay, thermostat or fan faults</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Frost build-up and defrost faults</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Noisy fans and compressors</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Cracked door shelves and worn seals</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Recently bought? Check your Kogan warranty and your Australian Consumer Law rights before paying for a repair.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a Kogan Repair</a>
+        </div>
+
+        <div id="ge" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">GE Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            GE (General Electric) fridges, now under GE Appliances, a Haier company, are less common in Australia. Most we see in Parramatta are larger imported side-by-side and French-door models, often with plumbed ice and water dispensers.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            GE fridge repairs often involve the ice and water system or the defrost and control electronics. Some GE parts have to be imported, so we confirm availability and timing before you commit.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Ice maker not making ice; water valve faults</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Dispenser leaks and frozen water lines</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Defrost heater, sensor or timer failure</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Control board and display faults</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Older GE models: we'll tell you honestly if part availability makes replacement the better option.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a GE Repair</a>
+        </div>
+
+        <div id="simpson" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">Simpson Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Simpson is a long-standing Australian appliance brand, now owned by Electrolux. Older Simpson top-mount fridges are still running in many established Parramatta, North Parramatta and Northmead homes, and they're often worth keeping.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Because Simpson shares many parts with Westinghouse and Electrolux, Simpson fridge repairs are usually straightforward and parts are easy to get. Many are fixed on the first visit from parts carried in the van.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Thermostat failure</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Defrost timer or heater faults: iced-up freezer</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Evaporator and condenser fan motors</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Door seal replacement</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Most Simpson fridges we see are out of warranty, so repairs go straight through us.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a Simpson Repair</a>
+        </div>
+
+        <div id="siemens" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 scroll-mt-24">
+          <h3 class="text-2xl font-extrabold text-slate-900">Siemens Fridge Repair Parramatta</h3>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Siemens fridges are German-engineered by BSH, the same group that makes Bosch. Many Siemens models in Parramatta are integrated (built-in) fridges or premium NoFrost freestanding units with electronic controls.
+          </p>
+          <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+            Siemens fridge repairs and integrated fridge repairs need care: we work inside the cabinetry without damaging joinery, and test the electronic module, sensors and NoFrost system before quoting.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <p class="text-sm font-bold text-slate-900 sm:col-span-2">Common faults we fix:</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> NoFrost defrost faults: ice on the rear panel</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Electronic module or sensor errors</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Fan faults and temperature drift</p>
+            <p class="text-slate-600 text-sm flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Integrated door hinge and seal problems</p>
+          </div>
+          <p class="text-xs text-slate-600 italic">Under warranty, use Siemens' own repair service. Out of warranty, our Siemens repairs are backed by our 1-year warranty.</p>
+          <a href="contact#contact-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all">Book a Siemens Repair</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BRAND COMPARISON TABLE -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="table" class="w-4 h-4"></i> At A Glance
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Repair Guide by Brand</h2>
+        <p class="text-slate-700 text-base leading-relaxed">
+          A quick look at what we usually find with each of these brands, and how easy parts are to get in Sydney.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr>
+              <th class="p-4">Brand</th>
+              <th class="p-4">Common types</th>
+              <th class="p-4">Most common fault</th>
+              <th class="p-4">Parts availability</th>
+              <th class="p-4">Our tip</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">Teco</td>
+              <td class="p-4">Top mount, bar fridge, freezers</td>
+              <td class="p-4">Thermostat / start relay</td>
+              <td class="p-4">Good (standard parts)</td>
+              <td class="p-4">Get a quote before deciding to replace</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">TCL</td>
+              <td class="p-4">Frost-free, French door</td>
+              <td class="p-4">Sensors, fans, defrost</td>
+              <td class="p-4">Good for newer models</td>
+              <td class="p-4">Check manufacturer warranty first</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">Vintec</td>
+              <td class="p-4">Wine cabinets (single/multi-zone)</td>
+              <td class="p-4">Zone temperature drift</td>
+              <td class="p-4">Moderate: confirm before quoting</td>
+              <td class="p-4">Check the cabinet's ventilation</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">Kogan</td>
+              <td class="p-4">Top mount, bar fridge</td>
+              <td class="p-4">Relay, thermostat, fans</td>
+              <td class="p-4">Varies; compatible parts used</td>
+              <td class="p-4">Confirm part availability upfront</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">GE</td>
+              <td class="p-4">Side-by-side, French door</td>
+              <td class="p-4">Ice maker / water valve</td>
+              <td class="p-4">Some parts imported</td>
+              <td class="p-4">Expect a longer timeline for rare parts</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">Simpson</td>
+              <td class="p-4">Older top mount</td>
+              <td class="p-4">Defrost timer / thermostat</td>
+              <td class="p-4">Very good (shared with Westinghouse)</td>
+              <td class="p-4">Usually worth repairing</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-bold text-slate-900">Siemens</td>
+              <td class="p-4">Integrated, NoFrost</td>
+              <td class="p-4">Defrost / electronic module</td>
+              <td class="p-4">Good (BSH parts network)</td>
+              <td class="p-4">Use a careful integrated-fridge specialist</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. COMMERCIAL BRANDS -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="store" class="w-4 h-4"></i> For Businesses
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Commercial Refrigeration Brands We Repair</h2>
+        <p class="text-slate-700 text-base leading-relaxed">
+          For cafes, restaurants, clinics and shops across Parramatta we repair under-bench, upright, display and coolroom equipment from:
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Skope</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Williams</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">FED</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Bromic</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Hoshizaki</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Polar</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Skipio</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Anvil</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Kirby</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Arneg</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">Rhino</span>
+        <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">AG Equipment</span>
+      </div>
+
+      <p class="text-slate-600 text-sm">
+        Components and controls: Carel, Dixell, Danfoss, Embraco, Cubigel and Actrol.
+      </p>
+
+      <a href="services#commercial" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">
+        Commercial fridge repair <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- 7. MANUFACTURER VS INDEPENDENT + PARTS -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="scale" class="w-4 h-4"></i> Honest Advice
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Manufacturer Service or an Independent Repairer?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Call the manufacturer when&hellip;</h3>
+          <ul class="text-slate-600 text-sm space-y-2">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> Your fridge is still under the manufacturer's warranty. Using them keeps that cover intact.</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> It's a recent purchase with an early fault. Your Australian Consumer Law rights may give you a free repair or replacement through the retailer.</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Call us when&hellip;</h3>
+          <ul class="text-slate-600 text-sm space-y-2">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> The fridge is out of warranty and you want a fast, local fix.</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> You have more than one brand to look at, for example a fridge and a bar fridge.</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> The manufacturer's wait time is too long for a fridge full of food.</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> You want an honest second opinion on whether a repair is worth it.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white border border-slate-200 space-y-2">
+        <h3 class="text-lg font-bold text-slate-900">Genuine fridge parts vs quality-matched parts</h3>
+        <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+          We use genuine fridge parts wherever they're available. For brands with limited part supply, such as some Kogan and GE models, we may recommend a quality-matched compatible part. We'll always tell you which you're getting, and both are covered by our 1-year warranty.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. FIND YOUR BRAND & MODEL NUMBER -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="search" class="w-4 h-4"></i> Before You Book
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How to Find Your Fridge's Brand and Model Number</h2>
+        <p class="text-slate-700 text-base leading-relaxed">
+          Sending us your model number helps us bring the right part and fix it on the first visit.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="reveal-child space-y-2">
+            <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">01</span>
+            <h3 class="text-base font-bold text-slate-900">Inside the fridge</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Check the side wall of the fresh-food compartment, near the crisper drawers or behind the top shelf.</p>
+          </div>
+          <div class="reveal-child space-y-2">
+            <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">02</span>
+            <h3 class="text-base font-bold text-slate-900">Inside the door frame</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Many Samsung, LG and TCL models have the sticker on the edge of the cabinet behind the door.</p>
+          </div>
+          <div class="reveal-child space-y-2">
+            <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">03</span>
+            <h3 class="text-base font-bold text-slate-900">On the back</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Older Simpson, Teco and Kogan fridges often have the rating plate on the rear, near the compressor.</p>
+          </div>
+          <div class="reveal-child space-y-2">
+            <span class="w-8 h-8 rounded-full bg-sky-700 text-white font-extrabold text-xs flex items-center justify-center">04</span>
+            <h3 class="text-base font-bold text-slate-900">Wine cabinets</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Vintec labels are usually on an inside wall or behind the bottom shelf.</p>
+          </div>
+        </div>
+
+        <img src="image/fridge-model-number-sticker.webp" width="800" height="600" onerror="this.onerror=null; this.src='image/hero-fridge-repair-tech.webp';" alt="Where to find the model number sticker inside a fridge" class="w-full h-56 lg:h-72 object-cover rounded-xl border border-slate-200" loading="lazy" decoding="async">
+
+      </div>
+
+      <p class="text-slate-600 text-sm">Tip: take a photo of the sticker and send it with your booking.</p>
+
+    </div>
+  </section>
+
+  <!-- 9. FAQs -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="space-y-3 max-w-2xl">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-4 h-4"></i> Clear Answers
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Brand Repair FAQs</h2>
+      </div>
+
+      <div class="space-y-3 max-w-4xl">
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>1. Do you repair all fridge brands in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We repair almost every domestic and commercial fridge brand in Parramatta, from Samsung, LG and Fisher &amp; Paykel to Teco, TCL, Vintec, Kogan, GE, Simpson and Siemens. If you're unsure about yours, send us the brand and model number.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>2. Do you do Teco fridge repairs?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We repair Teco top-mount fridges, bar fridges and freezers across Parramatta. Common Teco faults are thermostats, start relays and door seals, and we'll tell you honestly whether the repair is worth it.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>3. Can you repair a TCL fridge?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. Our TCL fridge repairs cover frost-free, French-door and side-by-side models, including sensor, fan, defrost and control board faults. If your TCL is still under warranty, contact TCL first.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>4. Do you repair Vintec wine fridges?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes, out-of-warranty Vintec wine fridges, including single and multi-zone cabinets. For in-warranty repairs, book with Vintec directly on 1800 666 778.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>5. Are Kogan fridges worth repairing?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Often, yes, especially for common faults like relays, thermostats and fans. Because some Kogan parts are harder to source, we confirm part availability before quoting so you don't pay for a repair we can't finish.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>6. Can you get parts for GE fridges?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Usually, yes, though some GE parts are imported and can take longer. We confirm availability and timing before you commit to the repair.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>7. Is it worth fixing an old Simpson fridge?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Often, yes. Simpson shares many parts with Westinghouse and Electrolux, so parts are easy to get and common repairs like thermostats, fans and defrost parts are affordable.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>8. Do you repair integrated Siemens fridges?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We repair freestanding and integrated Siemens fridges, working carefully inside the cabinetry. In-warranty Siemens repairs should go through Siemens' own service.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>9. Will using an independent repairer void my warranty?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            If your fridge is still under manufacturer warranty, use the manufacturer's service to keep that cover. For out-of-warranty fridges, our repairs come with our own 1-year parts and labour warranty.
+          </div>
+        </div>
+
+        <div class="faq-item p-5 rounded-xl bg-white border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>10. Do you use genuine parts?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            We use genuine parts wherever they're available. For brands with limited supply we may suggest quality-matched compatible parts, and we always tell you which you're getting.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA -->
+  <section class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+
+      <div class="space-y-3">
+        <span class="px-3.5 py-1.5 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold uppercase tracking-wider">
+          Any Brand, One Call
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white">Book Repairs for Any of the Fridge Brands We Repair in Parramatta</h2>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          Tell us your brand and model number. A licensed local technician will confirm the likely fault, parts availability and a fixed quote.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Book Online 24/7</span>
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs text-slate-300 text-left pt-6 max-w-4xl mx-auto border-t border-slate-800">
+        <div class="reveal-child flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> All makes & models</div>
+        <div class="reveal-child flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Genuine & quality-matched parts</div>
+        <div class="reveal-child flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Fixed quote before work starts</div>
+        <div class="reveal-child flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1-year parts & labour warranty</div>
+        <div class="reveal-child flex items-center gap-2 sm:col-span-2 md:col-span-1"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Same-day service where available</div>
+      </div>
+
+      <p class="text-slate-400 text-xs max-w-2xl mx-auto pt-4">
+        Fridge Repair Parramatta is an independent repair business and is not affiliated with, authorised by or endorsed by any of the brands listed. All trademarks belong to their respective owners.
+      </p>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
+    </a>
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>📅 Book Online</span>
+    </a>
+  </div>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="services#regas-service" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            Samsung · LG · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta · North Parramatta · Harris Park · Westmead · Rosehill · Granville · Merrylands · Wentworthville · Northmead · Oatlands · Rydalmere · Dundas · Telopea · Carlingford · Toongabbie · Winston Hills · Baulkham Hills · Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=10"></script>
+</body>
+</html>
