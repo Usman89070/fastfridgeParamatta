@@ -1,58 +1,110 @@
-# 🚀 Hostinger Deployment Guide - Fridge Repair Parramatta
+# 🚀 Hostinger Deployment Guide — Fridge Repair Parramatta
 
-This project is fully prepared and optimized for 1-click deployment on **Hostinger Web Hosting** (Shared Hosting, Cloud Hosting, WordPress Hosting, or VPS).
+This site is a hybrid: most pages are static HTML, but the blog (`/blog` and every
+`/blog-{slug}` post) is powered by a small PHP/MySQL admin panel. Both parts live
+in this one repo and deploy to the same `public_html` folder on Hostinger.
 
 ---
 
-## 📁 Files Included in Hostinger Package
+## ⚙️ Hosting requirements
 
-All files are located in your workspace directory (`c:\Users\Usman Khan\Desktop\ffp\`):
+- **PHP 8.0 or higher** (tested and confirmed working on PHP 8.3). Check/change
+  this in hPanel → **Websites → [your domain] → Advanced → PHP Configuration →
+  PHP version**.
+- **PHP extensions required:** `dom`, `xml`, `pdo_mysql`, `mbstring`. Check these
+  under the same PHP Configuration page → **PHP extensions** tab. If any blog
+  page 500s while every static page loads fine, this is the first thing to check
+  — the blog's JSON-LD schema generator (`admin/includes/functions.php`) uses
+  `DOMDocument`, which needs `dom`/`xml` enabled, and only blog pages touch it.
+- A MySQL database, created in hPanel → **Databases → MySQL Databases**, with
+  `database/schema.sql` imported into it via phpMyAdmin.
 
-| File / Folder | Purpose for Hostinger |
+---
+
+## 📁 What's in this repo
+
+| Path | What it is |
 | :--- | :--- |
-| `index.html` | Primary landing page containing all 25 content sections & SEO metadata |
-| `styles.css` | Production CSS styles, glassmorphic effects & responsive layout |
-| `app.js` | Interactive booking wizard, calculators, search filters & accordions |
-| `.htaccess` | Apache configuration: Forces HTTPS, Gzip compression, browser caching & clean URL slug `/fridge-repair-parramatta/` |
-| `sitemap.xml` | Search Engine sitemap for Google Search Console |
-| `robots.txt` | Crawler indexing instructions pointing to `sitemap.xml` |
-| `images/` | Product images directory |
+| `index.html`, `about.html`, `contact.html`, `services.html`, `brands.html`, `emergency-fridge-repair.html`, `fridge-repair-cost.html`, `fridge-not-cooling-repair.html` | Static pages. Edit and re-upload directly — no PHP involved. |
+| `styles.css`, `app.js` | Shared styling/behaviour for every page. |
+| `.htaccess` | Forces HTTPS + non-www, clean URLs (e.g. `/about` instead of `/about.html`), blocks direct access to `includes/`, `admin/includes/`, `database/`, routes `/blog` and `/blog-{slug}` to the PHP pages below. |
+| `robots.txt`, `sitemap.php` | `sitemap.php` generates `sitemap.xml` on the fly (scans the static pages above + queries published blog posts) — nothing to edit by hand when a page or post is added. |
+| `blog.php` | Renders the blog list at `/blog`. |
+| `blog-post.php` | Renders a single post at `/blog-{slug}`. |
+| `includes/site-header.php`, `includes/site-footer.php` | The shared header/footer markup for `blog.php`/`blog-post.php` — kept functionally identical to the header/footer duplicated at the top/bottom of every static `.html` page. |
+| `admin/` | The password-protected blog admin panel (login, write/edit/delete posts). Needs `admin/includes/config.php` (see below) to connect to the database. |
+| `admin/includes/functions.php` | Shared PHP helpers: HTML sanitizer for post content, and the JSON-LD schema builder (Article/FAQPage/HowTo) used by `blog-post.php`. |
+| `database/schema.sql` | The `blog_posts` table definition + the three original seed posts. |
+| `image/` | Site images. |
+
+**blog-*.html files sitting in the repo root** (`blog.html`,
+`blog-fridge-not-cooling-causes.html`, etc.) are old static snapshots, superseded
+by the PHP/MySQL admin panel above. `.htaccess` always routes `/blog` and
+`/blog-{slug}` to `blog.php`/`blog-post.php`, never to these files, so they're
+dead weight — safe to ignore, not worth re-uploading.
 
 ---
 
-## 🛠️ Step-by-Step Deployment Instructions
+## 🔑 First-time setup: the database
 
-### Option 1: Upload via Hostinger hPanel File Manager (Recommended & Fastest)
-
-1. Log into your [Hostinger hPanel](https://hpanel.hostinger.com/).
-2. Navigate to **Websites** & click **Manage** next to your domain (`fridgerepairparramatta.com.au`).
-3. Click **File Manager** (Files section) and open the **`public_html`** directory.
-4. Click the **Show Hidden Files** toggle (gear icon top right) to ensure `.htaccess` is visible.
-5. Select all files from `c:\Users\Usman Khan\Desktop\ffp\` (`index.html`, `styles.css`, `app.js`, `.htaccess`, `robots.txt`, `sitemap.xml`, and the `images/` directory).
-6. Drag and drop them directly into the **`public_html`** folder on Hostinger.
-
----
-
-### Option 2: Upload via FTP (FileZilla / WinSCP)
-
-1. In Hostinger hPanel, go to **Files -> FTP Accounts** and copy your **FTP Host**, **FTP Username**, and **Password**.
-2. Open FileZilla, connect to your Hostinger server.
-3. Open `/public_html/` on the remote server side.
-4. Upload all files from `c:\Users\Usman Khan\Desktop\ffp\` to `/public_html/`.
+1. hPanel → **Databases → MySQL Databases** → create a database + user, note the
+   database name, username, password.
+2. phpMyAdmin → open the new database → **Import** → upload `database/schema.sql`.
+3. In File Manager, copy `admin/includes/config.example.php` to
+   `admin/includes/config.php` (same folder) and fill in the real database name/
+   username/password from step 1. **Never commit this file to git** — it's
+   already in `.gitignore` for this reason.
 
 ---
 
-## 🔒 Post-Deployment Checklist on Hostinger
+## 🛠️ Deploying changes (no FTP/Git integration — manual File Manager upload)
 
-1. **Activate Free SSL (HTTPS)**:
-   - Go to **Security -> SSL** in hPanel.
-   - Click **Install SSL** (Hostinger provides free lifetime SSL via Let's Encrypt).
-   - Our `.htaccess` file will automatically redirect all `http://` traffic to `https://`.
+There is no automated deploy for this site — every change has to be manually
+uploaded through hPanel's **File Manager**. This has caused real problems, so
+follow this carefully:
 
-2. **Verify URL Slug `/fridge-repair-parramatta/`**:
-   - Access `https://yourdomain.com/fridge-repair-parramatta/` in your browser.
-   - The `.htaccess` rewrite rule ensures this URL loads seamlessly.
+1. **Always use the Upload button, never the in-browser code Editor's paste.**
+   Pasting large files into the File Manager's text editor has silently
+   truncated files before (losing the opening `<?php` tag and the first couple
+   hundred lines) — the symptom is a blog page suddenly dumping raw PHP source
+   code as plain text instead of rendering. If that happens, delete the broken
+   file and re-upload it fresh rather than trying to fix it in the editor.
+2. For a changed **static `.html` page**: just re-upload that one file to the
+   site root, overwriting the old one.
+3. For a changed **PHP file**, upload it to the exact matching folder — this is
+   easy to get wrong since several files share a name across folders:
 
-3. **Submit Sitemap to Google Search Console**:
-   - Add your website property in Google Search Console.
-   - Go to **Sitemaps** and submit `https://yourdomain.com/sitemap.xml`.
+   | File | Goes in |
+   | :--- | :--- |
+   | `site-header.php`, `site-footer.php` | `includes/` |
+   | `blog.php`, `blog-post.php`, `sitemap.php`, `send-inquiry.php` | site root |
+   | `functions.php`, `db.php`, `auth.php`, `layout.php` | `admin/includes/` |
+   | `index.php`, `login.php`, `logout.php`, `post-form.php`, `post-save.php`, `post-delete.php`, `change-password.php` | `admin/` |
+4. After uploading a PHP file, open it in File Manager and sanity-check: first
+   line is `<?php`, and scrolling to the bottom shows the file's real ending
+   (not cut off mid-function).
+5. Hard-refresh the browser (Ctrl+Shift+R) before checking the live result —
+   Hostinger/LiteSpeed caching can otherwise show a stale page. If a page still
+   looks stale after re-uploading the right file correctly, check hPanel →
+   **Cache Manager** → Purge/Clear All Cache.
+
+For a from-scratch deploy (new hosting account, nothing uploaded yet), it's
+simpler to zip the whole repo (excluding `.git` and `admin/includes/config.php`)
+and extract it in one go via File Manager, then do the database setup above.
+
+---
+
+## 🔒 Post-deployment checklist
+
+1. **SSL**: hPanel → **Security → SSL** → Install SSL (free Let's Encrypt). The
+   `.htaccess` file already forces `http://` → `https://`.
+2. **Database + admin panel**: confirm `admin/includes/config.php` exists with
+   the real credentials, then log in at `/admin` and confirm the 3 seed posts
+   from `database/schema.sql` show up.
+3. **Blog pages render** (not just the static pages): open `/blog` and one
+   `/blog-{slug}` post directly — these are the pages most likely to break from
+   a missed upload or a missing PHP extension, since static pages will look
+   fine either way.
+4. **Sitemap**: visit `/sitemap.xml` and confirm it lists the static pages and
+   the published blog posts with no errors, then submit it in Google Search
+   Console (**Sitemaps** → `https://fridgerepairparramatta.com.au/sitemap.xml`).
