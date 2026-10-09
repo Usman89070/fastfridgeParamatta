@@ -2,7 +2,7 @@
 /**
  * Receives a POST from the site's contact/booking forms (via fetch, no page
  * reload) and emails the submitted details straight to the business inbox -
- * so a query lands in info@fridgerepairparramatta.com.au without the visitor
+ * so a query lands in info@fastfridgerepairs.com.au without the visitor
  * ever having to open their own mail app. Always responds with JSON.
  */
 
@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');
 
-const RECIPIENT = 'info@fridgerepairparramatta.com.au';
+const RECIPIENT = 'info@fastfridgerepairs.com.au';
 
 function respond(bool $success, string $message): void {
     http_response_code($success ? 200 : 400);
@@ -149,7 +149,7 @@ $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n");
 $sent = @mail(RECIPIENT, $encodedSubject, $body, implode("\r\n", $headers));
 
 if (!$sent) {
-    respond(false, 'Sorry, something went wrong sending your details. Please email us directly at info@fridgerepairparramatta.com.au.');
+    respond(false, 'Sorry, something went wrong sending your details. Please email us directly at info@fastfridgerepairs.com.au.');
 }
 
 respond(true, 'Thanks - we\'ll be in touch shortly.');
