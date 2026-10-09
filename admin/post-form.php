@@ -35,6 +35,16 @@ render_admin_header($isEdit ? 'Edit Post' : 'New Post');
 render_flash_messages();
 ?>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css">
+<style>
+  /* Match the Quill toolbar/editor to the rest of the admin form fields. */
+  #quill-editor-wrap .ql-toolbar { border: none; border-bottom: 1px solid #cbd5e1; background: #f8fafc; }
+  #quill-editor-wrap .ql-container { border: none; font-size: 0.95rem; }
+  #quill-editor .ql-editor { min-height: 420px; }
+  #quill-editor .ql-editor h2 { font-size: 1.4rem; font-weight: 800; margin-top: 0.5em; }
+  #quill-editor .ql-editor h3 { font-size: 1.15rem; font-weight: 700; margin-top: 0.5em; }
+</style>
+
 <div class="mb-6">
   <a href="index.php" class="text-sm text-slate-500 hover:text-sky-600 font-semibold">&larr; Back to Posts</a>
 </div>
@@ -91,12 +101,20 @@ render_flash_messages();
   </div>
 
   <div>
-    <label class="admin-label" for="content">Post Content *</label>
-    <textarea class="admin-textarea" id="content" name="content" rows="20" required><?= e($post['content']) ?></textarea>
+    <div class="flex items-center justify-between gap-4">
+      <label class="admin-label" for="content">Post Content *</label>
+      <button type="button" id="toggle-html-view" class="text-xs font-bold text-sky-700 hover:underline">View/Edit raw HTML</button>
+    </div>
+    <div id="quill-editor-wrap" class="bg-white border border-slate-300 rounded-lg overflow-hidden">
+      <div id="quill-editor" style="min-height: 420px;"></div>
+    </div>
+    <textarea class="admin-textarea hidden" id="content" name="content" rows="20" required><?= e($post['content']) ?></textarea>
     <p class="admin-hint">
-      Basic HTML only: <code>&lt;p&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;ul&gt;&lt;li&gt;</code>,
-      <code>&lt;strong&gt;</code>, <code>&lt;a href="..."&gt;</code>. Everything else is stripped out for safety when you save.
-      Wrap a highlighted tip box in <code>&lt;div class="callout"&gt;...&lt;/div&gt;</code>.
+      Write and format normally (headings, bold, lists, links) with the toolbar above - it saves as clean HTML
+      automatically. Pasting from Word or Google Docs is fine; use the "Clean" (eraser) button to strip leftover
+      formatting first. For an advanced element the toolbar doesn't cover, such as a highlighted
+      <code>&lt;div class="callout"&gt;</code> tip box, click "View/Edit raw HTML" above and type the tag directly.
+      Anything outside the allowed tags is stripped out for safety when you save.
     </p>
   </div>
 
@@ -135,6 +153,65 @@ render_flash_messages();
 
   titleInput.addEventListener('input', updatePreview);
   slugInput.addEventListener('input', updatePreview);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+<script>
+  const quill = new Quill('#quill-editor', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ header: [2, 3, false] }],
+        ['bold', 'italic'],
+        [{ list: 'ordered' }, { list: 'bullet' }],
+        ['blockquote', 'link'],
+        ['clean'],
+      ],
+    },
+  });
+
+  const contentField = document.getElementById('content');
+  const quillWrap = document.getElementById('quill-editor-wrap');
+  const toggleBtn = document.getElementById('toggle-html-view');
+
+  // Seed the editor from whatever's already in the hidden textarea (existing
+  // post content when editing, empty for a new post).
+  quill.root.innerHTML = contentField.value;
+
+  // Keep the hidden textarea in sync on every edit, since that's the field
+  // that actually gets posted to post-save.php.
+  quill.on('text-change', () => {
+    contentField.value = quill.root.innerHTML;
+  });
+
+  let showingRawHtml = false;
+  toggleBtn.addEventListener('click', () => {
+    if (!showingRawHtml) {
+      // Switching TO raw HTML: make sure the textarea has the latest content,
+      // then show it instead of the visual editor.
+      contentField.value = quill.root.innerHTML;
+      quillWrap.classList.add('hidden');
+      contentField.classList.remove('hidden');
+      toggleBtn.textContent = 'Back to Visual Editor';
+    } else {
+      // Switching back TO the visual editor: load whatever was hand-typed in
+      // the raw textarea back into Quill.
+      quill.root.innerHTML = contentField.value;
+      contentField.classList.add('hidden');
+      quillWrap.classList.remove('hidden');
+      toggleBtn.textContent = 'View/Edit raw HTML';
+    }
+    showingRawHtml = !showingRawHtml;
+  });
+
+  // Belt-and-braces: whichever view is visible when the form submits wins,
+  // so make sure the textarea reflects the visual editor's content right
+  // before submit too (covers a stray edit that didn't fire text-change).
+  document.querySelector('form[action="post-save.php"]').addEventListener('submit', () => {
+    if (!showingRawHtml) {
+      contentField.value = quill.root.innerHTML;
+    }
+  });
 </script>
 
 <?php render_admin_footer(); ?>
