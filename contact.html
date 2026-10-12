@@ -114,7 +114,20 @@
 
       <!-- Desktop Nav Links -->
       <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
-        <a href="services" class="hover:text-sky-400 transition-colors">Services</a>
+        <div class="relative">
+          <button type="button" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 hover:text-sky-400 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+          <div id="services-dropdown-panel" class="hidden absolute left-0 top-full mt-2 w-64 rounded-xl bg-slate-900 border border-slate-700 shadow-xl py-2 z-50">
+            <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
+            <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
+            <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
+            <a href="services#commercial" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="services#regas-service" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
+            <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
+          </div>
+        </div>
         <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
         <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
         <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
@@ -146,6 +159,13 @@
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
       <a href="services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
+      <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
+        <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
+        <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
+        <a href="services#commercial" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="services#regas-service" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
+        <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
+      </div>
       <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
       <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
       <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>

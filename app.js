@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTiltCards();
   initScrollProgress();
   initHeader();
-  initAgencyDropdown();
+  initServicesDropdown();
   initActiveNavLinks();
   initModals();
   initBookingWizard();
@@ -74,9 +74,9 @@ function initInitialHashScrollFix() {
 }
 
 // "Agency" Header Dropdown (About / Blog / Reviews / Contact)
-function initAgencyDropdown() {
-  const btn = document.getElementById('agency-dropdown-btn');
-  const panel = document.getElementById('agency-dropdown-panel');
+function initServicesDropdown() {
+  const btn = document.getElementById('services-dropdown-btn');
+  const panel = document.getElementById('services-dropdown-panel');
   if (!btn || !panel) return;
 
   const chevron = btn.querySelector('[data-lucide="chevron-down"]');
@@ -112,7 +112,7 @@ function initAgencyDropdown() {
   });
 }
 
-// Highlight the current page's link inside the Agency dropdown (and mobile menu equivalent)
+// Highlight the current page's link inside the Services dropdown (and mobile menu equivalent)
 function initActiveNavLinks() {
   const current = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const isBlogPost = current.startsWith('blog-');
