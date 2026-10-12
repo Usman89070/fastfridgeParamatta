@@ -28,11 +28,12 @@ function render_admin_header(string $title, string $active = ''): void {
         <img src="../image/FFp-logo.webp" alt="Fridge Repair Parramatta" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
         <div class="leading-tight">
           <div class="font-extrabold text-sm sm:text-base">Fridge Repair Parramatta</div>
-          <div class="text-xs text-sky-400 font-semibold">Blog Admin Panel</div>
+          <div class="text-xs text-sky-400 font-semibold">SEO &amp; Blog Admin Panel</div>
         </div>
       </div>
       <nav class="flex items-center gap-4 text-sm font-semibold">
         <a href="index.php" class="<?= $active === 'dashboard' ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400' ?> transition-colors">Posts</a>
+        <a href="pages.php" class="<?= $active === 'pages' ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400' ?> transition-colors">Pages</a>
         <a href="../blog" target="_blank" rel="noopener" class="text-slate-300 hover:text-sky-400 transition-colors">View Site</a>
         <a href="change-password.php" class="<?= $active === 'password' ? 'text-sky-400' : 'text-slate-300 hover:text-sky-400' ?> transition-colors">Change Password</a>
         <span class="hidden sm:inline text-slate-500">|</span>
