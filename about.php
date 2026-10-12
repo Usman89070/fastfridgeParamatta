@@ -1,4 +1,39 @@
-<!DOCTYPE html>
+<?php
+require __DIR__ . '/includes/page-seo.php';
+$seo = get_page_seo('about', [
+    'title' => 'About Us | Fridge Repair Parramatta',
+    'meta_description' => 'Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.',
+    'canonical_url' => 'https://fridgerepairparramatta.com.au/about',
+    'h1' => 'About Fridge Repair Parramatta',
+    'og_title' => 'About Us | Fridge Repair Parramatta',
+    'og_description' => 'Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.',
+    'robots_meta' => 'index,follow',
+    'schema' => [
+        '@context' => 'https://schema.org',
+        '@type' => 'HVACBusiness',
+        'name' => 'Fridge Repair Parramatta',
+        'image' => 'images/hero_refrigeration_tech.jpg',
+        'url' => 'https://fridgerepairparramatta.com.au/about',
+        'email' => 'info@fridgerepairparramatta.com.au',
+        'priceRange' => '$$',
+        'description' => 'Licensed residential and commercial refrigeration mechanics servicing Parramatta and Western Sydney, with 30+ years of experience and a 1-year workmanship warranty.',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Church Street',
+            'addressLocality' => 'Parramatta',
+            'addressRegion' => 'NSW',
+            'postalCode' => '2150',
+            'addressCountry' => 'AU',
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => -33.8150,
+            'longitude' => 151.0011,
+        ],
+    ],
+]);
+function seo_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+?><!DOCTYPE html>
 <html lang="en-AU" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -23,17 +58,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- SEO META -->
-  <title>About Us | Fridge Repair Parramatta</title>
+  <title><?= seo_e($seo['title']) ?></title>
   <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
   <link rel="apple-touch-icon" href="image/FFp-logo.webp">
-  <meta name="description" content="Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.">
-  <link rel="canonical" href="https://fridgerepairparramatta.com.au/about">
+  <meta name="description" content="<?= seo_e($seo['meta_description']) ?>">
+  <link rel="canonical" href="<?= seo_e($seo['canonical_url']) ?>">
+  <meta name="robots" content="<?= seo_e($seo['robots_meta']) ?>">
 
   <!-- Open Graph / Social Meta -->
-  <meta property="og:title" content="About Us | Fridge Repair Parramatta">
-  <meta property="og:description" content="Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.">
+  <meta property="og:title" content="<?= seo_e($seo['og_title']) ?>">
+  <meta property="og:description" content="<?= seo_e($seo['og_description']) ?>">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fridgerepairparramatta.com.au/about">
+  <meta property="og:url" content="<?= seo_e($seo['canonical_url']) ?>">
 
   <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
   <link rel="stylesheet" href="tailwind-built.css?v=1">
@@ -46,29 +82,7 @@
 
   <!-- JSON-LD Structured Data Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "name": "Fridge Repair Parramatta",
-    "image": "images/hero_refrigeration_tech.jpg",
-    "url": "https://fridgerepairparramatta.com.au/about",
-    "email": "info@fridgerepairparramatta.com.au",
-    "priceRange": "$$",
-    "description": "Licensed residential and commercial refrigeration mechanics servicing Parramatta and Western Sydney, with 30+ years of experience and a 1-year workmanship warranty.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Church Street",
-      "addressLocality": "Parramatta",
-      "addressRegion": "NSW",
-      "postalCode": "2150",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -33.8150,
-      "longitude": 151.0011
-    }
-  }
+  <?= json_encode($seo['schema'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
   </script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
@@ -165,7 +179,7 @@
       <p class="text-xs font-semibold text-slate-400">
         <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span> About
       </p>
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">About Fridge Repair Parramatta</h1>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight"><?= seo_e($seo['h1']) ?></h1>
       <p class="text-slate-300 text-base sm:text-lg max-w-2xl">
         Licensed refrigeration mechanics, 30+ years of hands-on experience, and honest advice for Parramatta and Western Sydney.
       </p>
