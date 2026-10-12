@@ -66,7 +66,7 @@ require __DIR__ . '/includes/site-header.php';
   </section>
 
   <!-- ARTICLE CONTENT + SIDEBAR -->
-  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+  <section class="no-scroll-reveal py-16 sm:py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-12">
 

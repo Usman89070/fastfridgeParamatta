@@ -768,7 +768,7 @@ function initScrollReveal() {
   // and under <main> on pages that have one (added later for the
   // accessibility landmark) - match both so reveal animation keeps working
   // everywhere.
-  const sections = document.querySelectorAll('body > section, main > section, body > footer');
+  const sections = document.querySelectorAll('body > section:not(.no-scroll-reveal), main > section:not(.no-scroll-reveal), body > footer');
   // Blocks that need to animate on their own scroll trigger, independent of
   // the section they sit inside (e.g. two sibling blocks that should each
   // fade in separately rather than both appearing the moment their shared
