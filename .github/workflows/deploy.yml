@@ -20,6 +20,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Explicit FTPS (TLS) - Hostinger resets plain-FTP data connections.
+          protocol: ftps
           # The FTP account's root is already
           # /home/u232649564/domains/fridgerepairparramatta.com.au/public_html
           # so the server dir is "./" (do NOT repeat the full path here).
