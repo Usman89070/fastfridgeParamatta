@@ -46,7 +46,7 @@
             <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
             <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
-            <li><a href="services#regas-service" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
             <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
