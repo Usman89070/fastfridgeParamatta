@@ -37,6 +37,7 @@ try {
         'blog'                     => ['priority' => '0.7', 'changefreq' => 'weekly'],
         'emergency-fridge-repair'  => ['priority' => '0.9', 'changefreq' => 'weekly'],
         'fridge-repair-cost'       => ['priority' => '0.9', 'changefreq' => 'monthly'],
+        'fridge-not-cooling-repair' => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'services'                 => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'brands'                   => ['priority' => '0.9', 'changefreq' => 'monthly'],
     ];
@@ -52,20 +53,30 @@ try {
     $homeLastmod = date('Y-m-d', $homeMtime !== false ? $homeMtime : time());
     $urls[] = ['loc' => BASE_URL . '/', 'lastmod' => $homeLastmod, 'changefreq' => 'daily', 'priority' => '1.0'];
 
-    // Every other top-level static page: scan the directory instead of hand-
+    // Every other top-level page: scan the directory instead of hand-
     // listing files, so a new page (any new *.html dropped in the site root)
     // shows up here without touching this script.
     // - index.html is excluded: already handled above as the homepage.
     // - blog-*.html files are excluded: those are legacy static copies of
     //   database-backed blog posts, which are listed separately below using
     //   their real published/updated dates instead of the static file's mtime.
-    $htmlFiles = glob(__DIR__ . '/*.html') ?: [];
-    sort($htmlFiles);
-    foreach ($htmlFiles as $path) {
-        $slug = basename($path, '.html');
-        if ($slug === 'index' || strpos($slug, 'blog-') === 0) {
+    // Pages migrated from .html to .php (e.g. about.php, which pulls its SEO
+    // fields from the admin panel) are scanned too. Backend scripts and the
+    // dynamic blog templates are not pages, so they're skipped, and a slug
+    // present as both .html and .php is only listed once.
+    $nonPagePhp = ['sitemap', 'send-inquiry', 'blog-post'];
+    $pageFiles = array_merge(glob(__DIR__ . '/*.html') ?: [], glob(__DIR__ . '/*.php') ?: []);
+    sort($pageFiles);
+    $seenSlugs = [];
+    foreach ($pageFiles as $path) {
+        $ext = pathinfo($path, PATHINFO_EXTENSION);
+        $slug = basename($path, '.' . $ext);
+        if ($slug === 'index' || strpos($slug, 'blog-') === 0
+            || isset($seenSlugs[$slug])
+            || ($ext === 'php' && in_array($slug, $nonPagePhp, true))) {
             continue;
         }
+        $seenSlugs[$slug] = true;
         $mtime = filemtime($path);
         $settings = $pageSettings[$slug] ?? ['priority' => $defaultPriority, 'changefreq' => $defaultChangefreq];
         $urls[] = [
