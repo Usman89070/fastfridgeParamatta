@@ -39,6 +39,7 @@ try {
         'fridge-repair-cost'       => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'fridge-not-cooling-repair' => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'fridge-regas'             => ['priority' => '0.9', 'changefreq' => 'monthly'],
+        'samsung-fridge-repair-parramatta' => ['priority' => '0.8', 'changefreq' => 'monthly'],
         'services'                 => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'brands'                   => ['priority' => '0.9', 'changefreq' => 'monthly'],
     ];

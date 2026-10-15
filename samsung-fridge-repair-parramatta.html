@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title>Samsung Fridge Repair Parramatta | Same-Day, Fixed Quote</title>
+<meta name="description" content="Samsung fridge not cooling, leaking or showing an error code? Local licensed Parramatta techs, same-day where available. Fixed quote, 1-year warranty.">
+<link rel="canonical" href="https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Samsung Fridge Repair Parramatta | Same-Day, Fixed Quote">
+<meta property="og:description" content="Samsung fridge not cooling, leaking or showing an error code? Local licensed Parramatta techs, same-day where available. Fixed quote, 1-year warranty.">
+<meta property="og:url" content="https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta property="og:image" content="https://fridgerepairparramatta.com.au/image/FFp-logo.webp">
+
+  <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
+  <link rel="stylesheet" href="tailwind-built.css?v=1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+<!-- Page styles, scoped to .sfr -->
+<style>
+body{margin:0}
+:root{--sfr-bg:#fff;--sfr-alt:#f1f5f9;--sfr-ink:#0f172a;--sfr-mute:#475569;--sfr-line:#dbe3ec;--sfr-dark:#0f172a;--sfr-accent:#0ea5e9;--sfr-accent-ink:#0369a1;--sfr-warn:#fff7d6;--sfr-r:14px}
+.sfr{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--sfr-ink);line-height:1.65;font-size:1rem;-webkit-text-size-adjust:100%}
+.sfr *,.sfr *::before,.sfr *::after{box-sizing:border-box}
+.sfr img{max-width:100%;height:auto}
+.sfr a{color:var(--sfr-accent-ink);text-underline-offset:3px}
+.sfr a:focus-visible,.sfr summary:focus-visible{outline:3px solid var(--sfr-accent);outline-offset:2px}
+.sfr-wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+.sfr-sec{padding:40px 0}
+.sfr-sec.alt{background:var(--sfr-alt)}
+.sfr h1,.sfr h2,.sfr h3{line-height:1.2;margin:0 0 .6em;letter-spacing:-.01em}
+.sfr h1{font-size:clamp(1.9rem,6.2vw,3rem)}
+.sfr h2{font-size:clamp(1.5rem,4.6vw,2.15rem)}
+.sfr h3{font-size:1.1rem}
+.sfr p{margin:0 0 1em}
+.sfr-eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sfr-accent-ink);margin-bottom:.6rem}
+.sfr-hero{background:var(--sfr-dark);color:#e2e8f0;padding:28px 0 40px}
+.sfr-hero h1{color:#fff}
+.sfr-hero a{color:#7dd3fc}
+.sfr-crumb{font-size:.88rem;margin:0 0 18px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px;color:#94a3b8}
+.sfr-crumb li+li::before{content:"/";margin-right:6px}
+.sfr-lead{font-size:1.08rem;max-width:62ch}
+.sfr-btns{display:flex;flex-direction:column;gap:12px;margin:22px 0 18px}
+.sfr-btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center;border:2px solid transparent}
+.sfr .sfr-btn.primary{background:var(--sfr-accent);color:#04202f}
+.sfr .sfr-btn.ghost{border-color:#475569;color:#fff}
+.sfr-ticks{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.95rem}
+.sfr-ticks li::before{content:"\2713";color:#38bdf8;font-weight:700;margin-right:8px}
+.sfr-answer{background:#fff;border:1px solid var(--sfr-line);border-left:6px solid var(--sfr-accent);border-radius:var(--sfr-r);padding:20px}
+.sfr-grid{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px;grid-template-columns:1fr}
+.sfr-card{background:#fff;border:1px solid var(--sfr-line);border-radius:var(--sfr-r);padding:18px}
+.sfr-card p{margin:0;color:var(--sfr-mute);font-size:.97rem}
+.sfr-chips{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.sfr-chips li{background:#fff;border:1px solid var(--sfr-line);border-radius:999px;padding:8px 14px;font-size:.92rem}
+.sfr-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--sfr-line);border-radius:var(--sfr-r);background:#fff;margin:18px 0}
+.sfr table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+.sfr th,.sfr td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--sfr-line);vertical-align:top}
+.sfr th{background:#e8eef5;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+.sfr tr:last-child td{border-bottom:0}
+.sfr-note{background:var(--sfr-warn);border-left:5px solid #f0a202;padding:14px 16px;border-radius:10px;font-size:.95rem;margin:18px 0}
+.sfr-steps{list-style:none;counter-reset:s;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.sfr-steps li{counter-increment:s;background:#fff;border:1px solid var(--sfr-line);border-radius:var(--sfr-r);padding:18px 18px 18px 64px;position:relative}
+.sfr-steps li::before{content:counter(s);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--sfr-dark);color:#fff;display:grid;place-items:center;font-weight:700}
+.sfr-steps h3{margin-bottom:.25em}.sfr-steps p{margin:0;color:var(--sfr-mute)}
+.sfr-faq{background:#fff;border:1px solid var(--sfr-line);border-radius:12px;margin:0 0 10px}
+.sfr-faq summary{cursor:pointer;list-style:none;font-weight:700;padding:16px 48px 16px 16px;min-height:48px;position:relative}
+.sfr-faq summary::-webkit-details-marker{display:none}
+.sfr-faq summary::after{content:"+";position:absolute;right:16px;top:12px;font-size:1.5rem;line-height:1.2;color:var(--sfr-accent-ink)}
+.sfr-faq[open] summary::after{content:"\2212"}
+.sfr-faq div{padding:0 16px 6px}
+.sfr-cta{background:var(--sfr-dark);color:#e2e8f0;text-align:center;padding:48px 0}
+.sfr-cta h2{color:#fff}
+.sfr-cta .sfr-btns{max-width:420px;margin:22px auto 0}
+.sfr-related{display:grid;gap:10px;list-style:none;margin:16px 0 0;padding:0}
+.sfr-related a{display:block;padding:14px 16px;border:1px solid var(--sfr-line);border-radius:12px;background:#fff;text-decoration:none;font-weight:600;min-height:48px}
+.sfr-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--sfr-line);box-shadow:0 -6px 20px rgba(15,23,42,.1)}
+.sfr-bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;font-weight:700;text-decoration:none}
+.sfr-bar .a{background:var(--sfr-accent);color:#04202f}.sfr-bar .b{border:2px solid var(--sfr-line);color:var(--sfr-ink)}
+.sfr{padding-bottom:76px}
+@media(min-width:640px){.sfr-sec{padding:56px 0}.sfr-grid{grid-template-columns:repeat(2,1fr)}.sfr-btns{flex-direction:row}.sfr-btn{min-width:200px}.sfr-ticks{grid-template-columns:repeat(2,auto);justify-content:start;gap:8px 28px}.sfr-related{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.sfr-wrap{padding:0 24px}.sfr-sec{padding:72px 0}.sfr-hero{padding:48px 0 64px}.sfr-grid.c3{grid-template-columns:repeat(3,1fr)}.sfr-steps{grid-template-columns:repeat(2,1fr)}.sfr-related{grid-template-columns:repeat(3,1fr)}.sfr{padding-bottom:0}.sfr-bar{display:none}.sfr-two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+@media(prefers-reduced-motion:reduce){.sfr *{scroll-behavior:auto;transition:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#webpage",
+      "url": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta",
+      "name": "Samsung Fridge Repair Parramatta | Same-Day, Fixed Quote",
+      "description": "Samsung fridge not cooling, leaking or showing an error code? Local licensed Parramatta techs, same-day where available. Fixed quote, 1-year warranty.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://fridgerepairparramatta.com.au/#website"
+      },
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#service"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#service",
+      "name": "Samsung Fridge Repair Parramatta",
+      "serviceType": "Samsung fridge and freezer repair",
+      "description": "Independent Samsung fridge repair in Parramatta: not cooling, ice maker, leaks, fan, defrost, control board, compressor and error code faults on French door, side-by-side, top mount, bottom mount and Family Hub models. Licensed technicians, fixed quotes and a 1-year warranty on parts and labour.",
+      "url": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "City",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "City",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "City",
+          "name": "Westmead"
+        },
+        {
+          "@type": "City",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "City",
+          "name": "Granville"
+        },
+        {
+          "@type": "City",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "City",
+          "name": "Northmead"
+        },
+        {
+          "@type": "City",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "City",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "City",
+          "name": "Dundas"
+        },
+        {
+          "@type": "City",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "City",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "City",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "City",
+          "name": "Ermington"
+        },
+        {
+          "@type": "City",
+          "name": "Epping"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Samsung fridge and freezer owners"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Samsung fridge repairs",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung fridge not cooling repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung freezer and fridge fan repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung defrost system repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung ice maker and water dispenser repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung fridge water leak repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung control board and error code repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Samsung compressor repair"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I get Samsung fridge repair in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Right here. Our licensed technicians are based locally and repair Samsung fridges across Parramatta and nearby suburbs. We are an independent repairer, not a Samsung service centre. Book online and we confirm a time, usually the same day if you book early."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Samsung fridge repair cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Samsung fridge repairs cost $150 to $450 including parts. A call-out is usually $60 to $200. Control boards cost $250 to $600 and compressors $450 to $1,100. You get a fixed quote before we start, and that price is the one you pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my Samsung fridge not cooling but the freezer is cold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold air is made in the freezer and shared with the fridge through a fan and a damper. If the freezer is cold and the fridge is warm, the usual causes are an iced-up evaporator, a failed fan, a stuck damper or a bad defrost heater or sensor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the 22E error code mean on a Samsung fridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On most models, 22E or 22C points to the fridge fan, and 21E points to the freezer fan. Ice build-up is a common reason. Meanings vary between models, so write the code down, check the manual and book a technician if it returns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I reset my Samsung fridge when it shows an error?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A power reset is fine for codes like 88 88, which Samsung treats as a power or communication error. Switch it off at the wall for about a minute and turn it back on. For fan or defrost codes, don't keep resetting it. Note the code and call us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my Samsung ice maker not working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common causes are a frozen water line, a blocked or failed inlet valve, a dirty filter, a faulty ice maker module or a freezer that isn't cold enough. Check the ice bucket sits properly first. If ice still isn't coming, we can test the valve and module."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you a Samsung authorised service centre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We are an independent repairer and we are not affiliated with Samsung. If your fridge is still under warranty, contact Samsung or your retailer first. If the warranty has ended or you want a faster visit, we are happy to help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it worth repairing an older Samsung fridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often yes. If the repair costs less than half the price of a similar new fridge and the fridge is under about 10 years old, repairing usually makes sense. Sealed-system faults on old fridges can tip the balance, and we will tell you plainly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair Samsung French door, side-by-side and Family Hub fridges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We repair French door, side-by-side, top mount, bottom mount and multi-door Samsung fridges, as well as Bespoke and Family Hub models. Have your model number ready when you book. It is on a label inside the fridge."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Brands",
+          "item": "https://fridgerepairparramatta.com.au/brands"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Samsung Fridge Repair",
+          "item": "https://fridgerepairparramatta.com.au/samsung-fridge-repair-parramatta"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <div class="relative">
+          <button type="button" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+          <div id="services-dropdown-panel" class="hidden absolute left-0 top-full mt-2 w-64 rounded-xl bg-slate-900 border border-slate-700 shadow-xl py-2 z-50">
+            <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
+            <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
+            <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
+            <a href="services#commercial" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="fridge-regas" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
+            <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
+          </div>
+        </div>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-sky-400 py-1">Services</a>
+      <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
+        <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
+        <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
+        <a href="services#commercial" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="fridge-regas" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
+        <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
+      </div>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="sfr" id="main">
+
+<header class="sfr-hero">
+ <div class="sfr-wrap">
+  <ol class="sfr-crumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/brands">Brands</a></li><li aria-current="page">Samsung Fridge Repair</li></ol>
+  <span class="sfr-eyebrow" style="color:#7dd3fc">Independent Samsung repairs &middot; Parramatta 2150</span>
+  <h1>Samsung Fridge Repair Parramatta</h1>
+  <p class="sfr-lead">Samsung fridge not cooling, leaking or flashing a code? A licensed local technician can usually be with you the same day, find the real fault and fix it for a price agreed up front.</p>
+  <div class="sfr-btns">
+   <a class="sfr-btn primary" href="/contact#contact-form">Book Online 24/7</a>
+   <a class="sfr-btn ghost" href="mailto:info@fridgerepairparramatta.com.au">Email Us</a>
+  </div>
+  <ul class="sfr-ticks">
+   <li>Same-day where available</li>
+   <li>Fixed quote before work</li>
+   <li>ARC-licensed and insured</li>
+   <li>1-year parts and labour warranty</li>
+  </ul>
+ </div>
+</header>
+
+<section class="sfr-sec">
+ <div class="sfr-wrap">
+  <div class="sfr-answer">
+   <span class="sfr-eyebrow">The quick answer</span>
+   <h2>Samsung Fridge Repairs in Parramatta, Explained</h2>
+   <p>Most Samsung fridge faults come down to a handful of parts: a fan, a defrost heater or sensor, a door seal, a control board or, less often, the compressor. Most Samsung repairs here cost $150 to $450 including parts. We work on all Samsung fridge models, from older top mounts to French door, side-by-side and Family Hub fridges.</p>
+   <p>One thing to know first: we are an independent repairer, not a Samsung service centre. If your fridge is still under warranty, contact Samsung or your retailer first. If it isn't, or you can't wait, we're ready.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="problems">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">What we fix</span>
+  <h2>Common Samsung Fridge Problems We Repair</h2>
+  <p>These are the faults we see most on Samsung fridges and freezers. If yours isn't listed, book anyway. A technician can usually find it quickly.</p>
+  <ul class="sfr-grid c3"><li class="sfr-card"><h3>Samsung fridge not cooling</h3><p>The fridge is warm but the compressor runs. Often a dirty condenser, a failed fan or a sealed-system fault. See our <a href="/fridge-not-cooling-repair">fridge not cooling repair</a> page.</p></li><li class="sfr-card"><h3>Freezer cold, fridge warm</h3><p>Cold air isn't reaching the fresh-food section. Think iced evaporator, fan, damper or defrost parts.</p></li><li class="sfr-card"><h3>Ice and frost build-up</h3><p>Frost on the back wall or a block of ice in the freezer. Usually the defrost heater, sensor or drain.</p></li><li class="sfr-card"><h3>Ice maker not working</h3><p>No ice, small ice or a frozen dispenser. We test the water line, inlet valve and ice maker module.</p></li><li class="sfr-card"><h3>Water leaking inside or out</h3><p>Puddles under the fridge or water in the crisper are most often a frozen or blocked defrost drain.</p></li><li class="sfr-card"><h3>Loud or clicking noise</h3><p>Fan motors, a tired start relay or ice touching a fan blade. Worth fixing before it fails.</p></li><li class="sfr-card"><h3>Error codes and blank display</h3><p>Codes like 22E, 21E or 88 88, a dead panel or a fridge stuck in demo mode.</p></li><li class="sfr-card"><h3>Tripping the power</h3><p>A fridge that trips the switch can have a heater or compressor fault. Switch it off and call us.</p></li><li class="sfr-card"><h3>Family Hub and Bespoke faults</h3><p>Touchscreen, Wi-Fi and panel errors alongside the usual cooling parts. We check the fridge side first.</p></li></ul>
+ </div>
+</section>
+
+<section class="sfr-sec" id="models">
+ <div class="sfr-wrap sfr-two">
+  <div>
+   <span class="sfr-eyebrow">Models</span>
+   <h2>Samsung French Door, Side-by-Side and Family Hub Fridge Repair</h2>
+   <p>Samsung builds a lot of different fridges, and each layout fails in slightly different ways. For Samsung side-by-side fridge repair, the usual suspect is ice around the freezer fan. French door models rely on several fans and dampers to share cold air. Family Hub models add a screen and Wi-Fi on top of the same cooling system.</p>
+   <p>We repair all of them, including older units that are out of warranty. Having your model number ready helps us bring the right parts. It is on a label inside the fridge compartment, and on most current models it starts with RF, RS, RT or RB.</p>
+  </div>
+  <ul class="sfr-chips"><li>French door</li><li>Side-by-side</li><li>Top mount</li><li>Bottom mount</li><li>Multi-door</li><li>Family Hub</li><li>Bespoke</li><li>Twin Cooling Plus</li><li>Inverter models</li><li>Samsung freezers</li></ul>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="error-codes">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Error codes</span>
+  <h2>Samsung Fridge Error Codes and What to Try</h2>
+  <p>A code is a clue, not a diagnosis. Here are the ones we get asked about most. Samsung can change what a code means between model generations, so check your manual too.</p>
+  <div class="sfr-table-wrap" role="region" aria-label="Samsung fridge error codes" tabindex="0">
+   <table><thead><tr><th>Code</th><th>Usually means</th><th>What you can try</th></tr></thead><tbody><tr><td><strong>21E (or 21C)</strong></td><td>Freezer fan problem</td><td>Ice around the fan or a failed motor is common. Check the door seals, then defrost. If it returns, book a repair.</td></tr><tr><td><strong>22E (or 22C)</strong></td><td>Fridge fan problem</td><td>Often a fan fault or a door that isn't closing. Unplug for a few hours with the doors open. If it comes back, call us.</td></tr><tr><td><strong>5E (or 5C)</strong></td><td>Defrost sensor problem</td><td>The sensor can't read the evaporator temperature. Usually needs a technician to test and replace.</td></tr><tr><td><strong>88 88</strong></td><td>Power or communication error</td><td>A power reset usually clears it. Switch off at the wall for 1 minute, then turn on.</td></tr><tr><td><strong>OFF OFF / OF OF</strong></td><td>Cooling Off (demo) mode</td><td>Not a fault. Hold the top two left-hand buttons for 5 to 8 seconds until it chimes.</td></tr><tr><td><strong>Ice Off blinking</strong></td><td>Ice bucket not seated</td><td>Take the bucket out and push it back in until it clicks.</td></tr></tbody></table>
+  </div>
+  <p class="sfr-note"><strong>Before you reset anything:</strong> write the code down. Repeated resets can hide a fault from the technician. If a fan or defrost code keeps coming back, it needs a repair, not another reset.</p>
+ </div>
+</section>
+
+<section class="sfr-sec" id="not-cooling">
+ <div class="sfr-wrap sfr-two">
+  <div>
+   <span class="sfr-eyebrow">Why it happens</span>
+   <h2>Samsung Fridge Not Cooling? Start Here</h2>
+   <p>A Samsung fridge makes its cold in the freezer and moves it to the fridge with a fan. That is why the freezer can be fine while the fridge is warm. When ice builds up on the evaporator, it blocks that airflow. The cause is usually a defrost heater, a defrost sensor or a blocked drain.</p>
+   <p>Before you call, try these quick checks: make sure the doors close fully, pull the fridge a few centimetres from the wall, and check that vents inside aren't blocked by food. If the fridge is still warm after that, book a repair. For a longer list of causes, see our guide to <a href="/blog-fridge-not-cooling-causes">why a fridge stops cooling</a>.</p>
+  </div>
+  <div class="sfr-answer">
+   <h3>Warm food? Act quickly</h3>
+   <p>Food that has been above 5&deg;C for more than 4 hours should be thrown out. Keep the doors shut and move meat and dairy into a cooler with ice. If you need us after hours, see <a href="/emergency-fridge-repair">emergency fridge repair</a>.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="compressor">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Compressor</span>
+  <h2>Samsung Inverter Compressor and Sealed System Faults</h2>
+  <p>Many Samsung fridges use an inverter compressor, and Samsung has offered extended compressor warranties on some models. Before you pay for a compressor repair, check your purchase date, the model number and Samsung's current warranty terms. If cover is still on, it may be cheaper to claim than to pay us.</p>
+  <p>If you are out of cover, we'll test the compressor, the inverter board and the start components, because a failed board or relay is often mistaken for a dead compressor and costs far less. Gas leaks are fixed first and then the gas is recharged. Our <a href="/fridge-regas">fridge regas and gas leak repair</a> page explains how.</p>
+ </div>
+</section>
+
+<section class="sfr-sec" id="prices">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Transparent pricing</span>
+  <h2>Samsung Fridge Repair Cost in Parramatta</h2>
+  <p>These are typical Sydney prices including GST. We confirm your exact price in writing before any repair starts.</p>
+  <div class="sfr-table-wrap" role="region" aria-label="Samsung fridge repair prices" tabindex="0">
+   <table><thead><tr><th>Job</th><th>Typical cost</th><th>Notes</th></tr></thead><tbody><tr><td>Call-out and diagnosis</td><td><strong>$60 to $200</strong></td><td>Covers finding the fault</td></tr><tr><td>Typical Samsung repair</td><td><strong>$150 to $450</strong></td><td>Includes parts. Most jobs land here</td></tr><tr><td>Door seal replacement</td><td><strong>$120 to $300</strong></td><td>Cheaper than most people expect</td></tr><tr><td>Fan motor (fridge or freezer)</td><td><strong>$180 to $400</strong></td><td>Fixes many 21E and 22E codes</td></tr><tr><td>Defrost heater or sensor</td><td><strong>$150 to $350</strong></td><td>Cures ice build-up and 5E faults</td></tr><tr><td>Control board (PCB)</td><td><strong>$250 to $600</strong></td><td>Includes inverter and display boards</td></tr><tr><td>Gas leak repair and regas</td><td><strong>$250 to $600</strong></td><td>See our fridge regas page</td></tr><tr><td>Compressor replacement</td><td><strong>$450 to $1,100</strong></td><td>Check your warranty first</td></tr></tbody></table>
+  </div>
+  <p>Want every price in one place? See our <a href="/fridge-repair-cost">fridge repair cost guide</a>.</p>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="repair-or-replace">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Honest advice</span>
+  <h2>Is It Worth Repairing a Samsung Fridge?</h2>
+  <p>Usually, yes. A good rule is to repair when the fix costs less than half the price of a comparable new fridge and the fridge is under about 10 years old. A new fan, heater or seal on a fridge in good shape is almost always worth it. A leaking sealed system on a 15-year-old fridge often is not, and we'll tell you so before you spend anything.</p>
+  <p>Read our full guide: <a href="/blog-repair-or-replace-guide">repair or replace your fridge</a>.</p>
+ </div>
+</section>
+
+<section class="sfr-sec" id="process">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">How it works</span>
+  <h2>How We Repair Your Samsung Fridge</h2>
+  <ol class="sfr-steps">
+   <li><h3>You book online</h3><p>Tell us the model, the fault and any error code. We confirm a time.</p></li>
+   <li><h3>We diagnose on site</h3><p>We test temperatures, fans, defrost parts and the control board, not just the obvious part.</p></li>
+   <li><h3>You get a fixed quote</h3><p>You see the price before we start. If anything changes, we ask first.</p></li>
+   <li><h3>We repair, usually in one visit</h3><p>Common Samsung parts such as fans, sensors and heaters are on the van. If we need to order one, we tell you how long.</p></li>
+   <li><h3>We test and explain</h3><p>We run the fridge, confirm it is cooling, and explain what failed. Every repair has a 1-year warranty on parts and labour.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="why-us">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Why Parramatta chooses us</span>
+  <h2>Why Book Your Samsung Fridge Repair With Us</h2>
+  <ul class="sfr-grid c3">
+   <li class="sfr-card"><h3>Local to Parramatta</h3><p>Our technicians are based nearby, so travel time is short and visits are quick.</p></li>
+   <li class="sfr-card"><h3>Licensed and insured</h3><p>ARC-licensed for refrigerant work, and fully insured. Ask and we will show you.</p></li>
+   <li class="sfr-card"><h3>Fixed quote first</h3><p>No surprises on the bill. The price you agree is the price you pay.</p></li>
+   <li class="sfr-card"><h3>Independent and honest</h3><p>We are not tied to Samsung, so we will tell you plainly if a repair is not worth it.</p></li>
+   <li class="sfr-card"><h3>Parts on the van</h3><p>Fans, relays, sensors, heaters and seals, so most jobs finish on the first visit.</p></li>
+   <li class="sfr-card"><h3>1-year warranty</h3><p>Every repair is covered for 1 year on parts and labour.</p></li>
+  </ul>
+ </div>
+</section>
+
+<section class="sfr-sec" id="areas">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Service area</span>
+  <h2>Samsung Fridge Repairs Across Parramatta and Nearby</h2>
+  <p>We repair Samsung fridges in Parramatta and these nearby suburbs. If you do not see yours, ask. We may still be able to help.</p>
+  <ul class="sfr-chips"><li>Parramatta</li><li>North Parramatta</li><li>Harris Park</li><li>Westmead</li><li>Rosehill</li><li>Granville</li><li>Merrylands</li><li>Northmead</li><li>Wentworthville</li><li>Rydalmere</li><li>Dundas</li><li>Oatlands</li><li>Carlingford</li><li>Toongabbie</li><li>Ermington</li><li>Epping</li></ul>
+ </div>
+</section>
+
+<section class="sfr-sec alt" id="faqs">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Clear answers</span>
+  <h2>Samsung Fridge Repair Parramatta FAQs</h2>
+  <details class="sfr-faq"><summary>Where can I get Samsung fridge repair in Parramatta?</summary><div><p>Right here. Our licensed technicians are based locally and repair Samsung fridges across Parramatta and nearby suburbs. We are an independent repairer, not a Samsung service centre. Book online and we confirm a time, usually the same day if you book early.</p></div></details><details class="sfr-faq"><summary>How much does Samsung fridge repair cost in Parramatta?</summary><div><p>Most Samsung fridge repairs cost $150 to $450 including parts. A call-out is usually $60 to $200. Control boards cost $250 to $600 and compressors $450 to $1,100. You get a fixed quote before we start, and that price is the one you pay.</p></div></details><details class="sfr-faq"><summary>Why is my Samsung fridge not cooling but the freezer is cold?</summary><div><p>Cold air is made in the freezer and shared with the fridge through a fan and a damper. If the freezer is cold and the fridge is warm, the usual causes are an iced-up evaporator, a failed fan, a stuck damper or a bad defrost heater or sensor.</p></div></details><details class="sfr-faq"><summary>What does the 22E error code mean on a Samsung fridge?</summary><div><p>On most models, 22E or 22C points to the fridge fan, and 21E points to the freezer fan. Ice build-up is a common reason. Meanings vary between models, so write the code down, check the manual and book a technician if it returns.</p></div></details><details class="sfr-faq"><summary>Should I reset my Samsung fridge when it shows an error?</summary><div><p>A power reset is fine for codes like 88 88, which Samsung treats as a power or communication error. Switch it off at the wall for about a minute and turn it back on. For fan or defrost codes, don't keep resetting it. Note the code and call us.</p></div></details><details class="sfr-faq"><summary>Why is my Samsung ice maker not working?</summary><div><p>Common causes are a frozen water line, a blocked or failed inlet valve, a dirty filter, a faulty ice maker module or a freezer that isn't cold enough. Check the ice bucket sits properly first. If ice still isn't coming, we can test the valve and module.</p></div></details><details class="sfr-faq"><summary>Are you a Samsung authorised service centre?</summary><div><p>No. We are an independent repairer and we are not affiliated with Samsung. If your fridge is still under warranty, contact Samsung or your retailer first. If the warranty has ended or you want a faster visit, we are happy to help.</p></div></details><details class="sfr-faq"><summary>Is it worth repairing an older Samsung fridge?</summary><div><p>Often yes. If the repair costs less than half the price of a similar new fridge and the fridge is under about 10 years old, repairing usually makes sense. Sealed-system faults on old fridges can tip the balance, and we will tell you plainly.</p></div></details><details class="sfr-faq"><summary>Do you repair Samsung French door, side-by-side and Family Hub fridges?</summary><div><p>Yes. We repair French door, side-by-side, top mount, bottom mount and multi-door Samsung fridges, as well as Bespoke and Family Hub models. Have your model number ready when you book. It is on a label inside the fridge.</p></div></details>
+ </div>
+</section>
+
+<section class="sfr-sec" id="related">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow">Keep reading</span>
+  <h2>Related Fridge Repair Help</h2>
+  <ul class="sfr-related">
+   <li><a href="/brands">All fridge brands we repair</a></li>
+   <li><a href="/fridge-not-cooling-repair">Fridge not cooling repair</a></li>
+   <li><a href="/fridge-regas">Fridge regas and gas leak repair</a></li>
+   <li><a href="/fridge-repair-cost">Fridge repair cost guide</a></li>
+   <li><a href="/emergency-fridge-repair">Emergency fridge repair, 24/7</a></li>
+   <li><a href="/blog-summer-fridge-maintenance-tips">Summer fridge maintenance tips</a></li>
+   <li><a href="/services">All fridge repair services</a></li>
+   <li><a href="/about">About our technicians</a></li>
+  </ul>
+ </div>
+</section>
+
+<section class="sfr-cta">
+ <div class="sfr-wrap">
+  <span class="sfr-eyebrow" style="color:#7dd3fc">Samsung fridge playing up?</span>
+  <h2>Book Your Samsung Fridge Repair in Parramatta</h2>
+  <p>Tell us the model and what is happening. A local licensed technician will confirm a time and a fixed price.</p>
+  <div class="sfr-btns">
+   <a class="sfr-btn primary" href="/contact#contact-form">Book Online 24/7</a>
+   <a class="sfr-btn ghost" href="mailto:info@fridgerepairparramatta.com.au">Email Us</a>
+  </div>
+  <p style="font-size:.88rem;color:#94a3b8;margin-top:18px">Fridge Repair Parramatta is an independent repairer and is not affiliated with Samsung. Samsung is a trademark of Samsung Electronics.</p>
+ </div>
+</section>
+
+<!-- Mobile sticky bar (add a Call button with a tel: link once the site has a phone number) -->
+<nav class="sfr-bar" aria-label="Quick actions"><a class="a" href="/contact#contact-form">Book Online 24/7</a><a class="b" href="mailto:info@fridgerepairparramatta.com.au">Email Us</a></nav>
+
+</main>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            Samsung · LG · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta · North Parramatta · Harris Park · Westmead · Rosehill · Granville · Merrylands · Wentworthville · Northmead · Oatlands · Rydalmere · Dundas · Telopea · Carlingford · Toongabbie · Winston Hills · Baulkham Hills · Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=11"></script>
+</body>
+</html>
