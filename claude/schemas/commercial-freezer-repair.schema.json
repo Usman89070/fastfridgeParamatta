@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#webpage",
+      "url": "https://fridgerepairparramatta.com.au/commercial-freezer-repair",
+      "name": "Commercial Freezer Repair Parramatta | Same Day",
+      "description": "Commercial freezer repair and service in Parramatta: upright, chest, blast and display freezers. 24/7 emergency, free quote.",
+      "inLanguage": "en-AU",
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#service"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#service",
+      "name": "Commercial Freezer Repair Parramatta",
+      "serviceType": "Commercial freezer repair",
+      "description": "Commercial freezer repair and service in Parramatta and Western Sydney: upright, chest, under-bench, display and blast freezers and freezer rooms. Fans, defrost systems, door seals, controllers, compressors and gas leaks. Licensed technicians, fixed quotes and a 1-year warranty on parts and labour.",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "Place",
+          "name": "Westmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "Place",
+          "name": "Granville"
+        },
+        {
+          "@type": "Place",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "Place",
+          "name": "Northmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "Place",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "Place",
+          "name": "Dundas"
+        },
+        {
+          "@type": "Place",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "Place",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "Place",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "Place",
+          "name": "Ermington"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Restaurants, butchers, supermarkets, ice-cream shops and medical venues"
+      },
+      "url": "https://fridgerepairparramatta.com.au/commercial-freezer-repair"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Commercial Refrigeration Repair",
+          "item": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Commercial Freezer Repair",
+          "item": "https://fridgerepairparramatta.com.au/commercial-freezer-repair"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-freezer-repair#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does commercial freezer repair cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most commercial freezer repairs cost $200 to $900, plus a call-out fee of about $100 to $250. Compressors cost $450 to $1,100 or more depending on the unit. You get a fixed quote before we start, and that is the price you pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my commercial freezer not freezing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The common causes are a dirty or blocked condenser, a failed fan, ice blocking the evaporator because the defrost system has failed, a worn door seal, a faulty controller or probe, or low refrigerant from a leak. A technician tests each one in turn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my commercial freezer covered in ice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Heavy frost usually means the door is not sealing, the defrost heater, timer or sensor has failed, or the drain is blocked. Chipping the ice off only helps for a short time. We find why it formed and fix that part."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What temperature should a commercial freezer be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Frozen food should stay frozen hard, and most commercial freezers are set around -18°C. If your freezer is running warmer and food is going soft, book a repair and keep the door closed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My freezer has stopped. Should I throw out the food?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep the door shut so the cold stays in. If the food still has ice crystals and is hard, it is usually fine once the freezer is back. Food that has thawed and sat above 5°C for more than 4 hours should be thrown out and not refrozen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair chest freezers, display freezers and blast freezers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We repair upright, chest, under-bench and display freezers, blast freezers and chillers, and walk-in freezer rooms. Have the brand and model ready when you book and we will bring the right parts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency commercial freezer repair in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A freezer that has stopped is urgent when it holds a week of stock. Book online or email us with the venue, the unit and what it is doing, and we confirm the fastest time we can get there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you service a commercial freezer before it breaks down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Condenser cleaning, seal checks, defrost checks and temperature checks stop most breakdowns before they start. Ask us about a maintenance visit when you book and we will quote it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed to repair commercial freezers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our work is carried out by licensed refrigeration mechanics (Lic #R38910) who are ARC licensed to handle refrigerant. We are independent, so we tell you plainly when a repair is not worth it."
+          }
+        }
+      ]
+    }
+  ]
+}

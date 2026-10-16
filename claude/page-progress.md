@@ -8,7 +8,7 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 
 1. COMM-FRIDGE: Commercial Fridge & Refrigeration Repair (hub) -> `/commercial-refrigeration-repair` (Wk 1-2 P1) [DONE 16 Oct]
 2. COOLROOM: Coolroom & Cold Room Repair -> `/coolroom-repair` (Wk 1-2 P1) [DONE 16 Oct]
-3. COMM-FREEZER: Commercial Freezer Repair -> `/commercial-freezer-repair` (Wk 3-4 P1) [TO DO]
+3. COMM-FREEZER: Commercial Freezer Repair -> `/commercial-freezer-repair` (Wk 3-4 P1) [DONE 16 Oct]
 4. ICE: Ice Machine Repair -> `/ice-machine-repair` (Wk 3-4 P2) [TO DO]
 5. SEAL: Fridge Door Seal Replacement -> `/fridge-door-seal-replacement` (Wk 3-4 P1) [TO DO]
 6. FREEZER: Freezer Repair -> `/freezer-repair` (Wk 1-2 P1) [TO DO]
@@ -35,6 +35,7 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 - BR-LG: `/lg-fridge-repair` [DONE (live)]
 - COMM-FRIDGE: `/commercial-refrigeration-repair` [DONE 16 Oct; schema in claude/schemas/]
 - COOLROOM: `/coolroom-repair` [DONE 16 Oct; schema in claude/schemas/]
+- COMM-FREEZER: `/commercial-freezer-repair` [DONE 16 Oct; schema in claude/schemas/]
 
 ## Live pages that still need the sheet's title/meta/H1 optimisation (later phase)
 
@@ -54,4 +55,6 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 - 16 Oct 2026: keyword sheet saved to claude/. Built COMM-FRIDGE (/commercial-refrigeration-repair). Competitor sites could not be fetched (network block), used sheet benchmarks only. Linked from header/footer "Commercial Fridge Repair", services, cost, emergency pages. Spoke links (coolroom, freezer, ice) are plain text until those pages exist: when each spoke is built, link it from COMM-FRIDGE (equipment cards, FAQ 8) and the footer.
 - 16 Oct 2026: Built COOLROOM (/coolroom-repair). Owner confirmed the page did not exist on the live site. Coolroom installation NOT claimed (unconfirmed). Linked from header/footer, services, cost, emergency, and the COMM-FRIDGE hub.
 - RULE: before building any page, check the live site if the network allows (sandbox could not reach fridgerepairparramatta.com.au on 16 Oct); otherwise ask the owner to confirm the page does not already exist.
-- Next: COMM-FREEZER (/commercial-freezer-repair).
+- 16 Oct 2026: Built COMM-FREEZER (/commercial-freezer-repair). Owner confirmed it did not exist live. Linked from COMM-FRIDGE hub (upright card) and COOLROOM related list.
+- BRANCHES: all new work goes on `claude/new-pages-seo-oct16` (PR #8 to main). Do NOT push to `claude/site-layout-review-knuu9t` (PR #7, owner wants it left alone).
+- Next: ICE (/ice-machine-repair).

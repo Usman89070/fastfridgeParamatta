@@ -16,4 +16,5 @@ The owner does not want to say each day which page to build.
 - `tailwind-built.css` is precompiled. After adding new Tailwind classes run `cd .buildtools && npm ci && npx tailwindcss -i input.css -o ../tailwind-built.css --minify`.
 - No phone number exists on the site, so never add a tel: link. No ARCtick number is known: use the owner's wording ("ARCtick licensed & verified" or "ARC-licensed") and no number. Lic #R38910 is on the site.
 - Pages so far: regas, Samsung, LG. Everything else is tracked in `claude/page-progress.md`.
+- Branch: current work goes on `claude/new-pages-seo-oct16` (PR #8). Leave `claude/site-layout-review-knuu9t` (old PR #7) untouched.
 - Never push to `main` unless asked. Pushing a `claude/**` branch also deploys to the live site.
