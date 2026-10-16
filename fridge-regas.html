@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title>Fridge Regas Parramatta | Gas Leak Repair &amp; Recharge</title>
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta name="description" content="Fridge regas in Parramatta by ARCtick licensed technicians. We fix the gas leak first, then recharge. Fixed quote and 1-year warranty.">
+  <link rel="canonical" href="https://fridgerepairparramatta.com.au/fridge-regas">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Fridge Regas Parramatta | Gas Leak Repair &amp; Recharge">
+  <meta property="og:description" content="Fridge regas in Parramatta by ARCtick licensed technicians. We fix the gas leak first, then recharge. Fixed quote and 1-year warranty.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fridgerepairparramatta.com.au/fridge-regas">
+  <meta property="og:image" content="https://fridgerepairparramatta.com.au/image/FFp-logo.webp">
+
+  <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
+  <link rel="stylesheet" href="tailwind-built.css?v=1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD Structured Data Schema (Service + BreadcrumbList + FAQPage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/fridge-regas#webpage",
+      "url": "https://fridgerepairparramatta.com.au/fridge-regas",
+      "name": "Fridge Regas Parramatta | Gas Leak Repair & Recharge",
+      "description": "Fridge regas in Parramatta by ARCtick licensed technicians. We fix the gas leak first, then recharge. Fixed quote and 1-year warranty.",
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/fridge-regas#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/fridge-regas#service",
+      "name": "Fridge Regas Parramatta",
+      "serviceType": "Fridge regas and gas leak repair",
+      "description": "Fridge regas and gas leak repair in Parramatta: the leak is found and fixed first, then the system is evacuated and recharged by weight with the correct refrigerant.",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "Place",
+          "name": "Westmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "Place",
+          "name": "Granville"
+        },
+        {
+          "@type": "Place",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "Place",
+          "name": "Northmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "Place",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "Place",
+          "name": "Dundas"
+        },
+        {
+          "@type": "Place",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "Place",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "Place",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "Place",
+          "name": "Ermington"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "AUD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 250,
+          "maxPrice": 600,
+          "priceCurrency": "AUD"
+        }
+      },
+      "url": "https://fridgerepairparramatta.com.au/fridge-regas"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/fridge-regas#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://fridgerepairparramatta.com.au/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fridge Regas",
+          "item": "https://fridgerepairparramatta.com.au/fridge-regas"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a fridge regas cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most fridge regas jobs cost $250 to $600, including the new filter-drier, vacuum and gas. A leak repair is quoted separately, depending on where the leak is. We quote the whole job before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a fridge need regassing regularly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A fridge is a sealed system and the gas doesn't wear out. If it needs gas, it has a leak, and the leak is what we fix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between a fridge gas refill and a gas recharge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nothing practical. People use regas, gas refill and gas recharge to mean the same job. A proper one includes finding the leak, fixing it, evacuating the system and charging by weight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I regas my fridge myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We don't recommend it, and in most cases it isn't allowed. Handling refrigerant needs an ARC licence. Many modern fridges use flammable R600a with a tiny charge, and a few grams too much can ruin the compressor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a fridge regas take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually 2 to 3 hours on site, including the leak test. The fridge then takes 4 to 24 hours to reach temperature, so food should stay in a cooler or another fridge until it's below 5°C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it worth regassing an old fridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. If the leak is at an accessible joint and the fridge is under about 10 years old, usually yes. If the evaporator is leaking or the fridge is very old, replacing it is often better value. We'll tell you either way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you regas freezers, bar fridges and commercial fridges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We service upright and chest freezers, bar fridges, display fridges and coolrooms. Commercial jobs use different gases and bigger charges, so they're quoted separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a fridge regas service near me in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our technicians are based locally and cover Parramatta and the suburbs listed above. Book online or email us and we'll confirm a time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee the repair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every repair has a 1-year warranty on parts and labour, including leak repairs."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <div class="relative">
+          <button type="button" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+          <div id="services-dropdown-panel" class="hidden absolute left-0 top-full mt-2 w-64 rounded-xl bg-slate-900 border border-slate-700 shadow-xl py-2 z-50">
+            <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
+            <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
+            <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
+            <a href="commercial-refrigeration-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="fridge-regas" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
+            <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
+          </div>
+        </div>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-sky-400 py-1">Services</a>
+      <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
+        <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
+        <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
+        <a href="commercial-refrigeration-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="fridge-regas" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
+        <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
+      </div>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <main>
+
+  <!-- 1. HERO -->
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
+    <!-- Image-free hero: layered gradient + soft glows in the site's slate/sky palette -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-500/10 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <p class="text-xs font-semibold text-slate-400">
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span>
+        <a href="services" class="hover:text-sky-400">Services</a> <span class="mx-1">/</span> Fridge Regas
+      </p>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold">
+            <i data-lucide="badge-check" class="w-4 h-4"></i> ARCtick Licensed &amp; Verified (Lic #R38910) &bull; Parramatta 2150 &amp; Surrounds
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">Fridge Regas Parramatta</h1>
+          <p class="text-slate-200 text-lg leading-relaxed">
+            A fridge that needs regas has a leak. We find it, fix it, then recharge the gas to the exact amount on your rating plate. One fixed price, agreed before we start.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-200 pt-1">
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Leak found before we regas</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Fixed quote first</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Same-day where available</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1-year parts &amp; labour warranty</span>
+          </div>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
+            <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all">
+              <i data-lucide="mail" class="w-5 h-5"></i><span>Email Us</span>
+            </a>
+            <a href="contact#contact-form" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">
+              <i data-lucide="calendar" class="w-5 h-5"></i><span>Book Online</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Booking form (wired up by app.js via #hero-contact-form) -->
+        <div class="lg:col-span-5 relative">
+          <div class="bg-white text-slate-900 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-200 space-y-4">
+            <div class="border-b border-slate-200 pb-3 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">&#128994; 24/7 Fast Response</span>
+                <span class="text-slate-500 font-medium">Free Upfront Quote</span>
+              </div>
+              <h2 class="text-xl font-extrabold text-slate-900 pt-1">Book a Fridge Regas Check</h2>
+              <p class="text-xs text-slate-600">Enter your details for a callback from a Parramatta technician.</p>
+            </div>
+
+            <form id="hero-contact-form" class="space-y-3 text-xs">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+              <div>
+                <label for="hero_name" class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                <input type="text" id="hero_name" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="hero_phone" class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
+                  <input type="tel" id="hero_phone" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                </div>
+                <div>
+                  <label for="hero_suburb" class="block font-semibold text-slate-700 mb-1">Suburb *</label>
+                  <input type="text" id="hero_suburb" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                </div>
+              </div>
+              <div>
+                <label for="hero_service" class="block font-semibold text-slate-700 mb-1">What's happening?</label>
+                <select id="hero_service" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                  <option value="Fridge warm">Regas / Leak Repair: Fridge is warm</option>
+                  <option value="Freezer cold only">Regas / Leak Repair: Freezer cold, fridge warm</option>
+                  <option value="Gas leak suspected">Regas / Leak Repair: Gas leak suspected</option>
+                  <option value="Not sure">Regas / Leak Repair: Not sure</option>
+                  <option value="Commercial fridge">Regas / Leak Repair: Commercial fridge</option>
+                </select>
+              </div>
+              <div>
+                <label for="hero_symptom" class="block font-semibold text-slate-700 mb-1">Brand / Issue Description</label>
+                <input type="text" id="hero_symptom" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i><span>Book a Callback</span>
+              </button>
+            </form>
+
+            <div id="hero-form-success" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-center space-y-2 text-xs">
+              <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600 mx-auto"></i>
+              <strong class="text-emerald-900 text-sm block font-bold">Request Received!</strong>
+              <p class="text-emerald-800">Our duty Parramatta technician will call your number within 15 minutes.</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+              <span>Prefer to Email Us?</span>
+              <a href="mailto:info@fridgerepairparramatta.com.au" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i><span>info@fridgerepairparramatta.com.au</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="zap" class="w-4 h-4"></i> The Short Version</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Does Your Fridge Really Need a Regas?</h2>
+        
+      </div>
+      <div class="max-w-4xl p-6 sm:p-8 rounded-2xl bg-sky-50 border border-sky-200 space-y-4">
+        <p class="text-slate-800 text-base leading-relaxed">Maybe, but not for the reason most people think. A home fridge has a sealed gas system and the gas doesn't get used up. If a fridge is low on gas, it is leaking. Topping it up without fixing the leak gives you a few weeks of cold at best, and it's also against the rules for a refrigerant to be released into the air.</p>
+        <p class="text-slate-800 text-base leading-relaxed">So our fridge gas recharge in Parramatta works in this order: confirm gas really is the problem, find the leak, repair it, then recharge. Most regas jobs cost <strong>$250 to $600</strong>, and the leak repair is quoted separately before we begin. If the gas isn't the problem, we'll say so. A lot of 'it needs gas' fridges actually have a fan, sensor or defrost fault, and those cost less to fix.</p>
+        <a href="fridge-not-cooling-repair" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">Fridge warm and not sure why? See all the causes <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="alert-circle" class="w-4 h-4"></i> What Low Gas Looks Like</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Signs Your Fridge May Be Low on Gas</h2>
+        <p class="text-slate-700 text-base leading-relaxed">None of these proves a gas problem on its own. A technician confirms it with gauges and a leak test. But if you see two or three together, a leak is likely.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Fridge slowly gets warmer over weeks</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A leak lets gas out gradually. The fridge copes at first, then can’t keep up.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="timer" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Compressor runs constantly, fridge still warm</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">It’s working hard to move gas that isn’t there. The motor feels warm but the cold never arrives.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="snowflake" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Frost only on part of the evaporator</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Low gas cools only the first section of the coil. The rest stays warm and the freezer back panel frosts unevenly.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="thermometer-snowflake" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Freezer not freezing, fridge section slightly cool</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Often the first thing people notice. Ice cream goes soft while the fridge is merely cool.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="volume-2" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Hissing, bubbling or oily residue</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A hiss or gurgle from the back, or a greasy spot on a pipe joint, is the oil that leaves with the gas.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Compressor hot, no cold at all</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A fridge that has lost nearly all of its gas, or a blocked system. Switch it off and call us.</p>
+        </div>
+      </div>
+      <a href="blog-fridge-not-cooling-causes" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">Not sure it's gas? Read the common causes first <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="wrench" class="w-4 h-4"></i> Fridge Gas Recharge Parramatta</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How a Proper Fridge Regas Works</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Topping up a gas bottle and walking away isn't a repair. This is what we do on every job:</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">01</span>
+          <h3 class="text-lg font-bold text-slate-900">Rule out the easy causes</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We check the condenser, fans, thermostat, door seals and defrost system first. If one of those is the culprit, no gas is needed.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">02</span>
+          <h3 class="text-lg font-bold text-slate-900">Read the rating plate</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">The plate inside the fridge or on the back shows the refrigerant type and the exact charge in grams. We never guess.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">03</span>
+          <h3 class="text-lg font-bold text-slate-900">Pressure and temperature tests</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We connect gauges and measure temperatures along the system to confirm low charge and spot a blockage.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">04</span>
+          <h3 class="text-lg font-bold text-slate-900">Find the leak</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">An electronic leak detector, and a nitrogen pressure test where needed, shows where the gas is getting out.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">05</span>
+          <h3 class="text-lg font-bold text-slate-900">Repair, evacuate and recharge</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We repair the leak, replace the filter-drier, pull a deep vacuum to remove moisture and air, then weigh in the exact charge.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">06</span>
+          <h3 class="text-lg font-bold text-slate-900">Test and explain</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We run the fridge, confirm it’s cooling and leak-free, and explain what we did. You pay the price we quoted.</p>
+        </div>
+      </div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">A full regas with a leak repair usually takes <strong>2 to 3 hours</strong> on site. After that, the fridge needs 4 to 24 hours to settle at 3 to 5&deg;C and the freezer at &minus;18&deg;C, so don't judge it in the first hour.</p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="droplets" class="w-4 h-4"></i> Leak First</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Gas Leak Repair Parramatta</h2>
+        <p class="text-slate-700 text-base leading-relaxed">The leak decides the job. Where it is and how big it is changes both the price and whether repairing is worth it.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-emerald-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Leaks we can usually fix</h3>
+          <ul class="space-y-2 text-slate-700 text-sm"><li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Pipe joints and brazed connections, often at the compressor or drier</span></li><li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Pinhole corrosion in an accessible copper line</span></li><li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>A split in the process tube where the system was originally charged</span></li><li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>A worn or damaged service port</span></li></ul>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-amber-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Leaks that often aren't worth fixing</h3>
+          <ul class="space-y-2 text-slate-700 text-sm"><li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>Aluminium evaporators in older frost-free fridge-freezers. They corrode from the inside, and a part is expensive or hard to get</span></li><li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>Leaks inside the foam of the cabinet wall, where the pipe can’t be reached</span></li><li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>A leaking sealed unit in a very old or low-value fridge</span></li></ul>
+        </div>
+      </div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">We tell you which of these you have before any work. If the leak is in the wrong place, we'll say so plainly and talk through replacement. Paying $500 to regas a fridge that is going to leak again next month isn't good advice, and we won't give it.</p>
+      <a href="blog-repair-or-replace-guide" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">Weighing it up? Read Repair or Replace Your Fridge <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="gauge" class="w-4 h-4"></i> Get the Gas Right</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Which Refrigerant Does Your Fridge Use?</h2>
+        <p class="text-slate-700 text-base leading-relaxed">The wrong gas, or too much of the right one, can damage the compressor. The type and charge are printed on the rating plate. This is a rough guide.</p>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr><th class="p-4">Refrigerant</th><th class="p-4">Typically found in</th><th class="p-4">Good to know</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">R600a (isobutane)</td>
+              <td class="p-4">Most domestic fridges made from the mid-2000s on</td>
+              <td class="p-4">Flammable. A very small charge, often just 20 to 60 g, so a few grams over or under matters. Needs proper handling</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">R134a</td>
+              <td class="p-4">Fridges from about the mid-1990s to the 2000s, and some newer ones</td>
+              <td class="p-4">Not flammable. Still widely used in older fridges and some bar fridges</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">R290 (propane)</td>
+              <td class="p-4">Some newer domestic and commercial units</td>
+              <td class="p-4">Flammable. Same care as R600a</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">R12 and other old gases</td>
+              <td class="p-4">Fridges from before the mid-1990s</td>
+              <td class="p-4">Phased out. Usually not worth regassing. We’ll talk replacement</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">R404A, R452A and similar</td>
+              <td class="p-4">Commercial fridges, display cases, coolrooms</td>
+              <td class="p-4">Larger charges. See our <a href="services#commercial" class="text-sky-700 font-bold hover:underline">commercial refrigeration repair</a> services</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="dollar-sign" class="w-4 h-4"></i> Transparent Pricing</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Regas and Gas Leak Repair Prices</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Typical Sydney prices including GST. Your exact price is confirmed in writing before we do anything.</p>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr><th class="p-4">Job</th><th class="p-4">Typical cost</th><th class="p-4">Notes</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Gas check and leak test</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$60 to $200</td>
+              <td class="p-4">Call-out and diagnosis fee</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Fridge regas / gas recharge</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$250 to $600</td>
+              <td class="p-4">Evacuation, new filter-drier, exact charge by weight</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Gas leak repair, accessible joint or pipe</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">Quoted after inspection</td>
+              <td class="p-4">Depends on where the leak is. Quoted before work starts</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Evaporator or condenser replacement</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">Quoted after inspection</td>
+              <td class="p-4">Quoted once the leak is found</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Compressor replacement</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$450 to $1,100</td>
+              <td class="p-4">Often a good time for a second opinion on replacing the fridge</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Commercial fridge or coolroom regas</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$250 to $900+</td>
+              <td class="p-4">Depends on gas type and charge size</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-slate-500 text-xs">Typical Sydney prices incl. GST. Final price confirmed in writing before work starts.</p>
+      <a href="fridge-repair-cost" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">See all repair prices <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="scale" class="w-4 h-4"></i> Honest Advice</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">When Regas Is Worth It, and When It Isn't</h2>
+        
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2">
+          <h3 class="text-lg font-bold text-emerald-900 flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5"></i> Usually worth it</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">The fridge is under about 10 years old, the leak is at an accessible joint, and the repair is well under half the cost of a comparable new fridge.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-amber-50 border border-amber-200 space-y-2">
+          <h3 class="text-lg font-bold text-amber-900 flex items-center gap-2"><i data-lucide="alert-circle" class="w-5 h-5"></i> Usually not worth it</h3>
+          <p class="text-slate-700 text-sm leading-relaxed">The evaporator is leaking, the fridge is 15 years old or more, or it has already been regassed once.</p>
+        </div>
+      </div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">We'll give you the numbers and let you decide.</p>
+      <a href="blog-repair-or-replace-guide" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">Read Repair or Replace Your Fridge <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="award" class="w-4 h-4"></i> Why Parramatta Chooses Us</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Book Your Fridge Regas With Us</h2>
+        
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="badge-check" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Licensed to handle refrigerant</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">In Australia you need an ARC licence to buy and handle refrigerant. Our technicians are ARCtick licensed and verified (Lic #R38910). A gas bottle kit from a hardware store isn’t a legal or safe shortcut.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="search" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Leak found, not guessed</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We find the leak before we add gas, so you don’t pay for gas that leaks out again.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Exact charge by weight</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Gas goes in by the gram, matched to the rating plate. No topping up by feel.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Fixed quote upfront</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">You get a price in writing first. If the job changes, we ask before we carry on.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="leaf" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Good for the environment</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We recover and dispose of old refrigerant properly. None is vented.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">1-year warranty</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Every repair is covered for 1 year on parts and labour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="map-pin" class="w-4 h-4"></i> Fridge Regas Near Me</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">All Brands, All Over Parramatta</h2>
+        <p class="text-slate-700 text-base leading-relaxed">We regas and repair gas leaks on fridges and freezers of all makes, including inverter and frost-free models, as well as commercial units.</p>
+      </div>
+      <div class="flex flex-wrap gap-2"><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Samsung</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">LG</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Fisher &amp; Paykel</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Westinghouse</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Electrolux</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Bosch</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Hisense</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Haier</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Mitsubishi</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Panasonic</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Kelvinator</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Whirlpool</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Vintec</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Bar fridges</span></div>
+      <a href="brands" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">All brands we repair <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">If you search for a fridge regas near me or fridge gas refill near me, we are the local team. Our technicians are based here, so most jobs are within the same day and the same suburb you live in:</p>
+      <div class="flex flex-wrap gap-2"><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Parramatta</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">North Parramatta</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Harris Park</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Westmead</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Rosehill</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Granville</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Merrylands</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Northmead</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Wentworthville</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Rydalmere</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Dundas</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Oatlands</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Carlingford</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Toongabbie</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Ermington</span></div>
+    </div>
+  </section>
+
+  <section id="faqs" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="help-circle" class="w-4 h-4"></i> Clear Answers</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fridge Regas Parramatta FAQs</h2>
+        
+      </div>
+      <div class="max-w-4xl space-y-3">
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>How much does a fridge regas cost in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Most fridge regas jobs cost $250 to $600, including the new filter-drier, vacuum and gas. A leak repair is quoted separately, depending on where the leak is. We quote the whole job before we start.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Does a fridge need regassing regularly?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            No. A fridge is a sealed system and the gas doesn't wear out. If it needs gas, it has a leak, and the leak is what we fix.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>What's the difference between a fridge gas refill and a gas recharge?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Nothing practical. People use regas, gas refill and gas recharge to mean the same job. A proper one includes finding the leak, fixing it, evacuating the system and charging by weight.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Can I regas my fridge myself?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            We don't recommend it, and in most cases it isn't allowed. Handling refrigerant needs an ARC licence. Many modern fridges use flammable R600a with a tiny charge, and a few grams too much can ruin the compressor.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>How long does a fridge regas take?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Usually 2 to 3 hours on site, including the leak test. The fridge then takes 4 to 24 hours to reach temperature, so food should stay in a cooler or another fridge until it's below 5°C.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Is it worth regassing an old fridge?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Sometimes. If the leak is at an accessible joint and the fridge is under about 10 years old, usually yes. If the evaporator is leaking or the fridge is very old, replacing it is often better value. We'll tell you either way.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you regas freezers, bar fridges and commercial fridges?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We service upright and chest freezers, bar fridges, display fridges and coolrooms. Commercial jobs use different gases and bigger charges, so they're quoted separately.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Is there a fridge regas service near me in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. Our technicians are based locally and cover Parramatta and the suburbs listed above. Book online or email us and we'll confirm a time.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you guarantee the repair?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. Every repair has a 1-year warranty on parts and labour, including leak repairs.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="space-y-3">
+        <span class="px-3.5 py-1.5 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold uppercase tracking-wider">Fridge Losing Its Cold?</span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white">Book Your Fridge Regas in Parramatta</h2>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">Tell us the brand and what's happening. A local licensed technician will confirm a time and a fixed price.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i><span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i><span>Book Online 24/7</span>
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2 text-xs font-semibold text-slate-200">
+        <span class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Leak found before we regas</span>
+        <span class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Fixed quote before work starts</span>
+        <span class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> ARCtick licensed &amp; verified</span>
+        <span class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 1-year parts &amp; labour warranty</span>
+      </div>
+      <p class="text-slate-400 text-xs pt-2">After hours? <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 font-bold">Emergency fridge repair</a></p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
+    </a>
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>📅 Book Online</span>
+    </a>
+  </div>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="coolroom-repair" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            <a href="samsung-fridge-repair-parramatta" class="hover:text-sky-400 text-sky-400">Samsung</a> · <a href="lg-fridge-repair" class="hover:text-sky-400 text-sky-400">LG</a> · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta · North Parramatta · Harris Park · Westmead · Rosehill · Granville · Merrylands · Wentworthville · Northmead · Oatlands · Rydalmere · Dundas · Telopea · Carlingford · Toongabbie · Winston Hills · Baulkham Hills · Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=11"></script>
+</body>
+</html>

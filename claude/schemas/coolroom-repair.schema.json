@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#webpage",
+      "url": "https://fridgerepairparramatta.com.au/coolroom-repair",
+      "name": "Coolroom Repairs Parramatta | Cold Room Repair Sydney",
+      "description": "Coolroom and cold room repair in Parramatta and Western Sydney. Walk-in coolers and freezer rooms, 24/7 breakdown service, free quote.",
+      "inLanguage": "en-AU",
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#service"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#service",
+      "name": "Coolroom and Cold Room Repair Parramatta",
+      "serviceType": "Coolroom, cold room and freezer room repair",
+      "description": "Coolroom, cold room and walk-in freezer room repair in Parramatta and Western Sydney: doors and seals, evaporators and fans, condensing units, compressors, controllers, defrost systems and gas leaks. Licensed technicians, fixed quotes and a 1-year warranty on parts and labour.",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "Place",
+          "name": "Westmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "Place",
+          "name": "Granville"
+        },
+        {
+          "@type": "Place",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "Place",
+          "name": "Northmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "Place",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "Place",
+          "name": "Dundas"
+        },
+        {
+          "@type": "Place",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "Place",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "Place",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "Place",
+          "name": "Ermington"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Restaurants, caterers, butchers, supermarkets, hotels and medical venues"
+      },
+      "url": "https://fridgerepairparramatta.com.au/coolroom-repair"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Commercial Refrigeration Repair",
+          "item": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coolroom Repair",
+          "item": "https://fridgerepairparramatta.com.au/coolroom-repair"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do coolroom repairs cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most coolroom and cold room repairs cost $250 to $900, plus a call-out fee of about $100 to $250. Gas leaks, condensing units and compressors can cost more and are quoted after we inspect the room. You get a fixed quote before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair freezer rooms as well as coolrooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We repair walk-in coolrooms, cold rooms and freezer rooms. Freezer rooms add defrost heaters, door-frame heaters and colder-running gear, so we quote them on what we find."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my coolroom not getting cold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The usual causes are a dirty or failed condensing unit fan, ice blocking the evaporator, a worn door seal or strip curtain letting warm air in, a faulty controller or probe, or low refrigerant from a leak. A technician tests each one in turn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What temperature should a coolroom be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold food should be kept at 5°C or below, so most coolrooms run a few degrees under that. If your room is holding above 5°C, move high-risk food such as meat, dairy and seafood to a working fridge or a cooler with ice and book a repair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is there ice on my coolroom evaporator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ice usually means the defrost system has failed, the door is not sealing, or the drain is blocked. Melting the ice only helps for a while. We find why it formed and repair that part."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency coolroom repair in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A coolroom that has stopped cooling is urgent for any kitchen or shop. Book online or email us with the venue, the room size and what it is doing, and we confirm the fastest time we can get there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you do coolroom maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Regular condenser cleaning, seal and hinge checks, defrost checks and temperature alarm tests catch most problems early. Ask us about a maintenance visit when you book and we will quote it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair all coolroom brands and condensing units?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We repair most makes of coolroom panels, evaporators and condensing units. Have the brand and model plate details ready when you book and we will bring the right parts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed to work on coolrooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our work is carried out by licensed refrigeration mechanics (Lic #R38910) who are ARC licensed to handle refrigerant. We are independent, so we tell you plainly when a repair is not worth it."
+          }
+        }
+      ]
+    }
+  ]
+}

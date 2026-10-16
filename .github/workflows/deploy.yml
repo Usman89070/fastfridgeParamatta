@@ -1,0 +1,42 @@
+name: Deploy to Hostinger (FTP)
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+
+jobs:
+  deploy:
+    name: FTP deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Explicit FTPS (TLS) - Hostinger resets plain-FTP data connections.
+          protocol: ftps
+          # The FTP account's root is already
+          # /home/u232649564/domains/fridgerepairparramatta.com.au/public_html
+          # so the server dir is "./" (do NOT repeat the full path here).
+          server-dir: ./
+          # Never wipe the server: files that exist only there (e.g.
+          # admin/includes/config.php with the DB credentials) must survive.
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .buildtools/**
+            **/node_modules/**
+            database/**
+            image.zip
+            HOSTINGER_DEPLOYMENT.md
+            claude/**
+            CLAUDE.md

@@ -1,0 +1,400 @@
+<?php
+require __DIR__ . '/includes/page-seo.php';
+$seo = get_page_seo('about', [
+    'title' => 'About Us | Fridge Repair Parramatta',
+    'meta_description' => 'Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.',
+    'canonical_url' => 'https://fridgerepairparramatta.com.au/about',
+    'h1' => 'About Fridge Repair Parramatta',
+    'og_title' => 'About Us | Fridge Repair Parramatta',
+    'og_description' => 'Licensed refrigeration mechanics with 30+ years of experience servicing Parramatta and Western Sydney. Learn how we work and why local customers trust us.',
+    'robots_meta' => 'index,follow',
+    'schema' => [
+        '@context' => 'https://schema.org',
+        '@type' => 'HVACBusiness',
+        'name' => 'Fridge Repair Parramatta',
+        'image' => 'images/hero_refrigeration_tech.jpg',
+        'url' => 'https://fridgerepairparramatta.com.au/about',
+        'email' => 'info@fridgerepairparramatta.com.au',
+        'priceRange' => '$$',
+        'description' => 'Licensed residential and commercial refrigeration mechanics servicing Parramatta and Western Sydney, with 30+ years of experience and a 1-year workmanship warranty.',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Church Street',
+            'addressLocality' => 'Parramatta',
+            'addressRegion' => 'NSW',
+            'postalCode' => '2150',
+            'addressCountry' => 'AU',
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => -33.8150,
+            'longitude' => 151.0011,
+        ],
+    ],
+]);
+function seo_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+?><!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title><?= seo_e($seo['title']) ?></title>
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta name="description" content="<?= seo_e($seo['meta_description']) ?>">
+  <link rel="canonical" href="<?= seo_e($seo['canonical_url']) ?>">
+  <meta name="robots" content="<?= seo_e($seo['robots_meta']) ?>">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="<?= seo_e($seo['og_title']) ?>">
+  <meta property="og:description" content="<?= seo_e($seo['og_description']) ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<?= seo_e($seo['canonical_url']) ?>">
+
+  <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
+  <link rel="stylesheet" href="tailwind-built.css?v=1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  <?= json_encode($seo['schema'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <div class="relative">
+          <button type="button" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 hover:text-sky-400 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+          <div id="services-dropdown-panel" class="hidden absolute left-0 top-full mt-2 w-64 rounded-xl bg-slate-900 border border-slate-700 shadow-xl py-2 z-50">
+            <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
+            <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
+            <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
+            <a href="commercial-refrigeration-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="fridge-regas" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
+            <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
+          </div>
+        </div>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-slate-300 hover:text-sky-400 py-1">Services</a>
+      <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
+        <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
+        <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
+        <a href="commercial-refrigeration-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="fridge-regas" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
+        <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
+      </div>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- PAGE BANNER -->
+  <section class="bg-slate-900 text-white py-14 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+      <p class="text-xs font-semibold text-slate-400">
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span> About
+      </p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight"><?= seo_e($seo['h1']) ?></h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl">
+        Licensed refrigeration mechanics, 30+ years of hands-on experience, and honest advice for Parramatta and Western Sydney.
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h2 class="text-3xl font-extrabold text-slate-900">Local, Licensed, and Genuinely Hands-On</h2>
+      <div class="space-y-4 text-slate-700 leading-relaxed">
+        <p>
+          Fridge Repair Parramatta is a licensed refrigeration mechanic business (Lic #R38910) servicing Parramatta and the surrounding Western Sydney suburbs. When you book a job, you're dealing with a qualified technician who understands both domestic and commercial refrigeration systems, not a call centre passing your job on to whoever's available.
+        </p>
+        <p>
+          With over 30 years of combined refrigeration experience, we've worked on everything from a bar fridge in a Parramatta CBD apartment to walk-in coolrooms in Silverwater, and the modern inverter-driven French door fridges going into the new high-rise developments around Rosehill and Harris Park. That range of experience means most faults get diagnosed correctly the first time, and most repairs get finished in a single visit.
+        </p>
+        <p>
+          We're fully insured, and every repair is backed by a 1-year workmanship warranty on parts and labour. Same-day appointments are available across Parramatta and Western Sydney wherever a slot allows, and our 24/7 booking line means you can lock in a time the moment a fridge or freezer fails, day or night.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="max-w-3xl space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How We Work</h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          A few simple principles guide every job, whether it's a bar fridge or a commercial coolroom.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="search-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Diagnose Before We Quote</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">A proper diagnosis comes first, always. You get a fixed, upfront quote before any work begins, no guessing and no shotgunning parts at the problem.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="message-square-heart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Honest Repair-vs-Replace Advice</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">If a repair isn't worth your money, we'll say so and explain why. We only recommend replacement when it's genuinely the better value for you.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Transparent Pricing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">No hidden call-out charges and no invented extras. The price we quote is the price you pay.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Stocked Vans</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Common spare parts - fan motors, thermostats, start relays, capacitors, door seals - are carried on every van, so most jobs finish in one visit.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Warranty on Every Job</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Every repair carries a full 1-year workmanship warranty on parts and labour, plus practical prevention tips to keep it running.</p>
+        </div>
+
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">24/7 Availability</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Breakdowns don't keep office hours, so neither do we. Book online any time, including nights, weekends and public holidays.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Ready to Book a Repair?</h2>
+      <p class="text-slate-300 text-base sm:text-lg">Same-day service, 24/7 emergency call-outs, and a free quote before any work starts.</p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Book Online 24/7</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
+    </a>
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>📅 Book Online</span>
+    </a>
+  </div>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="coolroom-repair" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            <a href="samsung-fridge-repair-parramatta" class="hover:text-sky-400 text-sky-400">Samsung</a> · <a href="lg-fridge-repair" class="hover:text-sky-400 text-sky-400">LG</a> · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta · North Parramatta · Harris Park · Westmead · Rosehill · Granville · Merrylands · Wentworthville · Northmead · Oatlands · Rydalmere · Dundas · Telopea · Carlingford · Toongabbie · Winston Hills · Baulkham Hills · Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=11"></script>
+</body>
+</html>

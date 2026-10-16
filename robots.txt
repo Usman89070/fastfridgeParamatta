@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
 
-# Hostinger Search Engine Indexing
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://fridgerepairparramatta.com.au/sitemap.xml

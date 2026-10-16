@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#webpage",
+      "url": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair",
+      "name": "Commercial Refrigeration Repair Parramatta | 24/7",
+      "description": "Commercial fridge and refrigeration repair in Parramatta and Western Sydney. Restaurants, cafes, hotels, medical. Fast response, free quote.",
+      "inLanguage": "en-AU",
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#service"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#service",
+      "name": "Commercial Refrigeration Repair Parramatta",
+      "serviceType": "Commercial refrigeration and fridge repair",
+      "description": "Commercial fridge and refrigeration repair in Parramatta and Western Sydney for restaurants, cafes, hotels, butchers, supermarkets and medical venues: display fridges, bar fridges, under-bench units, upright fridges and freezers, prep benches, coolrooms and ice machines. Licensed technicians, fixed quotes and a 1-year warranty on parts and labour.",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "Place",
+          "name": "Westmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "Place",
+          "name": "Granville"
+        },
+        {
+          "@type": "Place",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "Place",
+          "name": "Northmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "Place",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "Place",
+          "name": "Dundas"
+        },
+        {
+          "@type": "Place",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "Place",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "Place",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "Place",
+          "name": "Ermington"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Restaurants, cafes, hotels, butchers, supermarkets and medical venues"
+      },
+      "url": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://fridgerepairparramatta.com.au/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Commercial Refrigeration Repair",
+          "item": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does commercial refrigeration repair cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most commercial fridge and refrigeration repairs cost $200 to $900, plus a call-out fee of about $100 to $250. Coolroom repairs usually sit in the $250 to $900 range. You get a fixed quote before we start, and that is the price you pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency commercial fridge repair in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A fridge that has stopped cooling is an emergency for a kitchen, so we take after-hours and urgent calls. Book online or email us with the venue, the equipment and what it is doing, and we confirm the fastest time we can get there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What commercial fridges and equipment do you repair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Display fridges and glass-door merchandisers, bar fridges, under-bench fridges and freezers, upright fridges and freezers, prep and sandwich benches, drink chillers, ice machines and coolrooms. We also repair domestic-style fridges used in small businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My commercial fridge is running but not cold. What should I check first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the door is closing and the seals are sealing. Then look at the condenser: a coil clogged with dust and grease is the most common cause. Make sure airflow is not blocked by stock or a tight cavity. If it is still warm, switch it off and call us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What temperature should a commercial fridge and freezer be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold food should be kept at 5°C or below, and frozen food should stay frozen hard. If a fridge is holding above 5°C, move high-risk food such as meat, dairy and seafood into a working fridge or a cooler with ice and book a repair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you repair my fridge without throwing out my stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often yes. Many faults, such as a failed fan, a dirty condenser or a bad thermostat, are fixed on the day. We tell you early if the repair will take long so you can move stock to another fridge or a cooler while we work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do planned maintenance for commercial refrigeration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Regular condenser cleaning, seal checks and temperature checks stop most breakdowns before they start. Ask us about a maintenance visit when you book and we will quote it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair coolrooms, freezer rooms and ice machines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Coolroom, freezer room and ice machine repairs are part of our commercial work. They are quoted separately because the gas, the charge size and the parts are different."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed to work on commercial refrigeration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our work is carried out by licensed refrigeration mechanics (Lic #R38910) who are ARC licensed to handle refrigerant. We are independent and not tied to any equipment brand, so we tell you plainly when a repair is not worth it."
+          }
+        }
+      ]
+    }
+  ]
+}

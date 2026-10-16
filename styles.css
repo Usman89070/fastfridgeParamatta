@@ -25,14 +25,31 @@
 
 html {
   scroll-behavior: smooth;
+  /* Clears the sticky header (~90px tall) plus breathing room so jumping to
+     any #section (nav links, footer links, "Read Article", etc.) doesn't
+     land with the heading hidden underneath the header. */
+  scroll-padding-top: 110px;
   font-family: var(--font-body);
   background-color: #ffffff;
   color: var(--color-text-dark);
   -webkit-font-smoothing: antialiased;
+  font-size: 17px;
 }
 
 body {
   overflow-x: hidden;
+}
+
+/* Content text set to 18px site-wide, independent of heading sizes.
+   Scoped to actual body copy (paragraphs, list items, table cells, FAQ
+   answers) and excluded from the header/nav/sticky mobile bar so their
+   carefully-tuned widths aren't affected. A matching line-height is set
+   explicitly because Tailwind's smaller text-xs/text-sm utilities bundle
+   a tight line-height (e.g. 16px) that would otherwise stay put under the
+   larger 18px font, crowding wrapped lines together. */
+body :is(p, li, td, .faq-answer):not(header *, .sticky-mobile-bar *) {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Custom Scrollbar */
@@ -54,6 +71,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
+}
+
+/* Headings keep their existing font-size but get a roomier line-height so
+   multi-line titles (hero H1, blog post H1s, H2 section headings) don't
+   read as touching lines. Tailwind's text-3xl/4xl/5xl utilities bundle a
+   tight ~1.1-1.2 ratio into the class itself, so this needs the same
+   specificity-boosting :is()/:not() pattern as the body-copy rule above
+   to win over that class without !important. */
+body :is(h1, h2, h3, h4, h5, h6):not(header *, .sticky-mobile-bar *) {
+  line-height: 1.3;
 }
 
 /* Custom Scroll Progress Bar */
@@ -212,4 +239,71 @@ a[href^="tel:"]:active {
   .sticky-mobile-bar, header, footer {
     display: none !important;
   }
+}
+
+/* Blog Post Content (admin-authored, plain HTML - no per-element utility
+   classes required). Mirrors the spacing/typography already used by the
+   hand-built static blog posts so admin-created posts look identical. */
+.post-content > * + * {
+  margin-top: 2rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+}
+
+.post-content h2 + p,
+.post-content h3 + p {
+  margin-top: 0.75rem;
+}
+
+.post-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+}
+
+.post-content ul {
+  list-style-type: disc;
+}
+
+.post-content ol {
+  list-style-type: decimal;
+}
+
+.post-content li + li {
+  margin-top: 0.5rem;
+}
+
+.post-content a {
+  color: var(--color-trade-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  color: var(--color-trade-blue-hover);
+  text-decoration: underline;
+}
+
+.post-content .callout {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+}
+
+.post-content .callout > * + * {
+  margin-top: 0.5rem;
+}
+
+.post-content .callout h3 {
+  font-size: 1.125rem;
 }
