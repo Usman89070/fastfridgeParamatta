@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Capture and immediately strip any URL fragment (#section) so the
+    // browser's own native, premature scroll-to-fragment never happens -
+    // it races with scroll-reveal animations and page layout still
+    // settling, producing a slow, visibly broken jump. app.js restores the
+    // correct scroll position once the page has actually finished loading,
+    // and puts the fragment back in the address bar afterward.
+    window.__initialHash = location.hash;
+    if (window.__initialHash) {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- SEO META -->
+  <title>Coolroom Repairs Parramatta | Cold Room Repair Sydney</title>
+  <link rel="icon" type="image/webp" href="image/FFp-logo.webp">
+  <link rel="apple-touch-icon" href="image/FFp-logo.webp">
+  <meta name="description" content="Coolroom and cold room repair in Parramatta and Western Sydney. Walk-in coolers and freezer rooms, 24/7 breakdown service, free quote.">
+  <link rel="canonical" href="https://fridgerepairparramatta.com.au/coolroom-repair">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Coolroom Repairs Parramatta | Cold Room Repair Sydney">
+  <meta property="og:description" content="Coolroom and cold room repair in Parramatta and Western Sydney. Walk-in coolers and freezer rooms, 24/7 breakdown service, free quote.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fridgerepairparramatta.com.au/coolroom-repair">
+  <meta property="og:image" content="https://fridgerepairparramatta.com.au/image/FFp-logo.webp">
+
+  <!-- Compiled Tailwind CSS (precompiled build, not the CDN JIT compiler) -->
+  <link rel="stylesheet" href="tailwind-built.css?v=1">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD Structured Data Schema (WebPage + Service + BreadcrumbList + FAQPage) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#webpage",
+      "url": "https://fridgerepairparramatta.com.au/coolroom-repair",
+      "name": "Coolroom Repairs Parramatta | Cold Room Repair Sydney",
+      "description": "Coolroom and cold room repair in Parramatta and Western Sydney. Walk-in coolers and freezer rooms, 24/7 breakdown service, free quote.",
+      "inLanguage": "en-AU",
+      "about": {
+        "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#service"
+      },
+      "breadcrumb": {
+        "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#service",
+      "name": "Coolroom and Cold Room Repair Parramatta",
+      "serviceType": "Coolroom, cold room and freezer room repair",
+      "description": "Coolroom, cold room and walk-in freezer room repair in Parramatta and Western Sydney: doors and seals, evaporators and fans, condensing units, compressors, controllers, defrost systems and gas leaks. Licensed technicians, fixed quotes and a 1-year warranty on parts and labour.",
+      "provider": {
+        "@id": "https://fridgerepairparramatta.com.au/#business"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "North Parramatta"
+        },
+        {
+          "@type": "Place",
+          "name": "Harris Park"
+        },
+        {
+          "@type": "Place",
+          "name": "Westmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Rosehill"
+        },
+        {
+          "@type": "Place",
+          "name": "Granville"
+        },
+        {
+          "@type": "Place",
+          "name": "Merrylands"
+        },
+        {
+          "@type": "Place",
+          "name": "Northmead"
+        },
+        {
+          "@type": "Place",
+          "name": "Wentworthville"
+        },
+        {
+          "@type": "Place",
+          "name": "Rydalmere"
+        },
+        {
+          "@type": "Place",
+          "name": "Dundas"
+        },
+        {
+          "@type": "Place",
+          "name": "Oatlands"
+        },
+        {
+          "@type": "Place",
+          "name": "Carlingford"
+        },
+        {
+          "@type": "Place",
+          "name": "Toongabbie"
+        },
+        {
+          "@type": "Place",
+          "name": "Ermington"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Restaurants, caterers, butchers, supermarkets, hotels and medical venues"
+      },
+      "url": "https://fridgerepairparramatta.com.au/coolroom-repair"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fridgerepairparramatta.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Commercial Refrigeration Repair",
+          "item": "https://fridgerepairparramatta.com.au/commercial-refrigeration-repair"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coolroom Repair",
+          "item": "https://fridgerepairparramatta.com.au/coolroom-repair"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://fridgerepairparramatta.com.au/coolroom-repair#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do coolroom repairs cost in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most coolroom and cold room repairs cost $250 to $900, plus a call-out fee of about $100 to $250. Gas leaks, condensing units and compressors can cost more and are quoted after we inspect the room. You get a fixed quote before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair freezer rooms as well as coolrooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We repair walk-in coolrooms, cold rooms and freezer rooms. Freezer rooms add defrost heaters, door-frame heaters and colder-running gear, so we quote them on what we find."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my coolroom not getting cold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The usual causes are a dirty or failed condensing unit fan, ice blocking the evaporator, a worn door seal or strip curtain letting warm air in, a faulty controller or probe, or low refrigerant from a leak. A technician tests each one in turn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What temperature should a coolroom be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold food should be kept at 5°C or below, so most coolrooms run a few degrees under that. If your room is holding above 5°C, move high-risk food such as meat, dairy and seafood to a working fridge or a cooler with ice and book a repair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is there ice on my coolroom evaporator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ice usually means the defrost system has failed, the door is not sealing, or the drain is blocked. Melting the ice only helps for a while. We find why it formed and repair that part."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency coolroom repair in Parramatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A coolroom that has stopped cooling is urgent for any kitchen or shop. Book online or email us with the venue, the room size and what it is doing, and we confirm the fastest time we can get there."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you do coolroom maintenance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Regular condenser cleaning, seal and hinge checks, defrost checks and temperature alarm tests catch most problems early. Ask us about a maintenance visit when you book and we will quote it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair all coolroom brands and condensing units?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We repair most makes of coolroom panels, evaporators and condensing units. Have the brand and model plate details ready when you book and we will bring the right parts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed to work on coolrooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our work is carried out by licensed refrigeration mechanics (Lic #R38910) who are ARC licensed to handle refrigerant. We are independent, so we tell you plainly when a repair is not worth it."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Emergency Status & Ticker Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-white py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+        <span class="font-bold text-emerald-400 shrink-0">Live Status:</span>
+        <span class="text-slate-200 truncate">Technicians Active Across Parramatta 2150 & Western Sydney</span>
+      </div>
+      <div class="flex items-center gap-3 text-slate-300 overflow-hidden w-full sm:w-auto min-w-0">
+        <i data-lucide="activity" class="w-4 h-4 text-sky-400 shrink-0"></i>
+        <span id="live-ticker-text" class="truncate font-medium text-slate-200 min-w-0">
+          ⚡ Just Booked: Commercial coolroom diagnosis in Church St, Parramatta CBD
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-slate-900 text-white border-b border-slate-800 transition-all duration-300 py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center group shrink-0">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-14 h-14 rounded-lg border border-sky-500/40 object-cover shadow-md group-hover:scale-105 transition-transform">
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-5 text-sm 2xl:text-base font-semibold text-slate-300 whitespace-nowrap">
+        <div class="relative">
+          <button type="button" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 text-sky-400 hover:text-sky-300 transition-colors">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+          <div id="services-dropdown-panel" class="hidden absolute left-0 top-full mt-2 w-64 rounded-xl bg-slate-900 border border-slate-700 shadow-xl py-2 z-50">
+            <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
+            <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
+            <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
+            <a href="commercial-refrigeration-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="fridge-regas" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
+            <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
+          </div>
+        </div>
+        <a href="brands" class="hover:text-sky-400 transition-colors">Brands</a>
+        <a href="/#suburbs" class="hover:text-sky-400 transition-colors">Suburbs</a>
+        <a href="/#faqs" class="hover:text-sky-400 transition-colors">FAQs</a>
+        <a href="about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+        <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        <a href="fridge-repair-cost" class="text-sky-400 hover:text-sky-300 transition-colors">Prices</a>
+        <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 transition-colors">Emergency 24/7</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="hidden sm:flex items-center gap-2 2xl:gap-3 shrink-0">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center gap-2 px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 hover:bg-emerald-900/80 transition-all whitespace-nowrap">
+          <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+          <span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="px-3 2xl:px-4 py-2 rounded-lg text-xs 2xl:text-sm font-bold text-white bg-sky-700 hover:bg-sky-500 transition-all shadow-md whitespace-nowrap">
+          Book Online 24/7
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="xl:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-slate-900 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+      <a href="services" class="block text-sky-400 py-1">Services</a>
+      <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
+        <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
+        <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
+        <a href="commercial-refrigeration-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="fridge-regas" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
+        <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
+      </div>
+      <a href="brands" class="block text-slate-300 hover:text-sky-400 py-1">Brands</a>
+      <a href="/#suburbs" class="block text-slate-300 hover:text-sky-400 py-1">Suburbs</a>
+      <a href="/#faqs" class="block text-slate-300 hover:text-sky-400 py-1">FAQs</a>
+      <a href="about" class="block text-slate-300 hover:text-sky-400 py-1">About</a>
+      <a href="blog" class="block text-slate-300 hover:text-sky-400 py-1">Blog</a>
+      <a href="contact" class="block text-slate-300 hover:text-sky-400 py-1">Contact</a>
+      <a href="fridge-repair-cost" class="block text-sky-400 py-1">Prices</a>
+      <a href="emergency-fridge-repair" class="block text-red-400 py-1">Emergency 24/7</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full py-2.5 rounded-lg text-center font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+          ✉️ Email Us
+        </a>
+        <a href="contact#contact-form" class="block w-full py-2.5 rounded-lg text-center font-bold text-white bg-sky-700">
+          Book Online 24/7
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <main>
+
+  <!-- 1. HERO -->
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-500/10 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+      <p class="text-xs font-semibold text-slate-400">
+        <a href="/" class="hover:text-sky-400">Home</a> <span class="mx-1">/</span>
+        <a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Refrigeration Repair</a> <span class="mx-1">/</span> Coolroom Repair
+      </p>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold">
+            <i data-lucide="badge-check" class="w-4 h-4"></i> Licensed Refrigeration Mechanics (Lic #R38910) &bull; Parramatta &amp; Western Sydney
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">Coolroom &amp; Cold Room Repairs in Parramatta</h1>
+          <p class="text-slate-200 text-lg leading-relaxed">
+            A coolroom that stops holding temperature puts a whole week of stock at risk. Our licensed technicians repair walk-in coolrooms, cold rooms and freezer rooms across Parramatta: doors and seals, evaporators, condensing units, controllers and gas leaks, with a fixed quote before any work starts.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-200 pt-1">
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Urgent and after-hours calls taken</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Fixed quote first</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Common parts carried</span>
+            <span class="reveal-child flex items-center gap-2 p-2.5 rounded-lg bg-slate-800/80 border border-slate-700"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1-year parts &amp; labour warranty</span>
+          </div>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
+            <a href="mailto:info@fridgerepairparramatta.com.au" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all">
+              <i data-lucide="mail" class="w-5 h-5"></i><span>Email Us</span>
+            </a>
+            <a href="contact#contact-form" class="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all">
+              <i data-lucide="calendar" class="w-5 h-5"></i><span>Book Online 24/7</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Booking form (wired up by app.js via #hero-contact-form) -->
+        <div class="lg:col-span-5 relative">
+          <div class="bg-white text-slate-900 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-200 space-y-4">
+            <div class="border-b border-slate-200 pb-3 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">&#128994; 24/7 Fast Response</span>
+                <span class="text-slate-500 font-medium">Free Upfront Quote</span>
+              </div>
+              <h2 class="text-xl font-extrabold text-slate-900 pt-1">Book a Coolroom Repair</h2>
+              <p class="text-xs text-slate-600">Enter your details for a callback from a Parramatta technician.</p>
+            </div>
+            <form id="hero-contact-form" class="space-y-3 text-xs">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+              <div>
+                <label for="hero_name" class="block font-semibold text-slate-700 mb-1">Your Name / Business *</label>
+                <input type="text" id="hero_name" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="hero_phone" class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
+                  <input type="tel" id="hero_phone" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                </div>
+                <div>
+                  <label for="hero_suburb" class="block font-semibold text-slate-700 mb-1">Suburb *</label>
+                  <input type="text" id="hero_suburb" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                </div>
+              </div>
+              <div>
+                <label for="hero_service" class="block font-semibold text-slate-700 mb-1">What is happening?</label>
+                <select id="hero_service" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+                  <option value="Coolroom not cooling">Coolroom: Not getting cold</option>
+                  <option value="Freezer room">Coolroom: Freezer room</option>
+                  <option value="Ice on evaporator or leaking">Coolroom: Ice or water leaking</option>
+                  <option value="Door seal or hinge">Coolroom: Door, seal or hinge</option>
+                  <option value="Coolroom alarm or controller">Coolroom: Alarm or controller</option>
+                  <option value="Maintenance">Coolroom: Maintenance</option>
+                  <option value="Other coolroom">Coolroom: Something else</option>
+                </select>
+              </div>
+              <div>
+                <label for="hero_symptom" class="block font-semibold text-slate-700 mb-1">Room size / Brand / Issue</label>
+                <input type="text" id="hero_symptom" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-sky-600 focus:bg-white">
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-sky-700 hover:bg-sky-500 shadow-md transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i><span>Book a Callback</span>
+              </button>
+            </form>
+            <div id="hero-form-success" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-center space-y-2 text-xs">
+              <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600 mx-auto"></i>
+              <strong class="text-emerald-900 text-sm block font-bold">Request Received!</strong>
+              <p class="text-emerald-800">Our duty Parramatta technician will call your number within 15 minutes.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+              <span>Prefer to Email Us?</span>
+              <a href="mailto:info@fridgerepairparramatta.com.au" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i><span>info@fridgerepairparramatta.com.au</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="zap" class="w-4 h-4"></i> The Short Version</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Who Repairs Coolrooms in Parramatta?</h2>
+        
+      </div>
+      <div class="max-w-4xl p-6 sm:p-8 rounded-2xl bg-sky-50 border border-sky-200 space-y-4">
+        <p class="text-slate-800 text-base leading-relaxed">We do. Fridge Repair Parramatta is a local team of licensed refrigeration mechanics who repair coolrooms, cold rooms and walk-in freezer rooms for Parramatta kitchens, shops and venues. Most coolroom repairs cost <strong>$250 to $900</strong> plus a call-out fee of about $100 to $250, and you get a fixed quote before we start.</p>
+        <p class="text-slate-800 text-base leading-relaxed">If your room is warming up right now, keep the door shut, move meat, dairy and seafood to a working fridge or a cooler with ice, then <a href="contact#contact-form" class="text-sky-700 font-bold hover:underline">book online</a>. After hours, go to <a href="emergency-fridge-repair" class="text-sky-700 font-bold hover:underline">emergency fridge repair</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="wrench" class="w-4 h-4"></i> What We Repair</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">What We Fix in Coolrooms and Cold Rooms</h2>
+        <p class="text-slate-700 text-base leading-relaxed">A coolroom is a system: room, door, evaporator, condensing unit and controls. A fault in any one part can warm the whole room.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="door-open" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Doors, hinges, seals and strip curtains</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Worn seals and sagging doors let warm air in, so the unit runs flat out. A common and cheap fix that saves a lot of power.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="fan" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Evaporator coils and fans</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Ice, failed fan motors and blocked drains inside the room stop cold air moving.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="cpu" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Condensing units and compressors</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">The outdoor or rooftop unit that does the heavy lifting: fans, contactors, pressure controls and compressors.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="gauge" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Controllers, probes and alarms</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Temperature controllers, sensors and alarm panels that read wrong or trip for no clear reason.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="snowflake" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Defrost systems and heaters</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Defrost heaters, timers and drain-line heaters that stop ice building up, especially in freezer rooms.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="droplets" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Gas leaks and regas</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Leaks are found and fixed first, then the system is recharged by weight with the right refrigerant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="search" class="w-4 h-4"></i> Common Faults</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Your Coolroom Is Not Cooling</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Warm room, ice, leaks or alarms: here is what each usually points to.</p>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr><th class="p-4">What you see</th><th class="p-4">Likely cause</th><th class="p-4">What we do</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Room warm, condensing unit running</td>
+              <td class="p-4">Dirty or failed condenser fan, low gas, worn door seal</td>
+              <td class="p-4">Clean the coil, replace the fan, find any leak, replace the seal</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Room warm, condensing unit silent</td>
+              <td class="p-4">Tripped isolator, failed contactor, controller or compressor fault</td>
+              <td class="p-4">Test the electrics and controls, then the compressor</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Ice on the evaporator or ceiling</td>
+              <td class="p-4">Defrost heater, timer or sensor fault, or a blocked drain</td>
+              <td class="p-4">Repair the defrost system and clear the drain</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Ice build-up around the door</td>
+              <td class="p-4">Worn seal, door left ajar or a failed door-frame heater</td>
+              <td class="p-4">Replace the seal and fix the heater</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Water on the floor or dripping</td>
+              <td class="p-4">Blocked drain line or failed drain heater</td>
+              <td class="p-4">Clear and heat the drain, check the tray</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Runs all day, barely cold</td>
+              <td class="p-4">Dirty condenser, failing fan, low gas or a leaking door</td>
+              <td class="p-4">Clean, reseal and test the sealed system</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Loud vibration or rattling</td>
+              <td class="p-4">Fan blade hitting ice, failing motor or loose mounts</td>
+              <td class="p-4">Fix the cause and replace the motor if needed</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Alarm sounding or controller showing a fault</td>
+              <td class="p-4">Probe or controller fault, or a real temperature problem</td>
+              <td class="p-4">Check the real temperature, then test the probe and controller</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="columns" class="w-4 h-4"></i> Cold Room vs Freezer Room</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Coolroom and Freezer Room: What Is Different?</h2>
+        <p class="text-slate-700 text-base leading-relaxed">They look alike, but they fail in different ways. Knowing which you have helps us bring the right parts.</p>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr><th class="p-4"></th><th class="p-4">Coolroom or cold room</th><th class="p-4">Freezer room</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Typical purpose</td>
+              <td class="p-4">Fresh food, drinks, produce, flowers</td>
+              <td class="p-4">Frozen food, ice cream, stock held long term</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Running temperature</td>
+              <td class="p-4">A few degrees above 0°C, always at or under 5°C for food</td>
+              <td class="p-4">Around −18°C or colder</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Defrost</td>
+              <td class="p-4">Often off-cycle defrost, simple</td>
+              <td class="p-4">Heated defrost with heaters, timers and drain heaters</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Door</td>
+              <td class="p-4">Standard seals and strip curtains</td>
+              <td class="p-4">Door-frame heaters stop the door freezing shut</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Usual faults</td>
+              <td class="p-4">Seals, fans, controllers, condensing unit</td>
+              <td class="p-4">Defrost faults, ice build-up, heater failures</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="shield-alert" class="w-4 h-4"></i> When It Fails</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Coolroom Breakdown? What to Do Before We Arrive</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Cold food should be held at 5°C or below. These steps buy you time.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Do this</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Keep the door closed. Do not prop it open to "air" the room.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Read the room temperature on a probe thermometer, not just the controller.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Move meat, dairy, seafood and prepared food to a working fridge or a cooler with ice.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Check that the condensing unit isolator or breaker has not tripped.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i> <span>Note any alarm or controller code, and the brand on the condensing unit plate.</span></li>
+          </ul>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Avoid this</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>Do not chip ice off the evaporator. A punctured coil is a costly repair.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>Do not add refrigerant yourself. It needs an ARC licence.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>Do not keep resetting the controller. It can hide the fault.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i> <span>If you smell burning or see sparks at the condensing unit, switch it off at the isolator and call us.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">Food above 5&deg;C for more than 4 hours should be thrown out. Need us out of hours? See <a href="emergency-fridge-repair" class="text-sky-700 font-bold hover:underline">emergency fridge repair</a>.</p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="calendar-check" class="w-4 h-4"></i> Coolroom Maintenance</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Cool Room Maintenance That Prevents Breakdowns</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Most coolroom failures build up slowly. A regular visit finds them early.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">What a visit covers</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Condensing unit coil and fan cleaning</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Door seals, hinges, closer and strip curtain</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Evaporator coil, fan and drain line</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Defrost cycle and heaters</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Controller, probe and temperature alarm test</span></li>
+          </ul>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 space-y-3">
+          <h3 class="text-lg font-bold text-slate-900">Easy checks between visits</h3>
+          <ul class="space-y-2 text-slate-700 text-sm">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Keep stock off the floor and away from the evaporator.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Keep a clear gap around the condensing unit so air can move.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Look for ice around the door and on the coil.</span></li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-700 shrink-0 mt-0.5"></i> <span>Test that the door closes by itself and the seal grips.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">Want regular visits for your room? Mention it when you book and we will quote it.</p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="building-2" class="w-4 h-4"></i> Who We Work For</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Coolroom Repair for Parramatta Businesses</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Different businesses lean on their cold rooms in different ways.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="chef-hat" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Restaurants and commercial kitchens</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Walk-in coolers hold the whole week of prep. We aim to get a failing room back before the stock is at risk.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="party-popper" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Caterers and function venues</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Rooms that sit idle then work flat out before an event. Better to fix them before the big booking than during it.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="beef" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Butchers and fishmongers</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Heavy loads and strict temperatures, with cold rooms often running for long hours.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="apple" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Greengrocers, florists and supermarkets</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Cold rooms that hold fresh produce and cut flowers at steady temperatures.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="beer" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Pubs, clubs and hotels</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Keg rooms and cold stores that cannot go down on a busy weekend.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="stethoscope" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Medical, labs and aged care</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Cold rooms and kitchens where steady, recorded temperatures matter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="dollar-sign" class="w-4 h-4"></i> Transparent Pricing</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Coolroom Repair Cost in Parramatta</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Typical Sydney prices including GST. Your exact price is confirmed in writing before we do anything.</p>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 text-slate-800 uppercase tracking-wider text-xs border-b border-slate-200">
+            <tr><th class="p-4">Job</th><th class="p-4">Typical cost</th><th class="p-4">Notes</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Call-out and diagnosis</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$100 to $250</td>
+              <td class="p-4">Covers travel and finding the fault</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Typical coolroom repair</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$250 to $900</td>
+              <td class="p-4">Fans, seals, controllers, heaters, contactors, depending on the room</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Gas leak repair and regas</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">$250 to $600+</td>
+              <td class="p-4">Larger charges can cost more. See our <a href="fridge-regas" class="text-sky-700 font-bold hover:underline">fridge regas page</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Condensing unit or compressor replacement</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">Quoted after inspection</td>
+              <td class="p-4">Varies by room size and equipment</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-4 font-medium text-slate-900">Evaporator replacement</td>
+              <td class="p-4 font-bold text-sky-700 whitespace-nowrap">Quoted after inspection</td>
+              <td class="p-4">Quoted once the fault is confirmed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-slate-500 text-xs">Typical Sydney prices incl. GST. Final price confirmed in writing before work starts.</p>
+      <a href="fridge-repair-cost" class="inline-flex items-center gap-1.5 text-sm font-bold text-sky-700 hover:text-sky-800">See all repair prices <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="list-ordered" class="w-4 h-4"></i> How It Works</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How We Repair Your Coolroom</h2>
+        
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">01</span>
+          <h3 class="text-lg font-bold text-slate-900">You book or email us</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Tell us the venue, the room size and what it is doing. Urgent jobs go to the front of the queue.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">02</span>
+          <h3 class="text-lg font-bold text-slate-900">We look after your stock</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We tell you straight away if food should be moved, so you lose as little as possible.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">03</span>
+          <h3 class="text-lg font-bold text-slate-900">We test the whole system</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Door and seals, evaporator, defrost, condensing unit, controller and the gas side. Not just the obvious part.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">04</span>
+          <h3 class="text-lg font-bold text-slate-900">You get a fixed quote</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">You see the price before we start. If the job changes, we ask first.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">05</span>
+          <h3 class="text-lg font-bold text-slate-900">We repair, often in one visit</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Common parts such as fan motors, contactors, probes, heaters and seals are carried. Parts we have to order, we give you a timeframe for.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <span class="text-3xl font-extrabold text-sky-700">06</span>
+          <h3 class="text-lg font-bold text-slate-900">We test and explain</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We run the room, confirm it is holding temperature and explain what failed. Every repair has a 1-year warranty on parts and labour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="award" class="w-4 h-4"></i> Why Parramatta Businesses Choose Us</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Book Your Coolroom Repair With Us</h2>
+        
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="badge-check" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Licensed refrigeration mechanics</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Gas-side work is done by ARC-licensed technicians (Lic #R38910), as the law requires.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="zap" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Local and quick</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Technicians based near Parramatta, so travel time is short and urgent calls are taken seriously.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Fixed quote first</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">No surprises on the invoice. The price you agree is the price you pay.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="scale" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Independent and honest</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We are not tied to a panel or equipment brand, so we say so if a repair is not worth it.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="wrench" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">Common parts carried</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Fan motors, contactors, probes, heaters and seals, so many jobs finish on the first visit.</p>
+        </div>
+        <div class="reveal-child p-6 rounded-xl bg-white border border-slate-200 card-hover space-y-2">
+          <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-sky-700"></i></div>
+          <h3 class="text-lg font-bold text-slate-900">1-year warranty</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Every repair is covered for 1 year on parts and labour.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="map-pin" class="w-4 h-4"></i> Service Area</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Cool Room Repairs Across Parramatta and Nearby</h2>
+        <p class="text-slate-700 text-base leading-relaxed">Our technicians are based locally, so most jobs are in your suburb or the next one over.</p>
+      </div>
+      <div class="flex flex-wrap gap-2"><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Parramatta</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">North Parramatta</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Harris Park</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Westmead</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Rosehill</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Granville</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Merrylands</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Northmead</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Wentworthville</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Rydalmere</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Dundas</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Oatlands</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Carlingford</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Toongabbie</span><span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-semibold">Ermington</span></div>
+      <p class="text-slate-700 text-base leading-relaxed max-w-4xl">Outside these suburbs? Ask us. We may still be able to help. Need a fridge, freezer or display unit looked at too? See our <a href="commercial-refrigeration-repair" class="text-sky-700 font-bold hover:underline">commercial refrigeration repair</a> page.</p>
+    </div>
+  </section>
+
+  <section id="faqs" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="help-circle" class="w-4 h-4"></i> Clear Answers</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Coolroom Repair Parramatta FAQs</h2>
+        
+      </div>
+      <div class="max-w-4xl space-y-3">
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>How much do coolroom repairs cost in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Most coolroom and cold room repairs cost $250 to $900, plus a call-out fee of about $100 to $250. Gas leaks, condensing units and compressors can cost more and are quoted after we inspect the room. You get a fixed quote before we start.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you repair freezer rooms as well as coolrooms?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. We repair walk-in coolrooms, cold rooms and freezer rooms. Freezer rooms add defrost heaters, door-frame heaters and colder-running gear, so we quote them on what we find.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Why is my coolroom not getting cold?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            The usual causes are a dirty or failed condensing unit fan, ice blocking the evaporator, a worn door seal or strip curtain letting warm air in, a faulty controller or probe, or low refrigerant from a leak. A technician tests each one in turn.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>What temperature should a coolroom be?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Cold food should be kept at 5°C or below, so most coolrooms run a few degrees under that. If your room is holding above 5°C, move high-risk food such as meat, dairy and seafood to a working fridge or a cooler with ice and book a repair.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Why is there ice on my coolroom evaporator?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Ice usually means the defrost system has failed, the door is not sealing, or the drain is blocked. Melting the ice only helps for a while. We find why it formed and repair that part.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you offer emergency coolroom repair in Parramatta?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. A coolroom that has stopped cooling is urgent for any kitchen or shop. Book online or email us with the venue, the room size and what it is doing, and we confirm the fastest time we can get there.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Can you do coolroom maintenance?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Yes. Regular condenser cleaning, seal and hinge checks, defrost checks and temperature alarm tests catch most problems early. Ask us about a maintenance visit when you book and we will quote it.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Do you repair all coolroom brands and condensing units?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            We repair most makes of coolroom panels, evaporators and condensing units. Have the brand and model plate details ready when you book and we will bring the right parts.
+          </div>
+        </div>
+        <div class="faq-item p-5 rounded-xl bg-slate-50 border border-slate-200">
+          <button class="faq-question w-full text-left font-bold text-slate-900 text-base flex justify-between items-center gap-4">
+            <span>Are you licensed to work on coolrooms?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-sky-700 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed pt-3">
+            Our work is carried out by licensed refrigeration mechanics (Lic #R38910) who are ARC licensed to handle refrigerant. We are independent, so we tell you plainly when a repair is not worth it.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 text-sky-700 text-xs font-bold uppercase tracking-wider"><i data-lucide="link" class="w-4 h-4"></i> Keep Reading</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Related Fridge Repair Help</h2>
+        
+      </div>
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm font-bold text-sky-700">
+        <li><a href="commercial-refrigeration-repair" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">Commercial refrigeration repair</a></li>
+        <li><a href="emergency-fridge-repair" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">Emergency fridge repair, 24/7</a></li>
+        <li><a href="fridge-repair-cost" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">Fridge repair cost guide</a></li>
+        <li><a href="fridge-regas" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">Fridge regas and gas leak repair</a></li>
+        <li><a href="services" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">All fridge repair services</a></li>
+        <li><a href="brands" class="block p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-sky-500">All fridge brands we repair</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="space-y-3">
+        <span class="px-3.5 py-1.5 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 text-xs font-bold uppercase tracking-wider">Coolroom warming up?</span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white">Book Your Coolroom Repair in Parramatta</h2>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">Tell us the venue, the room size and what it is doing. A local licensed technician will confirm a time and a fixed price.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="mailto:info@fridgerepairparramatta.com.au" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-700 hover:bg-emerald-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="mail" class="w-5 h-5"></i><span>Email Us</span>
+        </a>
+        <a href="contact#contact-form" class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-sky-700 hover:bg-sky-500 shadow-lg transition-all flex items-center justify-center gap-2.5">
+          <i data-lucide="calendar" class="w-5 h-5"></i><span>Book Online 24/7</span>
+        </a>
+      </div>
+      <p class="text-slate-400 text-xs pt-2">Servicing Parramatta and Western Sydney. After hours? <a href="emergency-fridge-repair" class="text-red-400 hover:text-red-300 font-bold">Emergency fridge repair</a></p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- STICKY MOBILE BAR (Fixed to bottom on mobile only) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 sticky-mobile-bar">
+    <a href="mailto:info@fridgerepairparramatta.com.au" class="flex-1 py-3 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>✉️ Email Us</span>
+    </a>
+    <a href="contact#contact-form" class="flex-1 py-3 rounded-xl bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+      <span>📅 Book Online</span>
+    </a>
+  </div>
+
+  <!-- FOOTER (Deep Navy Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-24 md:pb-12 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="reveal-child space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="image/FFp-logo.webp" width="256" height="256" onerror="this.onerror=null; this.src='images/fridge_repair_logo.jpg';" alt="Fridge Repair Parramatta Logo" class="w-9 h-9 rounded-md border border-sky-500/40 object-cover">
+            <span class="text-base font-extrabold text-white">Fridge Repair Parramatta</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Reliable residential and commercial fridge repair across Parramatta and the surrounding Western Sydney suburbs. 30+ years of refrigeration experience, fully insured, same-day service available.
+          </p>
+          <div class="space-y-2 text-slate-300">
+            <p><strong class="text-white">Address:</strong> Parramatta, Sydney, NSW</p>
+            <p><strong class="text-white">Email:</strong> info@fridgerepairparramatta.com.au</p>
+            <p><strong class="text-white">Hours:</strong> 24/7 emergency service</p>
+          </div>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-slate-300">
+            <a href="about" class="hover:text-sky-400 transition-colors">About Us</a>
+            <a href="blog" class="hover:text-sky-400 transition-colors">Blog</a>
+            <a href="contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            <a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400 transition-colors">Prices</a>
+          </div>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
+            <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
+            <li><a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
+            <li><a href="coolroom-repair" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
+            <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
+            <li><a href="services#by-type" class="hover:text-sky-400">Bar & Wine Fridge Repair</a></li>
+            <li><a href="emergency-fridge-repair" class="hover:text-red-400 text-red-400">Emergency Fridge Repair</a></li>
+            <li><a href="fridge-repair-cost" class="hover:text-sky-400 text-sky-400">Fridge Repair Cost Guide</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Compressor Repair</a></li>
+            <li><a href="services#by-fault" class="hover:text-sky-400">Fridge Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Brands We Repair</h3>
+          <p class="leading-relaxed">
+            <a href="brands" class="hover:text-sky-400 text-sky-400 font-bold">View All Brands</a><br>
+            <a href="samsung-fridge-repair-parramatta" class="hover:text-sky-400 text-sky-400">Samsung</a> · <a href="lg-fridge-repair" class="hover:text-sky-400 text-sky-400">LG</a> · Westinghouse · Fisher & Paykel · Electrolux · Bosch · Hisense · Haier · Whirlpool · Smeg · Miele · Kelvinator · Liebherr · Bromic · Skope · Hoshizaki · Williams · Polar
+          </p>
+        </div>
+
+        <div class="reveal-child space-y-3">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">Areas We Serve</h3>
+          <p class="leading-relaxed">
+            Parramatta · North Parramatta · Harris Park · Westmead · Rosehill · Granville · Merrylands · Wentworthville · Northmead · Oatlands · Rydalmere · Dundas · Telopea · Carlingford · Toongabbie · Winston Hills · Baulkham Hills · Silverwater
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+        <p class="text-center md:text-left">
+          Servicing Parramatta and surrounding Western Sydney suburbs with same-day residential and commercial fridge, freezer, coolroom and refrigeration repairs.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 text-slate-400">
+          <span>© 2026 Fridge Repair Parramatta. All Rights Reserved.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=11"></script>
+</body>
+</html>

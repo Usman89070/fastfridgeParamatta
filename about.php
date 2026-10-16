@@ -353,7 +353,7 @@ function seo_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF
             <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
             <li><a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
             <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
-            <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
+            <li><a href="coolroom-repair" class="hover:text-sky-400">Coolroom Repair</a></li>
             <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Ice Machine Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Display Fridge Repair</a></li>
