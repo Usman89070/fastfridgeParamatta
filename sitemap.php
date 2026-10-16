@@ -41,6 +41,7 @@ try {
         'fridge-regas'             => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'samsung-fridge-repair-parramatta' => ['priority' => '0.8', 'changefreq' => 'monthly'],
         'lg-fridge-repair'         => ['priority' => '0.8', 'changefreq' => 'monthly'],
+        'commercial-refrigeration-repair' => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'services'                 => ['priority' => '0.9', 'changefreq' => 'monthly'],
         'brands'                   => ['priority' => '0.9', 'changefreq' => 'monthly'],
     ];

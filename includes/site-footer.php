@@ -43,7 +43,7 @@
             <li><a href="services" class="hover:text-sky-400 text-sky-400 font-bold">View All Services</a></li>
             <li><a href="fridge-not-cooling-repair" class="hover:text-sky-400 text-sky-400">Fridge Not Cooling Repair</a></li>
             <li><a href="services#by-fault" class="hover:text-sky-400">Residential Fridge Repair</a></li>
-            <li><a href="services#commercial" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
+            <li><a href="commercial-refrigeration-repair" class="hover:text-sky-400">Commercial Fridge Repair</a></li>
             <li><a href="services#by-type" class="hover:text-sky-400">Freezer Repair</a></li>
             <li><a href="services#commercial" class="hover:text-sky-400">Coolroom Repair</a></li>
             <li><a href="fridge-regas" class="hover:text-sky-400">Fridge Gas Refill & Leak Repair</a></li>

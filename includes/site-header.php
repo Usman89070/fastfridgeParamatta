@@ -111,7 +111,7 @@ $schemaGraph = $schemaGraph ?? [];
             <a href="services" class="block px-4 py-2 text-sm font-bold text-sky-400 hover:bg-slate-800">View All Services</a>
             <a href="fridge-not-cooling-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Not Cooling Repair</a>
             <a href="services#by-fault" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Residential Fridge Repair</a>
-            <a href="services#commercial" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
+            <a href="commercial-refrigeration-repair" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Commercial Fridge Repair</a>
             <a href="fridge-regas" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Fridge Gas Refill &amp; Leak Repair</a>
             <a href="services#by-type" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-sky-400">Freezer Repair</a>
           </div>
@@ -150,7 +150,7 @@ $schemaGraph = $schemaGraph ?? [];
       <div class="pl-3 space-y-1 border-l border-slate-800 ml-1">
         <a href="fridge-not-cooling-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Not Cooling Repair</a>
         <a href="services#by-fault" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Residential Fridge Repair</a>
-        <a href="services#commercial" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
+        <a href="commercial-refrigeration-repair" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Commercial Fridge Repair</a>
         <a href="fridge-regas" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Fridge Gas Refill &amp; Leak Repair</a>
         <a href="services#by-type" class="block text-slate-400 hover:text-sky-400 py-1 text-xs">Freezer Repair</a>
       </div>

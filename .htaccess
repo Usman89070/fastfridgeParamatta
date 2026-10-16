@@ -25,7 +25,7 @@ RewriteRule ^fridge-repair-parramatta/?$ index.html [L,QSA]
 RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^blog\.html$ /blog [R=301,L]
 RewriteRule ^blog-([a-z0-9-]+)\.html$ /blog-$1 [R=301,L]
-RewriteRule ^(about|contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair|fridge-regas|samsung-fridge-repair-parramatta|lg-fridge-repair)\.html$ /$1 [R=301,L]
+RewriteRule ^(about|contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair|fridge-regas|samsung-fridge-repair-parramatta|lg-fridge-repair|commercial-refrigeration-repair)\.html$ /$1 [R=301,L]
 
 # 2b. Clean URLs, step 2: serve the real page behind each extension-free
 # path. Blog URLs always resolve to the dynamic PHP pages (even though the
@@ -39,7 +39,7 @@ RewriteRule ^blog-([a-z0-9-]+)/?$ blog-post.php?slug=$1 [L,QSA]
 RewriteRule ^about/?$ about.php [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair|fridge-regas|samsung-fridge-repair-parramatta|lg-fridge-repair)/?$ $1.html [L,QSA]
+RewriteRule ^(contact|emergency-fridge-repair|fridge-repair-cost|services|brands|fridge-not-cooling-repair|fridge-regas|samsung-fridge-repair-parramatta|lg-fridge-repair|commercial-refrigeration-repair)/?$ $1.html [L,QSA]
 
 # 2c. sitemap.xml is generated on the fly by sitemap.php (scans the site for
 # pages and queries published blog posts), so new pages/posts show up

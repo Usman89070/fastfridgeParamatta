@@ -6,7 +6,7 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 
 ## Build order (new pages only, from the sheet's priority list)
 
-1. COMM-FRIDGE: Commercial Fridge & Refrigeration Repair (hub) -> `/commercial-refrigeration-repair` (Wk 1-2 P1) [TO DO]
+1. COMM-FRIDGE: Commercial Fridge & Refrigeration Repair (hub) -> `/commercial-refrigeration-repair` (Wk 1-2 P1) [DONE 16 Oct]
 2. COOLROOM: Coolroom & Cold Room Repair -> `/coolroom-repair` (Wk 1-2 P1) [TO DO]
 3. COMM-FREEZER: Commercial Freezer Repair -> `/commercial-freezer-repair` (Wk 3-4 P1) [TO DO]
 4. ICE: Ice Machine Repair -> `/ice-machine-repair` (Wk 3-4 P2) [TO DO]
@@ -33,6 +33,7 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 - REGAS: `/fridge-regas` [LIVE (built 14 Oct; optimise per sheet later)]
 - BR-SAMSUNG: `/samsung-fridge-repair-parramatta` [DONE (live)]
 - BR-LG: `/lg-fridge-repair` [DONE (live)]
+- COMM-FRIDGE: `/commercial-refrigeration-repair` [DONE 16 Oct; schema in claude/schemas/]
 
 ## Live pages that still need the sheet's title/meta/H1 optimisation (later phase)
 
@@ -49,4 +50,5 @@ Standing rules: `claude/content-standard.md` and `claude/website-context.md`. Ke
 ## Log
 - 14 Oct 2026: /fridge-regas built.
 - 15 Oct 2026: /samsung-fridge-repair-parramatta and /lg-fridge-repair built from user-supplied HTML.
-- 16 Oct 2026: keyword sheet saved to claude/. Next: COMM-FRIDGE.
+- 16 Oct 2026: keyword sheet saved to claude/. Built COMM-FRIDGE (/commercial-refrigeration-repair). Competitor sites could not be fetched (network block), used sheet benchmarks only. Linked from header/footer "Commercial Fridge Repair", services, cost, emergency pages. Spoke links (coolroom, freezer, ice) are plain text until those pages exist: when each spoke is built, link it from COMM-FRIDGE (equipment cards, FAQ 8) and the footer.
+- Next: COOLROOM (/coolroom-repair).
