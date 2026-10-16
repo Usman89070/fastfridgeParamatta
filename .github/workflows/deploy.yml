@@ -38,3 +38,5 @@ jobs:
             database/**
             image.zip
             HOSTINGER_DEPLOYMENT.md
+            claude/**
+            CLAUDE.md
